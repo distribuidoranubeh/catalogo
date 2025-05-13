@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-05-13 15:27:59 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Comestibles'>Comestibles</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Desechables'>Desechables</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Articulos del hogar'>Articulos del hogar</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
+﻿<!-- Esta es la versión 2025-05-13 19:02:56 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Comestibles'>Comestibles</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
 <img src='imagenes/000188.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000188</div>
 <div class='underline'></div>
@@ -1083,20 +1083,6 @@
 <div class='articulo'>TOALLA MICRO FIBRA 1x36</div>
 <div class='descripcion'>Paq = 36 Unidades *</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso conico de papel parafinado 4.5oz 25x200 ref. pb0110' data-cod='001886'>
-<img src='imagenes/001886.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001886</div>
-<div class='underline'></div>
-<div class='articulo'>VASO CONICO DE PAPEL PARAFINADO 4.5OZ 25X200 Ref. PB0110</div>
-<div class='descripcion'>Caja = 25 Paq de 200 Unidades</div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso de papel 7oz blanco (0c) 20x50 ref. pv1019' data-cod='001814'>
-<img src='imagenes/001814.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001814</div>
-<div class='underline'></div>
-<div class='articulo'>VASO DE PAPEL 7OZ BLANCO (0C) 20X50 REF. PV1019</div>
-<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
-</div>
 <div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Higienico' data-art='astral papel higienico 1x24 ref. ppn002' data-cod='001051'>
 <img src='imagenes/001051.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001051</div>
@@ -1146,46 +1132,11 @@
 <div class='articulo'>NIVEO PAPEL HIGIENICO L 4X12 Ref. PPI005</div>
 <div class='descripcion'>Fardo = 4 Paq de 12 Unidades</div>
 </div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Higienico' data-art='gaviota papel higienico jumbo roll 325 pies 1x12 ref. ppn009' data-cod='001738'>
-<img src='imagenes/001738.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001738</div>
-<div class='underline'></div>
-<div class='articulo'>GAVIOTA PAPEL HIGIENICO JUMBO ROLL 325 PIES 1X12 Ref. PPN009</div>
-<div class='descripcion'>Fardo = 12 Unidades</div>
-</div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Higienico' data-art='gaviota papel higienico jumbo roll 325 pies 4x3 ref. ppn007' data-cod='001050'>
-<img src='imagenes/001050.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001050</div>
-<div class='underline'></div>
-<div class='articulo'>GAVIOTA PAPEL HIGIENICO JUMBO ROLL 325 PIES 4X3 Ref. PPN007</div>
-<div class='descripcion'>Fardo = 4 Paq de 3 Unidades</div>
-</div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Higienico' data-art='niveo papel higienico xl 12x4 ref. ppb020' data-cod='001802'>
-<img src='imagenes/001802.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001802</div>
-<div class='underline'></div>
-<div class='articulo'>NIVEO PAPEL HIGIENICO XL 12X4 Ref. PPB020</div>
-<div class='descripcion'>Fardo = 12 Paq de 4 Unidades</div>
-</div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Higienico' data-art='niveo papel higienico xl 1x48 ref. ppa019' data-cod='001803'>
-<img src='imagenes/001803.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001803</div>
-<div class='underline'></div>
-<div class='articulo'>NIVEO PAPEL HIGIENICO XL 1X48 Ref. PPA019</div>
-<div class='descripcion'>Fardo = 48 Unidades</div>
-</div>
 <div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Toalla' data-art='gaviota papel toalla p/manos 325 pies 1 capa 1x6 ref. phc002' data-cod='001056'>
 <img src='imagenes/001056.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001056</div>
 <div class='underline'></div>
 <div class='articulo'>GAVIOTA PAPEL TOALLA P/MANOS 325 PIES 1 CAPA 1X6 Ref. PHC002</div>
-<div class='descripcion'>Fardo = 6 Unidades</div>
-</div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Papel Toalla' data-art='gaviota papel toalla 550 pies 1c 1x6 ref. phc004' data-cod='001333'>
-<img src='imagenes/001333.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001333</div>
-<div class='underline'></div>
-<div class='articulo'>GAVIOTA PAPEL TOALLA 550 PIES 1C 1X6 Ref. PHC004</div>
 <div class='descripcion'>Fardo = 6 Unidades</div>
 </div>
 <div class='item' data-cat='Papeles Higienicos' data-subcat='Servilletas' data-art='niveo servilleta familiar 32x100 (cuadradas) ref. psi030' data-cod='001742'>
@@ -1194,13 +1145,6 @@
 <div class='underline'></div>
 <div class='articulo'>NIVEO SERVILLETA FAMILIAR 32x100 (Cuadradas) Ref. PSI030</div>
 <div class='descripcion'>Caja = 32 Paq de 10 Unidades</div>
-</div>
-<div class='item' data-cat='Papeles Higienicos' data-subcat='Servilletas' data-art='niveo servilletas familiar 60x50 (cuadradas) ref. psa031' data-cod='001743'>
-<img src='imagenes/001743.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001743</div>
-<div class='underline'></div>
-<div class='articulo'>NIVEO SERVILLETAS FAMILIAR 60x50 (Cuadradas) Ref. PSA031</div>
-<div class='descripcion'>Caja = 60 Paq de 50 Unidades</div>
 </div>
 <div class='item' data-cat='Papeles Higienicos' data-subcat='Servilletas' data-art='gaviota servilletas disp 10x300 - rectangulares ref. psc008' data-cod='001055'>
 <img src='imagenes/001055.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
