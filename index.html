@@ -1,4 +1,4 @@
-<!-- Esta es la versión 2025-05-12 18:29:31 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 12px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Comestibles'>Comestibles</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Desechables'>Desechables</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Articulos del hogar'>Articulos del hogar</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
+ï»¿<!-- Esta es la versiÃ³n 2025-05-12 21:13:37 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Comestibles'>Comestibles</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Desechables'>Desechables</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Articulos del hogar'>Articulos del hogar</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
 <img src='imagenes/000188.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000188</div>
 <div class='underline'></div>
@@ -61,21 +61,21 @@
 <div class='articulo'>RANEX NEW YORK DESODORANTE SPRAY 150 ML 1X24 Ref. 699263</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash coconut & vanilla 16 oz 1x20' data-cod='001470'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de BaÃ±o' data-art='pureglow body wash coconut & vanilla 16 oz 1x20' data-cod='001470'>
 <img src='imagenes/001470.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001470</div>
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW BODY WASH COCONUT & VANILLA 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash green tea & mint 16 oz 1x20' data-cod='002113'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de BaÃ±o' data-art='pureglow body wash green tea & mint 16 oz 1x20' data-cod='002113'>
 <img src='imagenes/002113.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002113</div>
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW BODY WASH GREEN TEA & MINT 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash tropical fruits 16 oz 1x20' data-cod='002114'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de BaÃ±o' data-art='pureglow body wash tropical fruits 16 oz 1x20' data-cod='002114'>
 <img src='imagenes/002114.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002114</div>
 <div class='underline'></div>
@@ -111,7 +111,7 @@
 <div class='descripcion'>Caja = 6 Unidades *</div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002143.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002143</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS 1/2 GALON 1X6</div>
@@ -125,7 +125,7 @@
 <div class='descripcion'>Caja = 6 Unidades *</div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001910.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001910</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS LITRO 1X12</div>
@@ -510,14 +510,14 @@
 <div class='descripcion'>Caja = 6 Unidades *</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante en polvo 50 lbs 1x1' data-cod='000104'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/000104.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000104</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE EN POLVO 50 LBS 1X1</div>
 <div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante en polvo 8 lbs 1x6' data-cod='000105'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/000105.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000105</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE EN POLVO 8 LBS 1X6</div>
@@ -643,7 +643,7 @@
 <div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente blanqueador 1/2 galon 1x6' data-cod='002144'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002144.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002144</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE BLANQUEADOR 1/2 GALON 1X6</div>
@@ -692,7 +692,7 @@
 <div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002143.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002143</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS 1/2 GALON 1X6</div>
@@ -706,7 +706,7 @@
 <div class='descripcion'>Caja = 6 Unidades *</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001910.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001910</div>
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS LITRO 1X12</div>
@@ -944,7 +944,7 @@
 <div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Comestibles' data-subcat='Sal' data-art='sal' data-cod='000442'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/000442.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000442</div>
 <div class='underline'></div>
 <div class='articulo'>SAL</div>
@@ -1084,14 +1084,14 @@
 <div class='descripcion'>Paq = 36 Unidades *</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso conico de papel parafinado 4.5oz 25x200 ref. pb0110' data-cod='001886'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001886.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001886</div>
 <div class='underline'></div>
 <div class='articulo'>VASO CONICO DE PAPEL PARAFINADO 4.5OZ 25X200 Ref. PB0110</div>
 <div class='descripcion'>Caja = 25 Paq de 200 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso de papel 7oz blanco (0c) 20x50 ref. pv1019' data-cod='001814'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001814.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001814</div>
 <div class='underline'></div>
 <div class='articulo'>VASO DE PAPEL 7OZ BLANCO (0C) 20X50 REF. PV1019</div>
@@ -1223,43 +1223,36 @@
 <div class='articulo'>NIVEO SERVILLETAS COMERCIAL 10X500 Ref. PSD010</div>
 <div class='descripcion'>Fardo = 10 Paq de 500 Unidades</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola pequeña 48x12 ref. 5665 / 5799' data-cod='001785'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola pequeÃ±a 48x12 ref. 5665 / 5799' data-cod='001785'>
 <img src='imagenes/001785.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001785</div>
 <div class='underline'></div>
-<div class='articulo'>BRILLISIMO BRILLO BOLA PEQUEÑA 48X12 Ref. 5665 / 5799</div>
+<div class='articulo'>BRILLISIMO BRILLO BOLA PEQUEÃ‘A 48X12 Ref. 5665 / 5799</div>
 <div class='descripcion'>Caja = 48 Paq de 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola grande 20x12 ref. 5798' data-cod='002182'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002182.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002182</div>
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO BRILLO BOLA GRANDE 20X12 Ref. 5798</div>
 <div class='descripcion'>Caja = 20 Paq de 12 Unidades</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola pequeño 48x12 ref. 5799' data-cod='002183'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002183</div>
-<div class='underline'></div>
-<div class='articulo'>BRILLISIMO BRILLO BOLA PEQUEÑO 48X12 Ref. 5799</div>
-<div class='descripcion'>Caja = 48 Paq de 12 Unidades</div>
-</div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo fino 48x12 ref. 5802' data-cod='002184'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002184.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002184</div>
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO BRILLO FINO 48X12 Ref. 5802</div>
 <div class='descripcion'>Caja = 48 Paq de 12 Unidades</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo verde 48x10 ref. 5800' data-cod='002185'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002185.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002185</div>
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO BRILLO VERDE 48X10 Ref. 5800</div>
 <div class='descripcion'>Caja = 48 Paq de 10 Unidades</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo esponja doble 48x2 ref. 5801' data-cod='002186'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002186.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002186</div>
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO ESPONJA DOBLE 48X2 Ref. 5801</div>
@@ -1363,11 +1356,11 @@
 <div class='articulo'>Tapa Bandeja Redonda 9 Pulgadas (4x125) Ref. 5532</div>
 <div class='descripcion'>Caja = 4 Paq de 125 Unidades</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='tapa plastica pequeña 320 (1x100) ref. 5533' data-cod='001453'>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='tapa plastica pequeÃ±a 320 (1x100) ref. 5533' data-cod='001453'>
 <img src='imagenes/001453.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001453</div>
 <div class='underline'></div>
-<div class='articulo'>Tapa Plastica Pequeña 320 (1x100) Ref. 5533</div>
+<div class='articulo'>Tapa Plastica PequeÃ±a 320 (1x100) Ref. 5533</div>
 <div class='descripcion'>Caja = 100 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio mediana 430 (1x50) ref. 4710' data-cod='001454'>
@@ -1384,11 +1377,11 @@
 <div class='articulo'>Bandeja Aluminio Grande 525 (1x50) Ref. 5307</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio lasagña 1x50 ref. 5587' data-cod='001872'>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio lasagÃ±a 1x50 ref. 5587' data-cod='001872'>
 <img src='imagenes/001872.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001872</div>
 <div class='underline'></div>
-<div class='articulo'>BANDEJA ALUMINIO LASAGÑA 1X50 Ref. 5587</div>
+<div class='articulo'>BANDEJA ALUMINIO LASAGÃ‘A 1X50 Ref. 5587</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio paella 1x100 ref. 5655' data-cod='002074'>
@@ -1398,18 +1391,18 @@
 <div class='articulo'>BANDEJA ALUMINIO PAELLA 1X100 Ref. 5655</div>
 <div class='descripcion'>Caja = 100 Unidades</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='tapa plastica lasagña 1x50 ref. 5656' data-cod='002076'>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='tapa plastica lasagÃ±a 1x50 ref. 5656' data-cod='002076'>
 <img src='imagenes/002076.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002076</div>
 <div class='underline'></div>
-<div class='articulo'>TAPA PLASTICA LASAGÑA 1X50 Ref. 5656</div>
+<div class='articulo'>TAPA PLASTICA LASAGÃ‘A 1X50 Ref. 5656</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja pequeña 1x50 ref. 5856' data-cod='002157'>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja pequeÃ±a 1x50 ref. 5856' data-cod='002157'>
 <img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002157</div>
 <div class='underline'></div>
-<div class='articulo'>BANDEJA PEQUEÑA 1X50 Ref. 5856</div>
+<div class='articulo'>BANDEJA PEQUEÃ‘A 1X50 Ref. 5856</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='tapa plastica grande 1x50 ref. 5582' data-cod='002158'>
@@ -1685,11 +1678,11 @@
 <div class='articulo'>Papel Aluminio 12 pulg x 1000 pies (1x4) Ref. 5666</div>
 <div class='descripcion'>Caja = 4 Unidades</div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel paleta 18"x1000´ 1x1 ref. 5658' data-cod='001945'>
+<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel paleta 18"x1000Â´ 1x1 ref. 5658' data-cod='001945'>
 <img src='imagenes/001945.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001945</div>
 <div class='underline'></div>
-<div class='articulo'>PAPEL PALETA 18"X1000´ 1X1 Ref. 5658</div>
+<div class='articulo'>PAPEL PALETA 18"X1000Â´ 1X1 Ref. 5658</div>
 <div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel pasteles en hoja 14x75 ref. 5727' data-cod='002042'>
@@ -1749,42 +1742,42 @@
 <div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='de oro papel pvc 18x2000 pies 1x1 ref. 5590' data-cod='002156'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002156.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002156</div>
 <div class='underline'></div>
 <div class='articulo'>DE ORO PAPEL PVC 18X2000 PIES 1X1 Ref. 5590</div>
 <div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='alfombra para sushi makisu 1x25 ref. 5694' data-cod='002188'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002188.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002188</div>
 <div class='underline'></div>
 <div class='articulo'>ALFOMBRA PARA SUSHI MAKISU 1X25 Ref. 5694</div>
 <div class='descripcion'>Caja = 25 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso papel 12 oz blanco 20x50 ref. 5743' data-cod='001961'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001961.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001961</div>
 <div class='underline'></div>
 <div class='articulo'>VASO PAPEL 12 OZ BLANCO 20X50 Ref. 5743</div>
 <div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso papel 4 oz san valentin 20x50 ref. 5744' data-cod='002020'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/002020.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002020</div>
 <div class='underline'></div>
 <div class='articulo'>VASO PAPEL 4 OZ SAN VALENTIN 20X50 Ref. 5744</div>
 <div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
 </div>
 <div class='item' data-cat='Comestibles' data-subcat='Avena' data-art='arbol dorado avena 40x300grs 1x1 ref. 5621' data-cod='001805'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001805.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001805</div>
 <div class='underline'></div>
 <div class='articulo'>ARBOL DORADO AVENA 40X300GRS 1X1 Ref. 5621</div>
 <div class='descripcion'>Fardo = 40 Paq</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas doble profunda transparente ref. pc-733 1x500 ref. 18122' data-cod='001570'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001570.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001570</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR BANDEJAS DOBLE PROFUNDA TRANSPARENTE Ref. PC-733 1X500 Ref. 18122</div>
@@ -1868,39 +1861,32 @@
 <div class='descripcion'>Caja = 60 Paq *</div>
 </div>
 <div class='item' data-cat='Comestibles' data-subcat='Granerias' data-art='don rodrigo garbanzos 800 grs 1x30 ref. ga-0005' data-cod='001913'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001913.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001913</div>
 <div class='underline'></div>
 <div class='articulo'>DON RODRIGO GARBANZOS 800 GRS 1X30 Ref. GA-0005</div>
 <div class='descripcion'>Fardo = 30 Paq *</div>
 </div>
 <div class='item' data-cat='Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz chaca 800 grs 1x30 ref. ma-0019' data-cod='001896'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001896.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001896</div>
 <div class='underline'></div>
 <div class='articulo'>DON RODRIGO MAIZ CHACA 800 GRS 1X30 Ref. MA-0019</div>
 <div class='descripcion'>Fardo = 30 Paq *</div>
 </div>
 <div class='item' data-cat='Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz chenchen 800 grs 1x30 ref. ma-0018' data-cod='001838'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001838.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001838</div>
 <div class='underline'></div>
 <div class='articulo'>DON RODRIGO MAIZ CHENCHEN 800 GRS 1X30 Ref. MA-0018</div>
 <div class='descripcion'>Fardo = 30 Paq *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Guantes' data-art='manos fuertes guantes de limpieza eco 1x120' data-cod='001770'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<img src='imagenes/001770.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001770</div>
 <div class='underline'></div>
 <div class='articulo'>MANOS FUERTES GUANTES DE LIMPIEZA ECO 1X120</div>
 <div class='descripcion'>Caja = 120 Unidades</div>
-</div>
-<div class='item' data-cat='Articulos del hogar' data-subcat='Sábanas' data-art='sabanas twin 264cm x 168cm microfibra' data-cod='001348'>
-<img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001348</div>
-<div class='underline'></div>
-<div class='articulo'>SABANAS TWIN 264cm X 168cm MICROFIBRA</div>
-<div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Razuradoras' data-art='razuradora gillete venus sensitive 1x2' data-cod='001387'>
 <img src='imagenes/sin_imagen.jpg' oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
