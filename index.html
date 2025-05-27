@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-05-15 21:20:05 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Desechables'>Desechables</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
+﻿<!-- Esta es la versión 2025-05-27 12:04:29 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Productos de Belleza'>Productos de Belleza</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Desechables'>Desechables</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol isopropilico 70% galon 1x6' data-cod='000188'>
 <img src='imagenes/000188.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000188</div>
 <div class='underline'></div>
@@ -768,12 +768,12 @@
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='acido muriatico galon 1x6' data-cod='001306'>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='acido muriatico galon 1x4' data-cod='001306'>
 <img src='imagenes/001306.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001306</div>
 <div class='underline'></div>
-<div class='articulo'>ACIDO MURIATICO GALON 1X6</div>
-<div class='descripcion'>Caja = 6 Unidades *</div>
+<div class='articulo'>ACIDO MURIATICO GALON 1X4</div>
+<div class='descripcion'>Caja = 4 Unidades *</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpia cristales galon 1x6' data-cod='000148'>
 <img src='imagenes/000148.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -950,39 +950,39 @@
 <div class='articulo'>NUBEH CAR WASH SHAMPOO LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='brava cepillo plastico p/ inodoros c/ base blanco 1x12' data-cod='002205'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='brava cepillo plastico p/ inodoros c/ base blanco 1x12 ref. 47039 b' data-cod='002205'>
 <img src='imagenes/002205.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002205</div>
 <div class='underline'></div>
-<div class='articulo'>BRAVA CEPILLO PLASTICO P/ INODOROS C/ BASE BLANCO 1X12</div>
+<div class='articulo'>BRAVA CEPILLO PLASTICO P/ INODOROS C/ BASE BLANCO 1X12 Ref. 47039 B</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo plastico p/ inodoros c/ base colores 1x12 ref. 047039' data-cod='001163'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo plastico p/ inodoros c/ base colores 1x12 ref. 47039 l' data-cod='001163'>
 <img src='imagenes/001163.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001163</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA CEPILLO PLASTICO P/ INODOROS C/ BASE COLORES 1X12 Ref. 047039</div>
+<div class='articulo'>LINDA CEPILLO PLASTICO P/ INODOROS C/ BASE COLORES 1X12 Ref. 47039 L</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='dura clean cepillo de mano planchita 1x12 ref. 200090' data-cod='001745'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='dura clean cepillo de mano planchita 1x12 ref. 77153' data-cod='001745'>
 <img src='imagenes/001745.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001745</div>
 <div class='underline'></div>
-<div class='articulo'>DURA CLEAN CEPILLO DE MANO PLANCHITA 1X12 Ref. 200090</div>
+<div class='articulo'>DURA CLEAN CEPILLO DE MANO PLANCHITA 1X12 Ref. 77153</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano ecoovalin 1x12 ref. 200083' data-cod='001748'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano ecoovalin 1x12 ref. 00083' data-cod='001748'>
 <img src='imagenes/001748.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001748</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA CEPILLO DE MANO ECOOVALIN 1X12 REF. 200083</div>
+<div class='articulo'>LINDA CEPILLO DE MANO ECOOVALIN 1X12 Ref. 00083</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano plancha 1x12 ref. 921055' data-cod='001197'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano plancha 1x12 ref. 00090' data-cod='001197'>
 <img src='imagenes/001197.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001197</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA CEPILLO DE MANO PLANCHA 1X12 Ref. 921055</div>
+<div class='articulo'>LINDA CEPILLO DE MANO PLANCHA 1X12 Ref. 00090</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Cubetas' data-art='duraclean cubeta c/ ruedas y exprimidor 20 lts 1x1' data-cod='002191'>
@@ -1013,25 +1013,25 @@
 <div class='articulo'>BRAVA DESTUPIDOR DE INODOROS DE GOMA 1X12</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Destupidor' data-art='linda destupidor de inodoros de goma 1x12' data-cod='002196'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Destupidor' data-art='linda destupidor de inodoros de goma 1x12 ref. 02004' data-cod='002196'>
 <img src='imagenes/002196.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002196</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA DESTUPIDOR DE INODOROS DE GOMA 1X12</div>
-<div class='descripcion'>Docena = 12 Unidades *</div>
+<div class='articulo'>LINDA DESTUPIDOR DE INODOROS DE GOMA 1X12 Ref. 02004</div>
+<div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Escobas' data-art='linda escoba caribe 1x12 ref. 040806' data-cod='001098'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Escobas' data-art='linda escoba caribe 1x12 ref. 40806' data-cod='001098'>
 <img src='imagenes/001098.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001098</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA ESCOBA CARIBE 1X12 Ref. 040806</div>
+<div class='articulo'>LINDA ESCOBA CARIBE 1X12 Ref. 40806</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Escobas' data-art='linda escoba super economica 1x12 ref. 100014' data-cod='001541'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Escobas' data-art='linda escoba super economica 1x12 ref. 00014' data-cod='001541'>
 <img src='imagenes/001541.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001541</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA ESCOBA SUPER ECONOMICA 1X12 Ref. 100014</div>
+<div class='articulo'>LINDA ESCOBA SUPER ECONOMICA 1X12 Ref. 00014</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Escobas' data-art='brava cepillo de piso + goma 1x12' data-cod='002190'>
@@ -1061,6 +1061,13 @@
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO BRILLO BOLA PEQUEÑA 48X12 Ref. 5665 / 5799</div>
 <div class='descripcion'>Caja = 48 Paq de 12 Unidades *</div>
+</div>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola pequeño 48x12 ref. 5799' data-cod='002183'>
+<img src='imagenes/002183.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002183</div>
+<div class='underline'></div>
+<div class='articulo'>BRILLISIMO BRILLO BOLA PEQUEÑO 48X12 Ref. 5799</div>
+<div class='descripcion'>Caja = 48 Paq de 12 Unidades</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Fregado' data-art='brillisimo brillo fino 48x12 ref. 5802' data-cod='002184'>
 <img src='imagenes/002184.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1097,11 +1104,11 @@
 <div class='articulo'>MANOS SUAVES GUANTES DE LIMPIEZA 1X120 Ref. 881325</div>
 <div class='descripcion'>Caja = 120 Unidades  = (10 Paquetes de 12 pares)*</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Otros' data-art='letrero piso mojado 1x1' data-cod='002204'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Otros' data-art='letrero piso mojado 1x1 ref. 002502' data-cod='002204'>
 <img src='imagenes/002204.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002204</div>
 <div class='underline'></div>
-<div class='articulo'>LETRERO PISO MOJADO 1X1</div>
+<div class='articulo'>LETRERO PISO MOJADO 1X1 Ref. 002502</div>
 <div class='descripcion'>1 Unidad</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Palitas' data-art='brava palita recogedora con banda 1x12' data-cod='002197'>
@@ -1111,11 +1118,11 @@
 <div class='articulo'>BRAVA PALITA RECOGEDORA CON BANDA 1X12</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Palitas' data-art='linda palita recogedora 1x12 ref. 102059' data-cod='001162'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Palitas' data-art='linda palita recogedora 1x12 ref. 02059' data-cod='001162'>
 <img src='imagenes/001162.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001162</div>
 <div class='underline'></div>
-<div class='articulo'>LINDA PALITA RECOGEDORA 1X12 Ref. 102059</div>
+<div class='articulo'>LINDA PALITA RECOGEDORA 1X12 Ref. 02059</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Palitas' data-art='linda palita recogedora con banda 1x12' data-cod='002198'>
@@ -1125,12 +1132,12 @@
 <div class='articulo'>LINDA PALITA RECOGEDORA CON BANDA 1X12</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
 </div>
-<div class='item' data-cat='Articulos de limpieza' data-subcat='Saca Agua' data-art='saca agua c/palo (floor squeege)' data-cod='001355'>
+<div class='item' data-cat='Articulos de limpieza' data-subcat='Saca Agua' data-art='saca agua c/palo (floor squeege) ref. 87103' data-cod='001355'>
 <img src='imagenes/001355.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001355</div>
 <div class='underline'></div>
-<div class='articulo'>SACA AGUA C/PALO (FLOOR SQUEEGE)</div>
-<div class='descripcion'>Docena = 12 Unidades *</div>
+<div class='articulo'>SACA AGUA C/PALO (FLOOR SQUEEGE) Ref. 87103</div>
+<div class='descripcion'>Caja = 12 Unidades *</div>
 </div>
 <div class='item' data-cat='Articulos de limpieza' data-subcat='Suapers' data-art='dura clean  suaper #28 fibra 1x12 ref. dc28' data-cod='001813'>
 <img src='imagenes/001813.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1536,14 +1543,14 @@
 <div class='codigo'>001923</div>
 <div class='underline'></div>
 <div class='articulo'>PALILLOS REDONDOS 10X300 Ref. 5691</div>
-<div class='descripcion'>Caja = 10 Paq de 300 Unidades</div>
+<div class='descripcion'>Paq = 10 Unidades de 300 Uds c/u</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos redondos 12x100 ref. 5764' data-cod='001876'>
 <img src='imagenes/001876.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001876</div>
 <div class='underline'></div>
 <div class='articulo'>PALILLOS REDONDOS 12X100 Ref. 5764</div>
-<div class='descripcion'>Caja = 12 Paq de 100 Unidades</div>
+<div class='descripcion'>Paq = 12 Unidades de 100 Uds c/u</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos bola roja 12cm 100x100 ref. 5688' data-cod='002175'>
 <img src='imagenes/002175.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1579,6 +1586,13 @@
 <div class='underline'></div>
 <div class='articulo'>PALITOS FRUTICAS MIX 12CM 100X100 Ref. 5761</div>
 <div class='descripcion'>Caja = 100 Paq de 100 Unidades</div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 10" 100x100 ref. 5556' data-cod='001840'>
+<img src='imagenes/001840.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001840</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5556</div>
+<div class='descripcion'>Caja = 100 Paq de 100 Unidades *</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 10" 100x100 ref. 5822' data-cod='002170'>
 <img src='imagenes/002170.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1635,13 +1649,6 @@
 <div class='underline'></div>
 <div class='articulo'>PALITOS PERLA PLATEADA 12CM 100X100 Ref. 5759</div>
 <div class='descripcion'>Caja = 100 Paq de 100 Unidades</div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos pxpincho 10" 100x100 ref. 5556' data-cod='001840'>
-<img src='imagenes/001840.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001840</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS PXPINCHO 10" 100X100 Ref. 5556</div>
-<div class='descripcion'>Caja = 100 Paq de 100 Unidades *</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos sombrilla 50x144 ref. 5763' data-cod='001907'>
 <img src='imagenes/001907.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1761,13 +1768,6 @@
 <div class='underline'></div>
 <div class='articulo'>VASO CONICO DE PAPEL PARAFINADO 4.5OZ 25X200 Ref. PB0110</div>
 <div class='descripcion'>Caja = 25 Paq de 200 Unidades</div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso de papel 7oz blanco (0c) 20x50 ref. pv1019' data-cod='001814'>
-<img src='imagenes/001814.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001814</div>
-<div class='underline'></div>
-<div class='articulo'>VASO DE PAPEL 7OZ BLANCO (0C) 20X50 REF. PV1019</div>
-<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso papel 12 oz blanco 20x50 ref. 5743' data-cod='001961'>
 <img src='imagenes/001961.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1963,7 +1963,7 @@
 <div class='codigo'>000374</div>
 <div class='underline'></div>
 <div class='articulo'>BICARBONATO DE SODIO</div>
-<div class='descripcion'>Saco = 25 KG  (55 lbs)</div>
+<div class='descripcion'>FUN = 25 KG  (55 lbs)</div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='detergente en polvo 30 lbs 1x1' data-cod='001166'>
 <img src='imagenes/001166.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2012,6 +2012,6 @@
 <div class='codigo'>000442</div>
 <div class='underline'></div>
 <div class='articulo'>SAL</div>
-<div class='descripcion'>Saco = 25 KG  (55 lbs)</div>
+<div class='descripcion'>FUN = 25 KG  (55 lbs)</div>
 </div>
 </div><button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style='position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#003366;color:white;border:none;border-radius:5px;cursor:pointer;'>Volver arriba</button><div id='overlay' onclick='cerrarOverlay()'><img id='imgAmpliada' src='' oncontextmenu='return false;' ondragstart='return false;' draggable='false'></div><script>function ampliarImagen(img){document.getElementById('imgAmpliada').src=img.src;document.getElementById('overlay').style.display='flex';}function cerrarOverlay(){document.getElementById('overlay').style.display='none';}function buscar(){var input=document.getElementById('buscador').value.toLowerCase();var items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var cod=items[i].getAttribute('data-cod');var art=items[i].getAttribute('data-art');if(cod.includes(input)||art.includes(input)){items[i].style.display='block';}else{items[i].style.display='none';}}}function actualizarSubcategorias(){var cat=document.getElementById('categoriaSelect').value;var subcatSelect=document.getElementById('subcategoriaSelect');subcatSelect.innerHTML='<option value="">Todas las subcategorias</option>';var items=document.getElementsByClassName('item');var subcats={};for(var i=0;i<items.length;i++){if(cat==''||items[i].getAttribute('data-cat')==cat){subcats[items[i].getAttribute('data-subcat')]=true;}}for(var key in subcats){subcatSelect.innerHTML+='<option value="'+key+'">'+key+'</option>';}}function filtrar(){var cat=document.getElementById('categoriaSelect').value;var subcat=document.getElementById('subcategoriaSelect').value;var items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var item=items[i];var itemCat=item.getAttribute('data-cat');var itemSubcat=item.getAttribute('data-subcat');if((cat==''||itemCat==cat)&&(subcat==''||itemSubcat==subcat)){item.style.display='block';}else{item.style.display='none';}}}</script></body></html>
