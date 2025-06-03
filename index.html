@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-03 13:09:07 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-03 16:24:49 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -543,6 +543,13 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMOROL BLANCO GALON 1X6</div>
 <div class='descripcion'><span class='izquierda'>Caja = 6 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh amorol gel 1/2 gl 1x6' data-cod='001374'>
+<img src='imagenes/001374.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001374</div>
+<div class='underline'></div>
+<div class='articulo'>NUBEH AMOROL GEL 1/2 GL 1X6</div>
+<div class='descripcion'><span class='izquierda'>Caja = 6 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh car wash shampoo galon 1x6' data-cod='000191'>
 <img src='imagenes/000191.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1909,6 +1916,181 @@
 <div class='articulo'>PLASTIFAR BANDEJAS DOBLE PROFUNDA TRANSPARENTE Ref. PC-733 1X500 Ref. 18122</div>
 <div class='descripcion'><span class='izquierda'>Caja = 500 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 8x8 blanca sin division 2x100 ref. 12114' data-cod='001553'>
+<img src='imagenes/001553.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001553</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 8X8 BLANCA SIN DIVISION 2X100 Ref. 12114</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 2 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar ban transp fruta 1 pinta ref. pc-742 1x1000 ref. 16006' data-cod='001578'>
+<img src='imagenes/001578.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001578</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BAN TRANSP FRUTA 1 PINTA Ref. PC-742 1X1000 Ref. 16006</div>
+<div class='descripcion'><span class='izquierda'>Caja = 1000 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandeja 8x8 negra sin division 2x100 ref. 12533' data-cod='001579'>
+<img src='imagenes/001579.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001579</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJA 8X8 NEGRA SIN DIVISION 2X100 Ref. 12533</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 2 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 6x6 hamburguer 4x50 ref. 12300' data-cod='001741'>
+<img src='imagenes/001741.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001741</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 6X6 HAMBURGUER 4X50 Ref. 12300</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 4 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas doble mediana (especial) 1x200 ref. 12068' data-cod='001750'>
+<img src='imagenes/001750.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001750</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS DOBLE MEDIANA (ESPECIAL) 1X200 Ref. 12068</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 200 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 4s blanca1x500 ref. 12327' data-cod='001762'>
+<img src='imagenes/001762.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001762</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 4S BLANCA1X500 Ref. 12327</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 16s blanca 2x125 ref. 12082' data-cod='001763'>
+<img src='imagenes/001763.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001763</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 16S BLANCA 2X125 Ref. 12082</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 2 Paq de 125 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 17s negra1x500 ref. 12244' data-cod='001764'>
+<img src='imagenes/001764.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001764</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 17S NEGRA1X500 Ref. 12244</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 8x8 blanca con division 2x100 ref. 12115' data-cod='001765'>
+<img src='imagenes/001765.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001765</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 8X8 BLANCA CON DIVISION 2X100 Ref. 12115</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 2 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas doble pequeña 4x125 ref. 12050' data-cod='001766'>
+<img src='imagenes/001766.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001766</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS DOBLE PEQUEÑA 4X125 Ref. 12050</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 4 Paq de 125 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas doble mediana transparente 1x500 ref. pc-732' data-cod='001832'>
+<img src='imagenes/001832.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001832</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS DOBLE MEDIANA TRANSPARENTE 1X500 Ref. PC-732</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandeja bio 7x7 mfpp sin division (mf707) 4x50 ca ref. 45001' data-cod='001960'>
+<img src='imagenes/001960.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001960</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJA BIO 7X7 MFPP SIN DIVISION (MF707) 4X50 CA Ref. 45001</div>
+<div class='descripcion'><span class='izquierda'>Caja = 4 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bio bandeja 9x6 (ep206) 14x10 ca ref. 40023' data-cod='001977'>
+<img src='imagenes/001977.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001977</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BIO BANDEJA 9X6 (EP206) 14X10 CA Ref. 40023</div>
+<div class='descripcion'><span class='izquierda'>Caja = 14 Paq de 10 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandeja doble transparente pc-53 1x500 ref. 16020' data-cod='002003'>
+<img src='imagenes/002003.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002003</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJA DOBLE TRANSPARENTE PC-53 1x500 Ref. 16020</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas doble llana transp. pc-731 1x500 ref. 18120' data-cod='002004'>
+<img src='imagenes/002004.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002004</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS DOBLE LLANA TRANSP. PC-731 1X500 Ref. 18120</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar ref. 12020 bandejas  #1 1x500 ref. 12020' data-cod='002005'>
+<img src='imagenes/002005.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002005</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR Ref. 12020 BANDEJAS  #1 1X500 Ref. 12020</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 17s blanca 1x500 ref. 12022' data-cod='002006'>
+<img src='imagenes/002006.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002006</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 17S BLANCA 1x500 Ref. 12022</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandeja doble transp (pc600) 1x500 ref. 16050' data-cod='002008'>
+<img src='imagenes/002008.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002008</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJA DOBLE TRANSP (PC600) 1X500 Ref. 16050</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar ban 6x6 bionature (ep225) 40x10 ca ref. 40022' data-cod='002009'>
+<img src='imagenes/002009.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002009</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BAN 6X6 BIONATURE (EP225) 40X10 CA Ref. 40022</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 10 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 3p blanca  2x200 ref. 12460' data-cod='002016'>
+<img src='imagenes/002016.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002016</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 3P BLANCA  2X200 Ref. 12460</div>
+<div class='descripcion'><span class='izquierda'>Caja = 2 Paq de 200 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas  10" x 14" 1x100 ref. 12049' data-cod='002044'>
+<img src='imagenes/002044.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002044</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS  10" x 14" 1X100 Ref. 12049</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandeja 1.5 1x1000 ref. 12261' data-cod='002077'>
+<img src='imagenes/002077.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002077</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJA 1.5 1X1000 Ref. 12261</div>
+<div class='descripcion'><span class='izquierda'>Caja = 1000 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bio bandeja c- 460 cg box  4x50 ref. 12061 - 12740' data-cod='002127'>
+<img src='imagenes/002127.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002127</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BIO BANDEJA C- 460 CG BOX  4X50 Ref. 12061 - 12740</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 4 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas 2d 1x500 ref. 12024' data-cod='001751'>
+<img src='imagenes/001751.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001751</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS 2D 1X500 Ref. 12024</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 500 Unidades  </span><span class='derecha'>(far / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='plastifar bandejas  2s 1x500 ref. 12025' data-cod='002015'>
+<img src='imagenes/002015.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002015</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BANDEJAS  2S 1X500 Ref. 12025</div>
+<div class='descripcion'><span class='izquierda'>Caja = 500 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Cajas' data-art='plastifar bionature cajas p/llevar #1 (tob-k1) 9x50 ref. 19055' data-cod='001564'>
 <img src='imagenes/001564.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001564</div>
@@ -1916,11 +2098,81 @@
 <div class='articulo'>PLASTIFAR BIONATURE CAJAS P/LLEVAR #1 (TOB-K1) 9X50 Ref. 19055</div>
 <div class='descripcion'><span class='izquierda'>Caja = 9 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Calimetes' data-art='plastifar calimete clear envuelto 7.75 ' f/c 24x500 ref. 15006' data-cod='001562'>
+<img src='imagenes/001562.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001562</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR CALIMETE CLEAR ENVUELTO 7.75 ' F/C 24X500 Ref. 15006</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Paq de 500 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Calimetes' data-art='plastifar tapas calimete p/vaso foam #16 10x100 ref. 11026' data-cod='001775'>
+<img src='imagenes/001775.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001775</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPAS CALIMETE P/VASO FOAM #16 10X100 Ref. 11026</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Calimetes' data-art='plastifar tapas calimete (p/vaso foam #12 ref 13001) 10x100 ref. 11027' data-cod='001788'>
+<img src='imagenes/001788.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001788</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPAS CALIMETE (P/VASO FOAM #12 Ref 13001) 10X100 Ref. 11027</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar cucharas plasticas 40x25 ref. 14130' data-cod='001549'>
+<img src='imagenes/001549.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001549</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR CUCHARAS PLASTICAS 40X25 Ref. 14130</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar cucharas heavy weight clear  40x25 ref. 17120' data-cod='001776'>
+<img src='imagenes/001776.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001776</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR CUCHARAS HEAVY WEIGHT CLEAR  40X25 Ref. 17120</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar cuchillos heavy weight clear  40x25 ref. 17122' data-cod='001777'>
+<img src='imagenes/001777.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001777</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR CUCHILLOS HEAVY WEIGHT CLEAR  40X25 Ref. 17122</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar plasticombo no.2 (tenedor - cuchillo - servilleta) 5x100 ref. 14025' data-cod='001559'>
+<img src='imagenes/001559.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001559</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLASTICOMBO No.2 (Tenedor - Cuchillo - Servilleta) 5X100 Ref. 14025</div>
+<div class='descripcion'><span class='izquierda'>Caja = 5 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar plasticombo no.3 (tenedor- cuchara-cuchillo- servilleta) 5x100 ref. 14026' data-cod='001791'>
+<img src='imagenes/001791.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001791</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLASTICOMBO No.3 (Tenedor- Cuchara-Cuchillo- Servilleta) 5X100 Ref. 14026</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 5 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar cuchillos plasticos 40x25 ref. 14002' data-cod='001550'>
 <img src='imagenes/001550.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001550</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR CUCHILLOS PLASTICOS 40X25 Ref. 14002</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar tenedores heavy weight clear 40x25 ref. 17121' data-cod='001778'>
+<img src='imagenes/001778.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001778</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TENEDORES HEAVY WEIGHT CLEAR 40X25 Ref. 17121</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Cuberteria' data-art='plastifar tenedores plasticos blancos (cajas) 40x25 ref. 14131' data-cod='001797'>
+<img src='imagenes/001797.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001797</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TENEDORES PLASTICOS BLANCOS (CAJAS) 40X25 Ref. 14131</div>
 <div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar env. plast. souffle 4 oz color negro 20x125 ref 11272' data-cod='001561'>
@@ -1944,6 +2196,160 @@
 <div class='articulo'>PLASTIFAR TAPA PARA ENVASES SOUFFLE 3 1/4 , 4, 5 1/2 (20X125) Ref. 18091</div>
 <div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases #4oz 60x50 ref. 11022' data-cod='000988'>
+<img src='imagenes/000988.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>000988</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES #4oz 60X50 Ref. 11022</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 60 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli 8 onzas 10x50 ref. 18020' data-cod='001566'>
+<img src='imagenes/001566.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001566</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES DELI 8 ONZAS 10x50 Ref. 18020</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa plana pet lion (pl12h16) con ranura 10x100 ref. 18080' data-cod='001568'>
+<img src='imagenes/001568.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001568</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PLANA PET LION (PL12H16) CON RANURA 10X100 Ref. 18080</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli de 32 onzas white 10x50 ref. 18072' data-cod='001569'>
+<img src='imagenes/001569.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001569</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES DELI DE 32 ONZAS WHITE 10x50 Ref. 18072</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar bio sancochero con tapa soup bowl 32 oz 6x20 ref. 13181' data-cod='001739'>
+<img src='imagenes/001739.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001739</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BIO SANCOCHERO CON TAPA SOUP BOWL 32 OZ 6X20 Ref. 13181</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 6 Paq de 20 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapas envases 3,4,5 oz. 20x50 ref. 11031' data-cod='001749'>
+<img src='imagenes/001749.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001749</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPAS ENVASES 3,4,5 oz. 20x50 Ref. 11031</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet sin ranura lion (pl640) caja 1x100 ref. 18228' data-cod='001794'>
+<img src='imagenes/001794.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001794</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) CAJA 1X100 Ref. 18228</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa domo con hoyo 1" lion (pd16d) caja 10x100 ref. 18223' data-cod='001795'>
+<img src='imagenes/001795.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001795</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO 1" LION (PD16D) CAJA 10X100 Ref. 18223</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases foam con tapas 24 oz 8x20 ref. 13030' data-cod='001973'>
+<img src='imagenes/001973.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001973</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES FOAM CON TAPAS 24 OZ 8x20 Ref. 13030</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 8 Paq de 20 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet cxr lion (pl910) 25x100 ca ref. 18141' data-cod='002001'>
+<img src='imagenes/002001.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002001</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CxR LION (PL910) 25x100 CA Ref. 18141</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa domo s/h lion (pd12h16) 10x100 ca ref. 18220' data-cod='002013'>
+<img src='imagenes/002013.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002013</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO S/H LION (PD12H16) 10x100 CA Ref. 18220</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases #5oz 60x50 ref. 11023' data-cod='002022'>
+<img src='imagenes/002022.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002022</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES #5oz 60X50 Ref. 11023</div>
+<div class='descripcion'><span class='izquierda'>Caja = 60 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet s/r lion (pl1214) 25x100 ca ref. 18226' data-cod='002027'>
+<img src='imagenes/002027.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002027</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET S/R LION (PL1214) 25x100 CA Ref. 18226</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases souffle 1 oz  color negro (s100) 20x250 ref. 11280' data-cod='002070'>
+<img src='imagenes/002070.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002070</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASES SOUFFLE 1 OZ  COLOR NEGRO (S100) 20x250 Ref. 11280</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 250 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Fuentes' data-art='plastifar fuente base  negra gde. con tapa ref. pc-751 1x200 ref. 16010' data-cod='001560'>
+<img src='imagenes/001560.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001560</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR FUENTE BASE  NEGRA GDE. CON TAPA Ref. PC-751 1X200 Ref. 16010</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar bio plato foam redondo plano no.9 20x25 (fardo doble) ref. 12006 - 12808' data-cod='001551'>
+<img src='imagenes/001551.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001551</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BIO PLATO FOAM REDONDO PLANO NO.9 20X25 (FARDO DOBLE) Ref. 12006 - 12808</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 20 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar plato foam redondo plano no.6 40x25 ref. 12009' data-cod='001740'>
+<img src='imagenes/001740.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001740</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLATO FOAM REDONDO PLANO NO.6 40X25 Ref. 12009</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar plato peq. biofoam redondo plano no.6 40x25 ref. 12719' data-cod='001831'>
+<img src='imagenes/001831.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001831</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLATO PEQ. BIOFOAM REDONDO PLANO NO.6 40X25 Ref. 12719</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar plato papel 7.25" bionature 10x100 ca ref. 19138' data-cod='002101'>
+<img src='imagenes/002101.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002101</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLATO PAPEL 7.25" BIONATURE 10X100 CA Ref. 19138</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar plato hondo no. 9 20x25 ref. 12066' data-cod='001772'>
+<img src='imagenes/001772.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001772</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLATO HONDO No. 9 20X25 Ref. 12066</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 20 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Platos' data-art='plastifar platos #10 4x125 ref. 12581' data-cod='001986'>
+<img src='imagenes/001986.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001986</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR PLATOS #10 4X125 Ref. 12581</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 4 Paq de 125 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso papel blanco 8oz bio (phc8-w) 20x50 ref. 19064' data-cod='001806'>
+<img src='imagenes/001806.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001806</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PAPEL BLANCO 8OZ BIO (PHC8-W) 20X50 Ref. 19064</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso bajo pet 9oz lion (pt9r) caja 20x50 ref. 18207' data-cod='001713'>
 <img src='imagenes/001713.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001713</div>
@@ -1963,7 +2369,35 @@
 <div class='codigo'>001793</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR VASO PET 16oz SUNNY PACK (PT16D) CAJA 40x25 Ref. 18201</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(caj / far)</span></div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar copas ps inyectado p/champagne 24x6 ref. 17171' data-cod='001987'>
+<img src='imagenes/001987.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001987</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR COPAS PS INYECTADO P/CHAMPAGNE 24X6 Ref. 17171</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Paq de 6 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 10oz sunny pack (pt10d) 40x25 ca ref. 18210' data-cod='002000'>
+<img src='imagenes/002000.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002000</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 10oz SUNNY PACK (PT10D) 40x25 CA Ref. 18210</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar copa ps inyectado p/vino  24x8 ref. 17175' data-cod='002019'>
+<img src='imagenes/002019.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002019</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR COPA PS INYECTADO P/VINO  24X8 Ref. 17175</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Paq de 8 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 7oz lion (pt7) caja 20x50 ref. 18204' data-cod='002130'>
+<img src='imagenes/002130.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002130</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 7OZ LION (PT7) CAJA 20x50 Ref. 18204</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa blanca bebidas caliente  (pl6tl) 10x100 ref. 11390' data-cod='001572'>
 <img src='imagenes/001572.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1971,5 +2405,61 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR TAPA BLANCA BEBIDAS CALIENTE  (PL6TL) 10X100 Ref. 11390</div>
 <div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso plastico no. 7 50x50 ref. 11011' data-cod='001394'>
+<img src='imagenes/001394.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001394</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PLASTICO NO. 7 50X50 Ref. 11011</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 50 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos plasticos #10 50x50 ref. 18180' data-cod='001555'>
+<img src='imagenes/001555.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001555</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PLASTICOS #10 50X50 Ref. 18180</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 50 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pp 10 oz (pc10) 20x50 ref. 18012' data-cod='001732'>
+<img src='imagenes/001732.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001732</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PP 10 OZ (PC10) 20x50 Ref. 18012</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 12oz sunny pack (tp22) caja 40x25 ref. 18215' data-cod='001792'>
+<img src='imagenes/001792.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001792</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 12oz SUNNY PACK (TP22) CAJA 40x25 Ref. 18215</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 16 (pc16) 20x50 ref. 18048' data-cod='002012'>
+<img src='imagenes/002012.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002012</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PP 16 (PC16) 20x50 Ref. 18048</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 12 oz plastifar 20x50 ref. 18058' data-cod='002021'>
+<img src='imagenes/002021.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002021</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PP 12 OZ PLASTIFAR 20X50 Ref. 18058</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapas vasos (s-100) 50x100 ref. 18090' data-cod='002071'>
+<img src='imagenes/002071.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002071</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPAS VASOS (S-100) 50x100 Ref. 18090</div>
+<div class='descripcion'><span class='izquierda'>Caja = 50 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='0' data-art='plastifar tapa pp recesada para deli clear 10x50 ref. 18181' data-cod='001567'>
+<img src='imagenes/001567.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001567</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PP RECESADA PARA DELI CLEAR 10X50 Ref. 18181</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
 </div>
 </div><button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style='position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#003366;color:white;border:none;border-radius:5px;cursor:pointer;'>Volver arriba</button><div id='overlay' onclick='cerrarOverlay()'><img id='imgAmpliada' src='' oncontextmenu='return false;' ondragstart='return false;' draggable='false'></div><script>function ampliarImagen(img){document.getElementById('imgAmpliada').src=img.src;document.getElementById('overlay').style.display='flex';}function cerrarOverlay(){document.getElementById('overlay').style.display='none';}function buscar(){var input=document.getElementById('buscador').value.toLowerCase().split(' ');var items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var texto=items[i].getAttribute('data-art')+' '+items[i].getAttribute('data-cod');var visible=input.every(function(p){return texto.includes(p);});items[i].style.display=visible?'block':'none';}}function actualizarSubcategorias(){var cat=document.getElementById('categoriaSelect').value;var subcatSelect=document.getElementById('subcategoriaSelect');subcatSelect.innerHTML='<option value="">Todas las subcategorias</option>';var items=document.getElementsByClassName('item');var subcats={};for(var i=0;i<items.length;i++){if(cat==''||items[i].getAttribute('data-cat')==cat){subcats[items[i].getAttribute('data-subcat')]=true;}}for(var key in subcats){subcatSelect.innerHTML+='<option value="'+key+'">'+key+'</option>';}}function filtrar(){var cat=document.getElementById('categoriaSelect').value,subcat=document.getElementById('subcategoriaSelect').value,items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var item=items[i],itemCat=item.getAttribute('data-cat'),itemSubcat=item.getAttribute('data-subcat');item.style.display=(cat==''||itemCat==cat)&&(subcat==''||itemSubcat==subcat)?'block':'none';}document.getElementById('buscador').value='';actualizarURL(cat,subcat,'');}</script></body></html>
