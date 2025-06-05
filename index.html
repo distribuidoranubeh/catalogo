@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-04 20:05:33 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-05 12:04:01 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 140px; padding: 10px; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }</style></head><body><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -1020,13 +1020,6 @@
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Razuradoras' data-art='razuradora gillete venus sensitive 1x2' data-cod='001387'>
-<img src='imagenes/001387.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001387</div>
-<div class='underline'></div>
-<div class='articulo'>RAZURADORA GILLETE VENUS SENSITIVE 1X2</div>
-<div class='descripcion'><span class='izquierda'>Paq = 2 Unidades  </span><span class='derecha'>(paq / paq)</span></div>
-</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Repelente' data-art='mosqui-stop repelente spray 4 oz 1x24' data-cod='002099'>
 <img src='imagenes/002099.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002099</div>
@@ -1881,6 +1874,230 @@
 <div class='articulo'>PLASTIFAR ENV. PLAST. SOUFFLE 4 OZ COLOR NEGRO 20X125 Ref 11272</div>
 <div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd12) 1x240 ref. 18316' data-cod='002216'>
+<img src='imagenes/002216.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002216</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD12) 1X240 Ref. 18316</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 4.43" ANCHO x 1.70" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd16) 1x240 ref. 18317' data-cod='002217'>
+<img src='imagenes/002217.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002217</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD16) 1X240 Ref. 18317</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 4.43" ANCHO x 2.31" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd20) 1x200 ref. 18318' data-cod='002218'>
+<img src='imagenes/002218.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002218</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD20) 1X200 Ref. 18318</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 1.76" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd202) 1x150 ref. 18314' data-cod='002214'>
+<img src='imagenes/002214.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002214</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD202) 1X150 Ref. 18314</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 5.05" LARGO x 8.56" ANCHO x 3.18" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd24) 1x200 ref. 18319' data-cod='002219'>
+<img src='imagenes/002219.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002219</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD24) 1X200 Ref. 18319</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.08" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd32) 1x200 ref. 18320' data-cod='002220'>
+<img src='imagenes/002220.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002220</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD32) 1X200 Ref. 18320</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.67" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd8) 1x240 ref. 18315' data-cod='002215'>
+<img src='imagenes/002215.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002215</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK (PRD8) 1X240 Ref. 18315</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 4.43" ANCHO x 1.15" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock con hoyos (prd20) 1x200 ref. 18463' data-cod='002228'>
+<img src='imagenes/002228.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002228</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK CON HOYOS (PRD20) 1X200 Ref. 18463</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 1.76" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock con hoyos (prd24) 1x200 ref. 18464' data-cod='002229'>
+<img src='imagenes/002229.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002229</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCK CON HOYOS (PRD24) 1X200 Ref. 18464</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.08" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilockcon hoyos  (prd32) 1x200 ref. 18465' data-cod='002230'>
+<img src='imagenes/002230.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002230</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR ILOCKCON HOYOS  (PRD32) 1X200 Ref. 18465</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.67" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte12) 1x240 ref. 18452' data-cod='002234'>
+<img src='imagenes/002234.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002234</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE12) 1X240 Ref. 18452</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 4.43" ANCHO x 1.70" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte16) 1x240 ref. 18453' data-cod='002235'>
+<img src='imagenes/002235.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002235</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE16) 1X240 Ref. 18453</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 4.43" ANCHO x 2.31" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte20) 1x200 ref. 18454' data-cod='002236'>
+<img src='imagenes/002236.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002236</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE20) 1X200 Ref. 18454</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 1.76" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte202) 1x150 ref. 18461' data-cod='002232'>
+<img src='imagenes/002232.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002232</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE202) 1X150 Ref. 18461</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 5.05" LARGO x 8.56" ANCHO x 3.18" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte24) 1x200 ref. 18451' data-cod='002237'>
+<img src='imagenes/002237.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002237</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE24) 1X200 Ref. 18451</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.08" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte32) 1x200 ref. 18462' data-cod='002238'>
+<img src='imagenes/002238.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002238</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE32) 1X200 Ref. 18462</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades 5.76" LARGO x 6.83" ANCHO x 2.67" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular tamp evident ilock (prte8) 1x240 ref. 18447' data-cod='002233'>
+<img src='imagenes/002233.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002233</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE RECTANGULAR TAMP EVIDENT ILOCK (PRTE8) 1X240 Ref. 18447</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.76" LARGO x 6.83" ANCHO x 2.67" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (prnd12) 1x240 ref. 18322' data-cod='002222'>
+<img src='imagenes/002222.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002222</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PRND12) 1X240 Ref. 18322</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 6.52" LARGO x 5.67" ANCHO x 2.37" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (prnd16) 1x240 ref. 18323' data-cod='002223'>
+<img src='imagenes/002223.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002223</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PRND16) 1X240 Ref. 18323</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 6.52" LARGO x 5.67" ANCHO x 2.92" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (prnd24) 1x150 ref. 18324' data-cod='002224'>
+<img src='imagenes/002224.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002224</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PRND24) 1X150 Ref. 18324</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 7.70" LARGO x 6.85" ANCHO x 2.83" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (prnd32) 1x150 ref. 18325' data-cod='002225'>
+<img src='imagenes/002225.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002225</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PRND32) 1X150 Ref. 18325</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 7.70" LARGO x 6.85" ANCHO x 3.47" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (prnd8) 1x240 ref. 18321' data-cod='002221'>
+<img src='imagenes/002221.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002221</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PRND8) 1X240 Ref. 18321</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 6.52" LARGO x 5.67" ANCHO x 1.85" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (psb12) 1x256 ref. 18327' data-cod='002227'>
+<img src='imagenes/002227.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002227</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PSB12) 1X256 Ref. 18327</div>
+<div class='descripcion'><span class='izquierda'>Caja = 256 Unidades 5.53" LARGO x 4.69" ANCHO x 3.22" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo ilock (psb8) 1x256 ref. 18326' data-cod='002226'>
+<img src='imagenes/002226.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002226</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO ILOCK (PSB8) 1X256 Ref. 18326</div>
+<div class='descripcion'><span class='izquierda'>Caja = 256 Unidades 5.53" LARGO x 4.69" ANCHO x 2.59" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock ( prnte24) 1x150 ref. 18456' data-cod='002244'>
+<img src='imagenes/002244.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002244</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK ( PRNTE24) 1X150 Ref. 18456</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 6.52" LARGO x 5.67" ANCHO x 2.92" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (prnte12) 1x240 ref. 18458' data-cod='002242'>
+<img src='imagenes/002242.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002242</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PRNTE12) 1X240 Ref. 18458</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 5.53" LARGO x 4.69" ANCHO x 3.22" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (prnte16) 1x240 ref. 18455' data-cod='002243'>
+<img src='imagenes/002243.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002243</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PRNTE16) 1X240 Ref. 18455</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 6.52" LARGO x 5.67" ANCHO x 2.92" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (prnte32) 1x150 ref. 18459' data-cod='002245'>
+<img src='imagenes/002245.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002245</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PRNTE32) 1X150 Ref. 18459</div>
+<div class='descripcion'><span class='izquierda'>Caja = 150 Unidades 7.70" LARGO x 6.85" ANCHO x 3.47" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (prnte8) 1x240 ref. 18457' data-cod='002241'>
+<img src='imagenes/002241.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002241</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PRNTE8) 1X240 Ref. 18457</div>
+<div class='descripcion'><span class='izquierda'>Caja = 240 Unidades 6.52" LARGO x 5.67" ANCHO x 1.85" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (psbte12) 1x256 ref. 18444' data-cod='002240'>
+<img src='imagenes/002240.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002240</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PSBTE12) 1X256 Ref. 18444</div>
+<div class='descripcion'><span class='izquierda'>Caja = 256 Unidades 5.53" LARGO x 4.69" ANCHO x 3.22" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase redondo tamp evident ilock (psbte8) 1x256 ref. 18446' data-cod='002239'>
+<img src='imagenes/002239.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002239</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PSBTE8) 1X256 Ref. 18446</div>
+<div class='descripcion'><span class='izquierda'>Caja = 256 Unidades 5.53" LARGO x 4.69" ANCHO x 2.59" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase triangular p/sandwich ilock (tesw) 1x280 ref. 18429' data-cod='002231'>
+<img src='imagenes/002231.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002231</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR ENVASE TRIANGULAR P/SANDWICH ILOCK (TESW) 1X280 Ref. 18429</div>
+<div class='descripcion'><span class='izquierda'>Caja = 280 Unidades 6.69" LARGO x 4.05" ANCHO x 3.27" ALTURA </span><span class='derecha'>(caj / caj)</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases #4oz 60x50 ref. 11022' data-cod='000988'>
 <img src='imagenes/000988.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000988</div>
@@ -2326,7 +2543,7 @@
 <img src='imagenes/002211.jpg' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002211</div>
 <div class='underline'></div>
-<div class='articulo'>PLASTIFAR BIO VASO PAPEL BL 4OZ BIO (PHC4-W) 20X50 CA REF. 19060</div>
+<div class='articulo'>PLASTIFAR BIO VASO PAPEL BL 4OZ BIO (PHC4-W) 20X50 CA Ref. 19060</div>
 <div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar bio vaso papel blanco 8oz (phc8-w) 20x50 ref. 19064' data-cod='001806'>
