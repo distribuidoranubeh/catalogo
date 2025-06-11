@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-09 20:09:23 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-11 12:28:22 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -2413,6 +2413,13 @@
 <div class='articulo'>PLASTIFAR ENVASE REDONDO TAMP EVIDENT ILOCK (PSBTE8) 1X256 Ref. 18446</div>
 <div class='descripcion'><span class='izquierda'>Caja = 256 Unidades (5.53" Largo x 4.69" Ancho x 2.59" Altura) </span><span class='derecha'>(caj / caj)</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar bio envases foam con tapas 24 oz 8x20 ref. 13180' data-cod='001973'>
+<img src='imagenes/001973.jpg' data-codigo='001973' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001973</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR BIO ENVASES FOAM CON TAPAS 24 OZ 8x20 Ref. 13180</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 8 Paq de 20 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar bio sancochero con tapa soup bowl 32 oz 6x20 ref. 13181' data-cod='001739'>
 <img src='imagenes/001739.jpg' data-codigo='001739' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001739</div>
@@ -2455,13 +2462,6 @@
 <div class='articulo'>PLASTIFAR ENVASES DELI DE 32 ONZAS WHITE 10x50 Ref. 18072</div>
 <div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 50 Unidades  </span><span class='derecha'>(paq / far)</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases foam con tapas 24 oz 8x20 ref. 13030' data-cod='001973'>
-<img src='imagenes/001973.jpg' data-codigo='001973' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001973</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR ENVASES FOAM CON TAPAS 24 OZ 8x20 Ref. 13030</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 8 Paq de 20 Unidades  </span><span class='derecha'>(paq / far)</span></div>
-</div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases souffle 1 oz  color negro (s100) 20x250 ref. 11280' data-cod='002070'>
 <img src='imagenes/002070.jpg' data-codigo='002070' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002070</div>
@@ -2475,55 +2475,6 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR FUENTE BASE NEGRA PEQ. CON TAPA Ref. PC-752 1X200 Ref. 16011</div>
 <div class='descripcion'><span class='izquierda'>Caja = 200 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa domo con hoyo 1" lion (pd16d) caja 10x100 ref. 18223' data-cod='001795'>
-<img src='imagenes/001795.jpg' data-codigo='001795' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001795</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO 1" LION (PD16D) CAJA 10X100 Ref. 18223</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa domo s/h lion (pd12h16) 10x100 ca ref. 18220' data-cod='002013'>
-<img src='imagenes/002013.jpg' data-codigo='002013' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002013</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA DOMO S/H LION (PD12H16) 10x100 CA Ref. 18220</div>
-<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa para envases souffle 3 1/4 , 4, 5 1/2 (20x125) ref. 18091' data-cod='001580'>
-<img src='imagenes/001580.jpg' data-codigo='001580' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001580</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PARA ENVASES SOUFFLE 3 1/4 , 4, 5 1/2 (20X125) Ref. 18091</div>
-<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet cxr lion (pl910) 25x100 ca ref. 18141' data-cod='002001'>
-<img src='imagenes/002001.jpg' data-codigo='002001' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002001</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET CxR LION (PL910) 25x100 CA Ref. 18141</div>
-<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet s/r lion (pl1214) 25x100 ca ref. 18226' data-cod='002027'>
-<img src='imagenes/002027.jpg' data-codigo='002027' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002027</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET S/R LION (PL1214) 25x100 CA Ref. 18226</div>
-<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pet sin ranura lion (pl640) caja 1x100 ref. 18228' data-cod='001794'>
-<img src='imagenes/001794.jpg' data-codigo='001794' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001794</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) CAJA 1X100 Ref. 18228</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa plana pet lion (pl12h16) con ranura 10x100 ref. 18080' data-cod='001568'>
-<img src='imagenes/001568.jpg' data-codigo='001568' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001568</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PLANA PET LION (PL12H16) CON RANURA 10X100 Ref. 18080</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapas envases 3,4,5 oz. 20x50 ref. 11031' data-cod='001749'>
 <img src='imagenes/001749.jpg' data-codigo='001749' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2609,47 +2560,222 @@
 <div class='articulo'>PLASTIFAR COPAS PS INYECTADO P/CHAMPAGNE 24X6 Ref. 17171</div>
 <div class='descripcion'><span class='izquierda'>Caja = 24 Paq de 6 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso bajo pet 9oz lion (pt9r) caja 20x50 ref. 18207' data-cod='001713'>
-<img src='imagenes/001713.jpg' data-codigo='001713' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001713</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 10oz lion (pt10d) 20x50 ref. 18209' data-cod='002255'>
+<img src='imagenes/002255.jpg' data-codigo='002255' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002255</div>
 <div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASO BAJO PET 9OZ LION (PT9R) CAJA 20X50 Ref. 18207</div>
-<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+<div class='articulo'>PLASTIFAR VASO PET 10OZ LION (PT10D) 20X50 Ref. 18209</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18225, 18141) </span><span class='derecha'>(paq / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 10oz sunny pack (pt10d) 40x25 ca ref. 18210' data-cod='002000'>
 <img src='imagenes/002000.jpg' data-codigo='002000' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002000</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR VASO PET 10oz SUNNY PACK (PT10D) 40x25 CA Ref. 18210</div>
-<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades (Tapas: 18225, 18141) </span><span class='derecha'>(paq / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 12/14oz lion (pt12) 20/50 caja 20x50 ref. 18212' data-cod='001573'>
 <img src='imagenes/001573.jpg' data-codigo='001573' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001573</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR VASO PET 12/14oz LION (PT12) 20/50 CAJA 20X50 Ref. 18212</div>
-<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080, 17211) </span><span class='derecha'>(paq / caj)</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 16oz sunny pack (pt16d) caja 40x25 ref. 18201' data-cod='001793'>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 12oz lion (tp22) 20x50 ref. 18211' data-cod='002256'>
+<img src='imagenes/002256.jpg' data-codigo='002256' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002256</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 12OZ LION (TP22) 20X50 Ref. 18211</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18190, 18191, 18228, 18229) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 16oz lion (pt16d) 20x50 ref. 18202' data-cod='002257'>
+<img src='imagenes/002257.jpg' data-codigo='002257' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002257</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 16OZ LION (PT16D) 20X50 Ref. 18202</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18227, 18222, 18224, 18223, 17211, 18432) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 16oz sunny pack (pt16d) 40x25 ref. 18201' data-cod='001793'>
 <img src='imagenes/001793.jpg' data-codigo='001793' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001793</div>
 <div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASO PET 16oz SUNNY PACK (PT16D) CAJA 40x25 Ref. 18201</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+<div class='articulo'>PLASTIFAR VASO PET 16oz SUNNY PACK (PT16D) 40x25 Ref. 18201</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades (Tapas: 18227, 18222, 18224, 18223, 17211, 18432) </span><span class='derecha'>(paq / far)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 7oz lion (pt7) caja 20x50 ref. 18204' data-cod='002130'>
 <img src='imagenes/002130.jpg' data-codigo='002130' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002130</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR VASO PET 7OZ LION (PT7) CAJA 20x50 Ref. 18204</div>
-<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18091) </span><span class='derecha'>(paq / caj)</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pet 8 oz (sd8) 20x50 ref. 18439' data-cod='002212'>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 7oz sunny pack (pt7) 40x25 ref. 18205' data-cod='002253'>
+<img src='imagenes/002253.jpg' data-codigo='002253' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002253</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 7OZ SUNNY PACK (PT7) 40X25 Ref. 18205</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades (Tapas: 18091) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 9oz lion (pt9d) 20x50 ref. 18206' data-cod='002254'>
+<img src='imagenes/002254.jpg' data-codigo='002254' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002254</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 9OZ LION (PT9D) 20X50 Ref. 18206</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18225, 18141) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet squat 7oz lion (pt7r) 20x50 ref. 18460' data-cod='002247'>
+<img src='imagenes/002247.jpg' data-codigo='002247' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002247</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET SQUAT 7OZ LION (PT7R) 20X50 Ref. 18460</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet squat 9oz lion (pt9r) caja 20x50 ref. 18207' data-cod='001713'>
+<img src='imagenes/001713.jpg' data-codigo='001713' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001713</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET SQUAT 9OZ LION (PT9R) CAJA 20X50 Ref. 18207</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080, 17211) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet squat 9oz sunny pack (pt9r) 40x25 ref. 18208' data-cod='002248'>
+<img src='imagenes/002248.jpg' data-codigo='002248' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002248</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET SQUAT 9OZ SUNNY PACK (PT9R) 40X25 Ref. 18208</div>
+<div class='descripcion'><span class='izquierda'>Caja = 40 Paq de 25 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080, 17211) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pet sundae 5 oz (sd5) 20x50 ref. 18438' data-cod='002246'>
+<img src='imagenes/002246.jpg' data-codigo='002246' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002246</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PET SUNDAE 5 OZ (SD5) 20X50 Ref. 18438</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pet sundae 8 oz (sd8) 20x50 ref. 18439' data-cod='002212'>
 <img src='imagenes/002212.jpg' data-codigo='002212' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002212</div>
 <div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASOS PET 8 OZ (SD8) 20X50 Ref. 18439</div>
-<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+<div class='articulo'>PLASTIFAR VASOS PET SUNDAE 8 OZ (SD8) 20X50 Ref. 18439</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 50 Unidades (Tapas: 18220, 18221, 18431, 18230, 18080, 18080) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar insert 4 oz para vasos pt9r, pt12 y pt16d 10x100 ref. 17211' data-cod='002252'>
+<img src='imagenes/002252.jpg' data-codigo='002252' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002252</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR INSERT 4 OZ PARA VASOS PT9R, PT12 Y PT16D 10X100 Ref. 17211</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades (Vasos: 18208, 18212, 18202, 18201) </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo con hoyo (pd12h16) 10x100 ref. 18221' data-cod='002249'>
+<img src='imagenes/002249.jpg' data-codigo='002249' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002249</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO (PD12H16) 10X100 Ref. 18221</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo con hoyo 1" lion (pd16d) 10x100 ref. 18223' data-cod='001795'>
+<img src='imagenes/001795.jpg' data-codigo='001795' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001795</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO 1" LION (PD16D) 10X100 Ref. 18223</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo con hoyo 2" (pdw12h16) 10x100 ref. 18431' data-cod='002250'>
+<img src='imagenes/002250.jpg' data-codigo='002250' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002250</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO 2" (PDW12H16) 10X100 Ref. 18431</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo con hoyo 2" lion (pdw16d) 10x100 ref. 18432' data-cod='002262'>
+<img src='imagenes/002262.jpg' data-codigo='002262' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002262</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO CON HOYO 2" LION (PDW16D) 10X100 Ref. 18432</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo s/h lion (pd12h16) 10x100 ca ref. 18220' data-cod='002013'>
+<img src='imagenes/002013.jpg' data-codigo='002013' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002013</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO S/H LION (PD12H16) 10x100 CA Ref. 18220</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa domo sin hoyo lion (pd16d) 10x100 ref. 18222' data-cod='002261'>
+<img src='imagenes/002261.jpg' data-codigo='002261' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002261</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA DOMO SIN HOYO LION (PD16D) 10X100 Ref. 18222</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa para envases souffle 3 1/4 , 4, 5 1/2 (20x125) ref. 18091' data-cod='001580'>
+<img src='imagenes/001580.jpg' data-codigo='001580' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001580</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PARA ENVASES SOUFFLE 3 1/4 , 4, 5 1/2 (20X125) Ref. 18091</div>
+<div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl12h16) 10x100 ref. 18080' data-cod='001568'>
+<img src='imagenes/001568.jpg' data-codigo='001568' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001568</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL12H16) 10X100 Ref. 18080</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl16d) 10x100 ref. 18224' data-cod='002260'>
+<img src='imagenes/002260.jpg' data-codigo='002260' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002260</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL16D) 10X100 Ref. 18224</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl910) 25x100 ca ref. 18141' data-cod='002001'>
+<img src='imagenes/002001.jpg' data-codigo='002001' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002001</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL910) 25x100 CA Ref. 18141</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet s/r lion (pl1214) 25x100 ca ref. 18226' data-cod='002027'>
+<img src='imagenes/002027.jpg' data-codigo='002027' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002027</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET S/R LION (PL1214) 25x100 CA Ref. 18226</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura (pl12h16) 10x100 ref. 18230' data-cod='002251'>
+<img src='imagenes/002251.jpg' data-codigo='002251' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002251</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA (PL12H16) 10X100 Ref. 18230</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl16d) 10x100 ref. 18227' data-cod='002259'>
+<img src='imagenes/002259.jpg' data-codigo='002259' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002259</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL16D) 10X100 Ref. 18227</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl640) caja 1x100 ref. 18228' data-cod='001794'>
+<img src='imagenes/001794.jpg' data-codigo='001794' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001794</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) CAJA 1X100 Ref. 18228</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl910) 25x100 ref. 18225' data-cod='002258'>
+<img src='imagenes/002258.jpg' data-codigo='002258' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002258</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL910) 25X100 Ref. 18225</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 12oz sunny pack (tp22) 40x25 ref. 18215' data-cod='001792'>
+<img src='imagenes/001792.jpg' data-codigo='001792' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001792</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PET 12oz SUNNY PACK (TP22) 40x25 Ref. 18215</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa blanca bebidas caliente  (pl6tl) 10x100 ref. 11390' data-cod='001572'>
 <img src='imagenes/001572.jpg' data-codigo='001572' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2664,13 +2790,6 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR TAPAS VASOS (S-100) 50x100 Ref. 18090</div>
 <div class='descripcion'><span class='izquierda'>Caja = 50 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pet 12oz sunny pack (tp22) caja 40x25 ref. 18215' data-cod='001792'>
-<img src='imagenes/001792.jpg' data-codigo='001792' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001792</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASO PET 12oz SUNNY PACK (TP22) CAJA 40x25 Ref. 18215</div>
-<div class='descripcion'><span class='izquierda'>Fardo = 40 Paq de 25 Unidades  </span><span class='derecha'>(paq / far)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso plastico no. 7 50x50 ref. 11011' data-cod='001394'>
 <img src='imagenes/001394.jpg' data-codigo='001394' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
