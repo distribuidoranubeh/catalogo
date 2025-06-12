@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-11 13:23:58 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-12 17:14:23 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -46,6 +46,48 @@
 <div class='underline'></div>
 <div class='articulo'>AIR MAGIC FRESH AIR AEROSOL VANILLA GRASS 260 ML 1X24 Ref. 008474</div>
 <div class='descripcion'><span class='izquierda'>Caja = 24 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador algodon fresco 8 oz 1x24 ref. 41106' data-cod='002286'>
+<img src='imagenes/002286.jpg' data-codigo='002286' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002286</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR ALGODON FRESCO 8 OZ 1X24 Ref. 41106</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador hawaii tropical 8 oz 1x24 ref. 41102' data-cod='002282'>
+<img src='imagenes/002282.jpg' data-codigo='002282' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002282</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR HAWAII TROPICAL 8 OZ 1X24 Ref. 41102</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador lavanda 8 oz 1x24 ref. 41104' data-cod='002284'>
+<img src='imagenes/002284.jpg' data-codigo='002284' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002284</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR LAVANDA 8 OZ 1X24 Ref. 41104</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador manzana canela 8 oz 1x24 ref. 41101' data-cod='002281'>
+<img src='imagenes/002281.jpg' data-codigo='002281' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002281</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR MANZANA CANELA 8 OZ 1X24 Ref. 41101</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador menta eucalipto 8 oz 1x24 ref. 41105' data-cod='002285'>
+<img src='imagenes/002285.jpg' data-codigo='002285' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002285</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR MENTA EUCALIPTO 8 OZ 1X24 Ref. 41105</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='winds ambientador vainilla 8 oz 1x24 ref. 41103' data-cod='002283'>
+<img src='imagenes/002283.jpg' data-codigo='002283' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002283</div>
+<div class='underline'></div>
+<div class='articulo'>WINDS AMBIENTADOR VAINILLA 8 OZ 1X24 Ref. 41103</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='nubeh ambientador canela 4 oz 1x24' data-cod='000089'>
 <img src='imagenes/000089.jpg' data-codigo='000089' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -173,6 +215,20 @@
 <div class='articulo'>NUBEH DESGRASANTE EN POLVO 8 LBS 1X6</div>
 <div class='descripcion'><span class='izquierda'>Caja = 6 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
 </div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante bebe 120 ml 1x32 ref. 40703' data-cod='002276'>
+<img src='imagenes/002276.jpg' data-codigo='002276' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002276</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE BEBE 120 ML 1X32 Ref. 40703</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante bebe 50 ml 1x200 ref. 40603' data-cod='002269'>
+<img src='imagenes/002269.jpg' data-codigo='002269' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002269</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE BEBE 50 ML 1X200 Ref. 40603</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante brisa marina 1/2 galon 1x6' data-cod='000114'>
 <img src='imagenes/000114.jpg' data-codigo='000114' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000114</div>
@@ -193,6 +249,20 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BRISA MARINA LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante floral 120 ml 1x32 ref. 40701' data-cod='002274'>
+<img src='imagenes/002274.jpg' data-codigo='002274' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002274</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE FLORAL 120 ML 1X32 Ref. 40701</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante floral 50 ml 1x200 ref. 40601' data-cod='002267'>
+<img src='imagenes/002267.jpg' data-codigo='002267' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002267</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE FLORAL 50 ML 1X200 Ref. 40601</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante floral 1/2 galon 1x6' data-cod='000109'>
 <img src='imagenes/000109.jpg' data-codigo='000109' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -235,6 +305,20 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FRUTAL LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante lavanda 120 ml 1x32 ref. 40702' data-cod='002275'>
+<img src='imagenes/002275.jpg' data-codigo='002275' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002275</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE LAVANDA 120 ML 1X32 Ref. 40702</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante lavanda 50 ml 1x200 ref. 40602' data-cod='002268'>
+<img src='imagenes/002268.jpg' data-codigo='002268' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002268</div>
+<div class='underline'></div>
+<div class='articulo'>KING DESINFECTANTE LAVANDA 50 ML 1X200 Ref. 40602</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante bebe galon 1x6' data-cod='000112'>
 <img src='imagenes/000112.jpg' data-codigo='000112' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -291,6 +375,20 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE BLANQUEADOR LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='king jabon de cuaba 120 ml 1x32 ref. 40301' data-cod='002272'>
+<img src='imagenes/002272.jpg' data-codigo='002272' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002272</div>
+<div class='underline'></div>
+<div class='articulo'>KING JABON DE CUABA 120 ML 1X32 Ref. 40301</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='king jabon de cuaba 220 ml 1x24 ref. 40302' data-cod='002278'>
+<img src='imagenes/002278.jpg' data-codigo='002278' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002278</div>
+<div class='underline'></div>
+<div class='articulo'>KING JABON DE CUABA 220 ML 1X24 Ref. 40302</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon de cuaba liquido 1/2 galon 1x6' data-cod='000126'>
 <img src='imagenes/000126.jpg' data-codigo='000126' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -362,6 +460,13 @@
 <div class='articulo'>NUBEH DETERGENTE LIQUIDO PRO-COLOR LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
 </div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Jabon en barra' data-art='king jabon de cuaba 5x160 gr 1x10 ref. 41201' data-cod='002280'>
+<img src='imagenes/002280.jpg' data-codigo='002280' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002280</div>
+<div class='underline'></div>
+<div class='articulo'>KING JABON DE CUABA 5X160 GR 1X10 Ref. 41201</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 5 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux lavaplatos liquido limon 1/2 gal 1x6' data-cod='000141'>
 <img src='imagenes/000141.jpg' data-codigo='000141' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000141</div>
@@ -382,6 +487,20 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='king lavaplatos 120 ml 1x32 ref. 40401' data-cod='002273'>
+<img src='imagenes/002273.jpg' data-codigo='002273' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002273</div>
+<div class='underline'></div>
+<div class='articulo'>KING LAVAPLATOS 120 ML 1X32 Ref. 40401</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='king lavaplatos 220 ml 1x24 ref. 40402' data-cod='002279'>
+<img src='imagenes/002279.jpg' data-codigo='002279' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002279</div>
+<div class='underline'></div>
+<div class='articulo'>KING LAVAPLATOS 220 ML 1X24 Ref. 40402</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='ms pasta de fregar 500 gr 1x6 ref. 379801' data-cod='002207'>
 <img src='imagenes/002207.jpg' data-codigo='002207' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -516,6 +635,34 @@
 <div class='articulo'>DETERGENTE EN POLVO 4 LBS 1X8 Ref. Det4</div>
 <div class='descripcion'><span class='izquierda'>Fardo = 8 Paq * </span><span class='derecha'>(paq / far)</span></div>
 </div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='king combo detergente 3x200 grs 1x20 ref. 40105' data-cod='002265'>
+<img src='imagenes/002265.jpg' data-codigo='002265' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002265</div>
+<div class='underline'></div>
+<div class='articulo'>KING COMBO DETERGENTE 3X200 GRS 1X20 Ref. 40105</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 20 Paq de 3 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='king combo detergente 3x400 grs 1x10 ref. 40106' data-cod='002263'>
+<img src='imagenes/002263.jpg' data-codigo='002263' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002263</div>
+<div class='underline'></div>
+<div class='articulo'>KING COMBO DETERGENTE 3X400 GRS 1X10 Ref. 40106</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 3 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='king combo detergente 900+400 grs 1x10 ref. 40107' data-cod='002264'>
+<img src='imagenes/002264.jpg' data-codigo='002264' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002264</div>
+<div class='underline'></div>
+<div class='articulo'>KING COMBO DETERGENTE 900+400 GRS 1X10 Ref. 40107</div>
+<div class='descripcion'><span class='izquierda'>Fardo = 10 Paq de 2 Unidades  </span><span class='derecha'>(paq / far)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='king detergente 30 lbs 1x1 ref. 40104' data-cod='002266'>
+<img src='imagenes/002266.jpg' data-codigo='002266' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002266</div>
+<div class='underline'></div>
+<div class='articulo'>KING DETERGENTE 30 LBS 1X1 Ref. 40104</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(fun / fun)</span></div>
+</div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas baby 1/2 galon 1x6' data-cod='001081'>
 <img src='imagenes/001081.jpg' data-codigo='001081' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001081</div>
@@ -536,6 +683,27 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS BABY LITRO 1X12</div>
 <div class='descripcion'><span class='izquierda'>Caja = 12 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='king suavizante 120 ml 1x32 ref. 40501' data-cod='002271'>
+<img src='imagenes/002271.jpg' data-codigo='002271' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002271</div>
+<div class='underline'></div>
+<div class='articulo'>KING SUAVIZANTE 120 ML 1X32 Ref. 40501</div>
+<div class='descripcion'><span class='izquierda'>Caja = 32 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='king suavizante 220 ml 1x24 ref. 40502' data-cod='002277'>
+<img src='imagenes/002277.jpg' data-codigo='002277' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002277</div>
+<div class='underline'></div>
+<div class='articulo'>KING SUAVIZANTE 220 ML 1X24 Ref. 40502</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='king suavizante 50 ml 1x200 ref. 40506' data-cod='002270'>
+<img src='imagenes/002270.jpg' data-codigo='002270' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002270</div>
+<div class='underline'></div>
+<div class='articulo'>KING SUAVIZANTE 50 ML 1X200 Ref. 40506</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas primaveral 1/2 galon 1x6' data-cod='000197'>
 <img src='imagenes/000197.jpg' data-codigo='000197' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -928,6 +1096,13 @@
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW ALCOHOL EN GEL 8OZ 1X8</div>
 <div class='descripcion'><span class='izquierda'>Caja = 8 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='valle verde bay rum 12 oz 1x24 ref. 41301' data-cod='002287'>
+<img src='imagenes/002287.jpg' data-codigo='002287' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002287</div>
+<div class='underline'></div>
+<div class='articulo'>VALLE VERDE BAY RUM 12 OZ 1X24 Ref. 41301</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='ranex africa desodorante spray 150 ml 1x24 ref. 699256' data-cod='001815'>
 <img src='imagenes/001815.jpg' data-codigo='001815' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2763,11 +2938,11 @@
 <div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL16D) 10X100 Ref. 18227</div>
 <div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl640) caja 1x100 ref. 18228' data-cod='001794'>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl640) 1x100 ref. 18228' data-cod='001794'>
 <img src='imagenes/001794.jpg' data-codigo='001794' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001794</div>
 <div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) CAJA 1X100 Ref. 18228</div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) 1X100 Ref. 18228</div>
 <div class='descripcion'><span class='izquierda'>Caja = 100 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl910) 25x100 ref. 18225' data-cod='002258'>
