@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-12 17:38:21 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-14 14:20:38 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }.descripcion .izquierda { display: inline-block; text-align: left; }.descripcion .derecha { display: inline-block; float: right; color: gray; font-size: 11px; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Articulos de limpieza'>Articulos de limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Material Gastable'>Material Gastable</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles Higienicos'>Papeles Higienicos</option><option value='Comestibles'>Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -1426,6 +1426,293 @@
 <div class='articulo'>MANE TRATAMIENTO SMOOTH KERATIN 16 OZ 1X8</div>
 <div class='descripcion'><span class='izquierda'>Caja = 8 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
 </div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos bola roja 12cm 100x100 ref. 5688' data-cod='002175'>
+<img src='imagenes/002175.jpg' data-codigo='002175' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002175</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS BOLA ROJA 12CM 100X100 Ref. 5688</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos brocheta 9cm 100x100 ref. 5690' data-cod='002173'>
+<img src='imagenes/002173.jpg' data-codigo='002173' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002173</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS BROCHETA 9CM 100X100 Ref. 5690</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos corazon 12cm 100x100 ref. 5762' data-cod='002179'>
+<img src='imagenes/002179.jpg' data-codigo='002179' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002179</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS CORAZON 12CM 100X100 Ref. 5762</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos decorativos 10x125 ref. 5692' data-cod='002018'>
+<img src='imagenes/002018.jpg' data-codigo='002018' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002018</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS DECORATIVOS 10X125 Ref. 5692</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos decorativos 200x48 ref. 5766' data-cod='002072'>
+<img src='imagenes/002072.jpg' data-codigo='002072' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002072</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS DECORATIVOS 200X48 Ref. 5766</div>
+<div class='descripcion'><span class='izquierda'>Caja = 200 Paq de 48 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos doble bola 12cm 100x100 ref. 5768' data-cod='002174'>
+<img src='imagenes/002174.jpg' data-codigo='002174' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002174</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS DOBLE BOLA 12CM 100X100 Ref. 5768</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos envueltos 1x1000 ref. 5693' data-cod='002172'>
+<img src='imagenes/002172.jpg' data-codigo='002172' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002172</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS ENVUELTOS 1X1000 Ref. 5693</div>
+<div class='descripcion'><span class='izquierda'>Paq = 1000 Unidades  </span><span class='derecha'>(paq / paq)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos fruticas mix 12cm 100x100 ref. 5761' data-cod='002178'>
+<img src='imagenes/002178.jpg' data-codigo='002178' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002178</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS FRUTICAS MIX 12CM 100X100 Ref. 5761</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos hojita 12cm 100/100 ref. 5853' data-cod='002181'>
+<img src='imagenes/002181.jpg' data-codigo='002181' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002181</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS HOJITA 12CM 100/100 Ref. 5853</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos navidad 12cm 100x100 ref. 5852' data-cod='002180'>
+<img src='imagenes/002180.jpg' data-codigo='002180' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002180</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS NAVIDAD 12CM 100X100 Ref. 5852</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos perla blanca 12cm 100x100 ref. 5758' data-cod='002177'>
+<img src='imagenes/002177.jpg' data-codigo='002177' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002177</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS PERLA BLANCA 12CM 100X100 Ref. 5758</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos perla dorada 12cm 100x100 ref. 5760' data-cod='001990'>
+<img src='imagenes/001990.jpg' data-codigo='001990' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001990</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS PERLA DORADA 12CM 100X100 Ref. 5760</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos perla plateada 12cm 100x100 ref. 5759' data-cod='001989'>
+<img src='imagenes/001989.jpg' data-codigo='001989' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001989</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS PERLA PLATEADA 12CM 100X100 Ref. 5759</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos perla rosa 12cm 100x100 ref. 5757' data-cod='002176'>
+<img src='imagenes/002176.jpg' data-codigo='002176' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002176</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS PERLA ROSA 12CM 100X100 Ref. 5757</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos redondos 10x300 ref. 5691' data-cod='001923'>
+<img src='imagenes/001923.jpg' data-codigo='001923' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001923</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS REDONDOS 10X300 Ref. 5691</div>
+<div class='descripcion'><span class='izquierda'>Paq = 10 Unidades de 300 Uds c/u  </span><span class='derecha'>(paq / paq)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos redondos 12x100 ref. 5764' data-cod='001876'>
+<img src='imagenes/001876.jpg' data-codigo='001876' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001876</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS REDONDOS 12X100 Ref. 5764</div>
+<div class='descripcion'><span class='izquierda'>Paq = 12 Unidades de 100 Uds c/u  </span><span class='derecha'>(paq / paq)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos sombrilla 50x144 ref. 5763' data-cod='001907'>
+<img src='imagenes/001907.jpg' data-codigo='001907' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001907</div>
+<div class='underline'></div>
+<div class='articulo'>PALILLOS SOMBRILLA 50X144 Ref. 5763</div>
+<div class='descripcion'><span class='izquierda'>Caja = 50 Paq de 144 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 10" 100x100 ref. 5556' data-cod='001840'>
+<img src='imagenes/001840.jpg' data-codigo='001840' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001840</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5556</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades * </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 10" 100x100 ref. 5822' data-cod='002170'>
+<img src='imagenes/002170.jpg' data-codigo='002170' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002170</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5822</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 12" 100x100 ref. 5823' data-cod='002171'>
+<img src='imagenes/002171.jpg' data-codigo='002171' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002171</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 12" 100X100 Ref. 5823</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 6" 100x100 ref. 5820' data-cod='002168'>
+<img src='imagenes/002168.jpg' data-codigo='002168' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002168</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 6" 100X100 Ref. 5820</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 8" 100x100 ref. 5821' data-cod='002169'>
+<img src='imagenes/002169.jpg' data-codigo='002169' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002169</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS P/ PINCHO 8" 100X100 Ref. 5821</div>
+<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos para sushi 30x100 ref. 5687' data-cod='001908'>
+<img src='imagenes/001908.jpg' data-codigo='001908' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001908</div>
+<div class='underline'></div>
+<div class='articulo'>PALITOS PARA SUSHI 30X100 Ref. 5687</div>
+<div class='descripcion'><span class='izquierda'>Caja = 30 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='removedores de madera 5.5" envueltos 10x1000 ref. 5588' data-cod='002011'>
+<img src='imagenes/002011.jpg' data-codigo='002011' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002011</div>
+<div class='underline'></div>
+<div class='articulo'>REMOVEDORES DE MADERA 5.5" ENVUELTOS 10X1000 Ref. 5588</div>
+<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 1000 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel aluminio 12 pulg x 1000 pies (1x4) ref. 5666' data-cod='002073'>
+<img src='imagenes/002073.jpg' data-codigo='002073' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002073</div>
+<div class='underline'></div>
+<div class='articulo'>Papel Aluminio 12 pulg x 1000 pies (1x4) Ref. 5666</div>
+<div class='descripcion'><span class='izquierda'>Caja = 4 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel aluminio 12 pulg x 25 pies (1x24) ref. 5411' data-cod='001461'>
+<img src='imagenes/001461.jpg' data-codigo='001461' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001461</div>
+<div class='underline'></div>
+<div class='articulo'>Papel Aluminio 12 pulg x 25 Pies (1x24) Ref. 5411</div>
+<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel aluminio 18 pulg x 1000 pies (1x4) ref. 5559' data-cod='001458'>
+<img src='imagenes/001458.jpg' data-codigo='001458' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001458</div>
+<div class='underline'></div>
+<div class='articulo'>Papel Aluminio 18 pulg x 1000 pies (1x4) Ref. 5559</div>
+<div class='descripcion'><span class='izquierda'>Caja = 4 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro cinta adhesiva 2x70 yardas 1x72 ref. 5740' data-cod='001926'>
+<img src='imagenes/001926.jpg' data-codigo='001926' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001926</div>
+<div class='underline'></div>
+<div class='articulo'>DE ORO CINTA ADHESIVA 2X70 YARDAS 1X72 Ref. 5740</div>
+<div class='descripcion'><span class='izquierda'>Caja = 72 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro cinta adhesiva 2x90 yardas 1x72 ref. 2392' data-cod='001873'>
+<img src='imagenes/001873.jpg' data-codigo='001873' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001873</div>
+<div class='underline'></div>
+<div class='articulo'>DE ORO CINTA ADHESIVA 2X90 YARDAS 1X72 Ref. 2392</div>
+<div class='descripcion'><span class='izquierda'>Caja = 72 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='us brand cinta adhesiva clear 2x110 yardas 1x36 ref. 56195910' data-cod='002189'>
+<img src='imagenes/002189.jpg' data-codigo='002189' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002189</div>
+<div class='underline'></div>
+<div class='articulo'>US BRAND CINTA ADHESIVA CLEAR 2X110 YARDAS 1X36 Ref. 56195910</div>
+<div class='descripcion'><span class='izquierda'>Caja = 36 Unidades </span><span class='derecha'> (ud / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel paleta 18"x1000´ 1x1 ref. 5658' data-cod='001945'>
+<img src='imagenes/001945.jpg' data-codigo='001945' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001945</div>
+<div class='underline'></div>
+<div class='articulo'>PAPEL PALETA 18"X1000´ 1X1 Ref. 5658</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad</span><span class='derecha'>  (ud / ud)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='hilo pastel en hoja 25 pies 4x25 ref. 5859' data-cod='002166'>
+<img src='imagenes/002166.jpg' data-codigo='002166' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002166</div>
+<div class='underline'></div>
+<div class='articulo'>HILO PASTEL EN HOJA 25 PIES 4X25 Ref. 5859</div>
+<div class='descripcion'><span class='izquierda'>Caja = 4 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='hilo pastel en hoja 810 pies 4x25 ref. 5860' data-cod='002167'>
+<img src='imagenes/002167.jpg' data-codigo='002167' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002167</div>
+<div class='underline'></div>
+<div class='articulo'>HILO PASTEL EN HOJA 810 PIES 4X25 Ref. 5860</div>
+<div class='descripcion'><span class='izquierda'>Caja = 4 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel pasteles en hoja 14x75 ref. 5727' data-cod='002042'>
+<img src='imagenes/002042.jpg' data-codigo='002042' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002042</div>
+<div class='underline'></div>
+<div class='articulo'>PAPEL PASTELES EN HOJA 14X75 Ref. 5727</div>
+<div class='descripcion'><span class='izquierda'>Caja = 14 Paq de 75 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro papel pvc 12" x 750" mts 1x1 ref. 5659' data-cod='001912'>
+<img src='imagenes/001912.jpg' data-codigo='001912' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001912</div>
+<div class='underline'></div>
+<div class='articulo'>DE ORO PAPEL PVC 12" X 750" MTS 1X1 Ref. 5659</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro papel pvc 12x2000 pies 1x1 ref. 5646' data-cod='001827'>
+<img src='imagenes/001827.jpg' data-codigo='001827' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001827</div>
+<div class='underline'></div>
+<div class='articulo'>DE ORO PAPEL PVC 12X2000 PIES 1X1 Ref. 5646</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro papel pvc 18x2000 pies 1x1 ref. 5590' data-cod='002156'>
+<img src='imagenes/002156.jpg' data-codigo='002156' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002156</div>
+<div class='underline'></div>
+<div class='articulo'>DE ORO PAPEL PVC 18X2000 PIES 1X1 Ref. 5590</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel pvc 14 pulg x 750 metros (1x1) ref. 0572' data-cod='001462'>
+<img src='imagenes/001462.jpg' data-codigo='001462' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001462</div>
+<div class='underline'></div>
+<div class='articulo'>Papel PVC 14 Pulg X 750 Metros (1x1) Ref. 0572</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel pvc 16 pulg x 750 metros (1x1) ref. 0661' data-cod='001463'>
+<img src='imagenes/001463.jpg' data-codigo='001463' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001463</div>
+<div class='underline'></div>
+<div class='articulo'>Papel PVC 16 Pulg X 750 Metros (1x1) Ref. 0661</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel pvc 18 pulg x 750 metros (1x1) ref. 5580' data-cod='001464'>
+<img src='imagenes/001464.jpg' data-codigo='001464' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001464</div>
+<div class='underline'></div>
+<div class='articulo'>Papel PVC 18 Pulg X 750 Metros (1x1) Ref. 5580</div>
+<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
+<div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='alfombra para sushi makisu 1x25 ref. 5694' data-cod='002188'>
+<img src='imagenes/002188.jpg' data-codigo='002188' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002188</div>
+<div class='underline'></div>
+<div class='articulo'>ALFOMBRA PARA SUSHI MAKISU 1X25 Ref. 5694</div>
+<div class='descripcion'><span class='izquierda'>Caja = 25 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
+</div>
 <div class='item' data-cat='Material Gastable' data-subcat='Oficinas' data-art='hp resma papel bond 8.5" x 11" 500 hojas 1x10 ref. 710199' data-cod='002209'>
 <img src='imagenes/002209.jpg' data-codigo='002209' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002209</div>
@@ -1789,293 +2076,6 @@
 <div class='underline'></div>
 <div class='articulo'>Envase Aluminio 4 Oz (20x100) Ref. 5529</div>
 <div class='descripcion'><span class='izquierda'>Caja = 20 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='de oro cinta adhesiva 2x70 yardas 1x72 ref. 5740' data-cod='001926'>
-<img src='imagenes/001926.jpg' data-codigo='001926' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001926</div>
-<div class='underline'></div>
-<div class='articulo'>DE ORO CINTA ADHESIVA 2X70 YARDAS 1X72 Ref. 5740</div>
-<div class='descripcion'><span class='izquierda'>Caja = 72 Unidades </span><span class='derecha'> (ud / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='de oro cinta adhesiva 2x90 yardas 1x72 ref. 2392' data-cod='001873'>
-<img src='imagenes/001873.jpg' data-codigo='001873' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001873</div>
-<div class='underline'></div>
-<div class='articulo'>DE ORO CINTA ADHESIVA 2X90 YARDAS 1X72 Ref. 2392</div>
-<div class='descripcion'><span class='izquierda'>Caja = 72 Unidades </span><span class='derecha'> (ud / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='us brand cinta adhesiva clear 2x110 yardas 1x36 ref. 56195910' data-cod='002189'>
-<img src='imagenes/002189.jpg' data-codigo='002189' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002189</div>
-<div class='underline'></div>
-<div class='articulo'>US BRAND CINTA ADHESIVA CLEAR 2X110 YARDAS 1X36 Ref. 56195910</div>
-<div class='descripcion'><span class='izquierda'>Caja = 36 Unidades </span><span class='derecha'> (ud / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos bola roja 12cm 100x100 ref. 5688' data-cod='002175'>
-<img src='imagenes/002175.jpg' data-codigo='002175' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002175</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS BOLA ROJA 12CM 100X100 Ref. 5688</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos brocheta 9cm 100x100 ref. 5690' data-cod='002173'>
-<img src='imagenes/002173.jpg' data-codigo='002173' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002173</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS BROCHETA 9CM 100X100 Ref. 5690</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos corazon 12cm 100x100 ref. 5762' data-cod='002179'>
-<img src='imagenes/002179.jpg' data-codigo='002179' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002179</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS CORAZON 12CM 100X100 Ref. 5762</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos decorativos 10x125 ref. 5692' data-cod='002018'>
-<img src='imagenes/002018.jpg' data-codigo='002018' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002018</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS DECORATIVOS 10X125 Ref. 5692</div>
-<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 125 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos decorativos 200x48 ref. 5766' data-cod='002072'>
-<img src='imagenes/002072.jpg' data-codigo='002072' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002072</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS DECORATIVOS 200X48 Ref. 5766</div>
-<div class='descripcion'><span class='izquierda'>Caja = 200 Paq de 48 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos doble bola 12cm 100x100 ref. 5768' data-cod='002174'>
-<img src='imagenes/002174.jpg' data-codigo='002174' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002174</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS DOBLE BOLA 12CM 100X100 Ref. 5768</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos envueltos 1x1000 ref. 5693' data-cod='002172'>
-<img src='imagenes/002172.jpg' data-codigo='002172' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002172</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS ENVUELTOS 1X1000 Ref. 5693</div>
-<div class='descripcion'><span class='izquierda'>Paq = 1000 Unidades  </span><span class='derecha'>(paq / paq)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos fruticas mix 12cm 100x100 ref. 5761' data-cod='002178'>
-<img src='imagenes/002178.jpg' data-codigo='002178' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002178</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS FRUTICAS MIX 12CM 100X100 Ref. 5761</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos hojita 12cm 100/100 ref. 5853' data-cod='002181'>
-<img src='imagenes/002181.jpg' data-codigo='002181' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002181</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS HOJITA 12CM 100/100 Ref. 5853</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos navidad 12cm 100x100 ref. 5852' data-cod='002180'>
-<img src='imagenes/002180.jpg' data-codigo='002180' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002180</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS NAVIDAD 12CM 100X100 Ref. 5852</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos perla blanca 12cm 100x100 ref. 5758' data-cod='002177'>
-<img src='imagenes/002177.jpg' data-codigo='002177' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002177</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS PERLA BLANCA 12CM 100X100 Ref. 5758</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos perla dorada 12cm 100x100 ref. 5760' data-cod='001990'>
-<img src='imagenes/001990.jpg' data-codigo='001990' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001990</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS PERLA DORADA 12CM 100X100 Ref. 5760</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos perla plateada 12cm 100x100 ref. 5759' data-cod='001989'>
-<img src='imagenes/001989.jpg' data-codigo='001989' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001989</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS PERLA PLATEADA 12CM 100X100 Ref. 5759</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos perla rosa 12cm 100x100 ref. 5757' data-cod='002176'>
-<img src='imagenes/002176.jpg' data-codigo='002176' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002176</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS PERLA ROSA 12CM 100X100 Ref. 5757</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos redondos 10x300 ref. 5691' data-cod='001923'>
-<img src='imagenes/001923.jpg' data-codigo='001923' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001923</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS REDONDOS 10X300 Ref. 5691</div>
-<div class='descripcion'><span class='izquierda'>Paq = 10 Unidades de 300 Uds c/u  </span><span class='derecha'>(paq / paq)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos redondos 12x100 ref. 5764' data-cod='001876'>
-<img src='imagenes/001876.jpg' data-codigo='001876' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001876</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS REDONDOS 12X100 Ref. 5764</div>
-<div class='descripcion'><span class='izquierda'>Paq = 12 Unidades de 100 Uds c/u  </span><span class='derecha'>(paq / paq)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palillos sombrilla 50x144 ref. 5763' data-cod='001907'>
-<img src='imagenes/001907.jpg' data-codigo='001907' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001907</div>
-<div class='underline'></div>
-<div class='articulo'>PALILLOS SOMBRILLA 50X144 Ref. 5763</div>
-<div class='descripcion'><span class='izquierda'>Caja = 50 Paq de 144 Unidades (Venta min en bloques de 5 paq)* </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 10" 100x100 ref. 5556' data-cod='001840'>
-<img src='imagenes/001840.jpg' data-codigo='001840' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001840</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5556</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades * </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 10" 100x100 ref. 5822' data-cod='002170'>
-<img src='imagenes/002170.jpg' data-codigo='002170' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002170</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5822</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 12" 100x100 ref. 5823' data-cod='002171'>
-<img src='imagenes/002171.jpg' data-codigo='002171' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002171</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS P/ PINCHO 12" 100X100 Ref. 5823</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 6" 100x100 ref. 5820' data-cod='002168'>
-<img src='imagenes/002168.jpg' data-codigo='002168' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002168</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS P/ PINCHO 6" 100X100 Ref. 5820</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos p/ pincho 8" 100x100 ref. 5821' data-cod='002169'>
-<img src='imagenes/002169.jpg' data-codigo='002169' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002169</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS P/ PINCHO 8" 100X100 Ref. 5821</div>
-<div class='descripcion'><span class='izquierda'>Caja = 100 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='palitos para sushi 30x100 ref. 5687' data-cod='001908'>
-<img src='imagenes/001908.jpg' data-codigo='001908' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001908</div>
-<div class='underline'></div>
-<div class='articulo'>PALITOS PARA SUSHI 30X100 Ref. 5687</div>
-<div class='descripcion'><span class='izquierda'>Caja = 30 Paq de 100 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Otros' data-art='removedores de madera 5.5" envueltos 10x1000 ref. 5588' data-cod='002011'>
-<img src='imagenes/002011.jpg' data-codigo='002011' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002011</div>
-<div class='underline'></div>
-<div class='articulo'>REMOVEDORES DE MADERA 5.5" ENVUELTOS 10X1000 Ref. 5588</div>
-<div class='descripcion'><span class='izquierda'>Caja = 10 Paq de 1000 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel aluminio 12 pulg x 1000 pies (1x4) ref. 5666' data-cod='002073'>
-<img src='imagenes/002073.jpg' data-codigo='002073' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002073</div>
-<div class='underline'></div>
-<div class='articulo'>Papel Aluminio 12 pulg x 1000 pies (1x4) Ref. 5666</div>
-<div class='descripcion'><span class='izquierda'>Caja = 4 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel aluminio 12 pulg x 25 pies (1x24) ref. 5411' data-cod='001461'>
-<img src='imagenes/001461.jpg' data-codigo='001461' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001461</div>
-<div class='underline'></div>
-<div class='articulo'>Papel Aluminio 12 pulg x 25 Pies (1x24) Ref. 5411</div>
-<div class='descripcion'><span class='izquierda'>Caja = 24 Unidades </span><span class='derecha'> (ud / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel aluminio 18 pulg x 1000 pies (1x4) ref. 5559' data-cod='001458'>
-<img src='imagenes/001458.jpg' data-codigo='001458' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001458</div>
-<div class='underline'></div>
-<div class='articulo'>Papel Aluminio 18 pulg x 1000 pies (1x4) Ref. 5559</div>
-<div class='descripcion'><span class='izquierda'>Caja = 4 Unidades *</span><span class='derecha'> (ud / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel paleta 18"x1000´ 1x1 ref. 5658' data-cod='001945'>
-<img src='imagenes/001945.jpg' data-codigo='001945' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001945</div>
-<div class='underline'></div>
-<div class='articulo'>PAPEL PALETA 18"X1000´ 1X1 Ref. 5658</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad</span><span class='derecha'>  (ud / ud)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='hilo pastel en hoja 25 pies 4x25 ref. 5859' data-cod='002166'>
-<img src='imagenes/002166.jpg' data-codigo='002166' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002166</div>
-<div class='underline'></div>
-<div class='articulo'>HILO PASTEL EN HOJA 25 PIES 4X25 Ref. 5859</div>
-<div class='descripcion'><span class='izquierda'>Caja = 4 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='hilo pastel en hoja 810 pies 4x25 ref. 5860' data-cod='002167'>
-<img src='imagenes/002167.jpg' data-codigo='002167' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002167</div>
-<div class='underline'></div>
-<div class='articulo'>HILO PASTEL EN HOJA 810 PIES 4X25 Ref. 5860</div>
-<div class='descripcion'><span class='izquierda'>Caja = 4 Paq de 25 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel pasteles en hoja 14x75 ref. 5727' data-cod='002042'>
-<img src='imagenes/002042.jpg' data-codigo='002042' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002042</div>
-<div class='underline'></div>
-<div class='articulo'>PAPEL PASTELES EN HOJA 14X75 Ref. 5727</div>
-<div class='descripcion'><span class='izquierda'>Caja = 14 Paq de 75 Unidades  </span><span class='derecha'>(paq / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='de oro papel pvc 12" x 750" mts 1x1 ref. 5659' data-cod='001912'>
-<img src='imagenes/001912.jpg' data-codigo='001912' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001912</div>
-<div class='underline'></div>
-<div class='articulo'>DE ORO PAPEL PVC 12" X 750" MTS 1X1 Ref. 5659</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='de oro papel pvc 12x2000 pies 1x1 ref. 5646' data-cod='001827'>
-<img src='imagenes/001827.jpg' data-codigo='001827' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001827</div>
-<div class='underline'></div>
-<div class='articulo'>DE ORO PAPEL PVC 12X2000 PIES 1X1 Ref. 5646</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='de oro papel pvc 18x2000 pies 1x1 ref. 5590' data-cod='002156'>
-<img src='imagenes/002156.jpg' data-codigo='002156' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002156</div>
-<div class='underline'></div>
-<div class='articulo'>DE ORO PAPEL PVC 18X2000 PIES 1X1 Ref. 5590</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel pvc 14 pulg x 750 metros (1x1) ref. 0572' data-cod='001462'>
-<img src='imagenes/001462.jpg' data-codigo='001462' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001462</div>
-<div class='underline'></div>
-<div class='articulo'>Papel PVC 14 Pulg X 750 Metros (1x1) Ref. 0572</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel pvc 16 pulg x 750 metros (1x1) ref. 0661' data-cod='001463'>
-<img src='imagenes/001463.jpg' data-codigo='001463' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001463</div>
-<div class='underline'></div>
-<div class='articulo'>Papel PVC 16 Pulg X 750 Metros (1x1) Ref. 0661</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='papel pvc 18 pulg x 750 metros (1x1) ref. 5580' data-cod='001464'>
-<img src='imagenes/001464.jpg' data-codigo='001464' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001464</div>
-<div class='underline'></div>
-<div class='articulo'>Papel PVC 18 Pulg X 750 Metros (1x1) Ref. 5580</div>
-<div class='descripcion'><span class='izquierda'>1 Unidad  </span><span class='derecha'>(caj / caj)</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Papeles' data-art='alfombra para sushi makisu 1x25 ref. 5694' data-cod='002188'>
-<img src='imagenes/002188.jpg' data-codigo='002188' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002188</div>
-<div class='underline'></div>
-<div class='articulo'>ALFOMBRA PARA SUSHI MAKISU 1X25 Ref. 5694</div>
-<div class='descripcion'><span class='izquierda'>Caja = 25 Unidades  </span><span class='derecha'>(caj / caj)</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso conico de papel parafinado 4.5oz 25x200 ref. pb0110' data-cod='001886'>
 <img src='imagenes/001886.jpg' data-codigo='001886' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
