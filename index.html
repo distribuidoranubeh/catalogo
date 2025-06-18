@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-17 21:41:23 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papelería / Oficina'>Papelería / Oficina</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos / Comestibles'>Alimentos / Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-18 13:04:08 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papelería / Oficina'>Papelería / Oficina</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos / Comestibles'>Alimentos / Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -1175,7 +1175,7 @@
 <div class='articulo'>BRILLISIMO ESPONJA DOBLE 48X2 Ref. 5801</div>
 <div class='descripcion'>Caja = 48 Paq de 2 Unidades *</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $47.26</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,268.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,268.41</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Guantes' data-art='manos fuertes guantes de limpieza eco 1x120' data-cod='001770'>
 <img src='imagenes/001770.jpg' data-codigo='001770' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1447,6 +1447,42 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.48</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,275.49</span></div>
 </div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='grade 48 desodorante roll-on fresh 2.8 oz 1x24 ref. 20401' data-cod='002302'>
+<img src='imagenes/002302.jpg' data-codigo='002302' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002302</div>
+<div class='underline'></div>
+<div class='articulo'>GRADE 48 DESODORANTE ROLL-ON FRESH 2.8 OZ 1X24 Ref. 20401</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $56.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,346.99</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='grade 48 desodorante roll-on neutro 2.8 oz 1x24 ref. 20405' data-cod='002300'>
+<img src='imagenes/002300.jpg' data-codigo='002300' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002300</div>
+<div class='underline'></div>
+<div class='articulo'>GRADE 48 DESODORANTE ROLL-ON NEUTRO 2.8 OZ 1X24 Ref. 20405</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $56.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,346.99</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='grade 48 desodorante roll-on soft 2.8 oz 1x24 ref. 20403' data-cod='002299'>
+<img src='imagenes/002299.jpg' data-codigo='002299' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002299</div>
+<div class='underline'></div>
+<div class='articulo'>GRADE 48 DESODORANTE ROLL-ON SOFT 2.8 OZ 1X24 Ref. 20403</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $56.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,346.99</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='grade 48 desodorante roll-on sport 2.8 oz 1x24 ref. 20404' data-cod='002301'>
+<img src='imagenes/002301.jpg' data-codigo='002301' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002301</div>
+<div class='underline'></div>
+<div class='articulo'>GRADE 48 DESODORANTE ROLL-ON SPORT 2.8 OZ 1X24 Ref. 20404</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $56.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,346.99</span></div>
+</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='mane body wash de coco galon 1x6' data-cod='001139'>
 <img src='imagenes/001139.jpg' data-codigo='001139' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001139</div>
@@ -1483,7 +1519,61 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $164.16</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,283.23</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon de manos antibacterial avena 8oz 1x8' data-cod='001376'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blink jabon avena 110 gr 1x24 ref. 20804' data-cod='002305'>
+<img src='imagenes/002305.jpg' data-codigo='002305' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002305</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK JABON AVENA 110 GR 1X24 Ref. 20804</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $875.55</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blink jabon coco 110 gr 1x24 ref. 20803' data-cod='002306'>
+<img src='imagenes/002306.jpg' data-codigo='002306' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002306</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK JABON COCO 110 GR 1X24 Ref. 20803</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $875.55</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blink jabon miel glicerina 110 gr 1x24 ref. 20802' data-cod='002304'>
+<img src='imagenes/002304.jpg' data-codigo='002304' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002304</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK JABON MIEL GLICERINA 110 GR 1X24 Ref. 20802</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $875.55</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blink jabon sabila glicerina 110 gr 1x24 ref. 20801' data-cod='002303'>
+<img src='imagenes/002303.jpg' data-codigo='002303' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002303</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK JABON SABILA GLICERINA 110 GR 1X24 Ref. 20801</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $875.55</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon rosa mosqueta 110 gr 1x24 ref. 20807' data-cod='002308'>
+<img src='imagenes/002308.jpg' data-codigo='002308' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002308</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON ROSA MOSQUETA 110 GR 1X24 Ref. 20807</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon yogurt 110 gr 1x24 ref. 20806' data-cod='002307'>
+<img src='imagenes/002307.jpg' data-codigo='002307' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002307</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON YOGURT 110 GR 1X24 Ref. 20806</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial avena 8oz 1x8' data-cod='001376'>
 <img src='imagenes/001376.jpg' data-codigo='001376' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001376</div>
 <div class='underline'></div>
@@ -1492,7 +1582,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $105.22</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $841.76</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon de manos antibacterial coco tropical 8oz 1x8' data-cod='001372'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial coco tropical 8oz 1x8' data-cod='001372'>
 <img src='imagenes/001372.jpg' data-codigo='001372' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001372</div>
 <div class='underline'></div>
@@ -1501,7 +1591,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $105.22</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $841.76</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon de manos galon 1x6' data-cod='000136'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos galon 1x6' data-cod='000136'>
 <img src='imagenes/000136.jpg' data-codigo='000136' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000136</div>
 <div class='underline'></div>
@@ -1510,7 +1600,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $243.97</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,463.79</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon de manos litro 1x12' data-cod='002105'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos litro 1x12' data-cod='002105'>
 <img src='imagenes/002105.jpg' data-codigo='002105' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002105</div>
 <div class='underline'></div>
@@ -1519,7 +1609,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $90.38</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,084.51</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
 <img src='imagenes/002143.jpg' data-codigo='002143' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002143</div>
 <div class='underline'></div>
@@ -1528,7 +1618,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $143.63</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $861.78</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon liquido neutro multiusos galon 1x6' data-cod='000121'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos galon 1x6' data-cod='000121'>
 <img src='imagenes/000121.jpg' data-codigo='000121' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000121</div>
 <div class='underline'></div>
@@ -1537,7 +1627,7 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $236.99</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,421.95</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabon de Manos' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
 <img src='imagenes/001910.jpg' data-codigo='001910' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001910</div>
 <div class='underline'></div>
@@ -1681,6 +1771,33 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $155.23</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,862.75</span></div>
 </div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Brillantinas' data-art='vialen brillantina blue 4 oz 1x24 ref. 11005' data-cod='002310'>
+<img src='imagenes/002310.jpg' data-codigo='002310' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002310</div>
+<div class='underline'></div>
+<div class='articulo'>VIALEN BRILLANTINA BLUE 4 OZ 1X24 Ref. 11005</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,289.89</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Brillantinas' data-art='vialen brillantina natural 4 oz 1x24 ref. 11004' data-cod='002309'>
+<img src='imagenes/002309.jpg' data-codigo='002309' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002309</div>
+<div class='underline'></div>
+<div class='articulo'>VIALEN BRILLANTINA NATURAL 4 OZ 1X24 Ref. 11004</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,289.89</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Brillantinas' data-art='vialen brillantina red 4 oz 1x24 ref. 11006' data-cod='002311'>
+<img src='imagenes/002311.jpg' data-codigo='002311' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002311</div>
+<div class='underline'></div>
+<div class='articulo'>VIALEN BRILLANTINA RED 4 OZ 1X24 Ref. 11006</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,289.89</span></div>
+</div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Gotas de Brillo' data-art='mane gotas de brillo hydra 4 oz 1x24' data-cod='000176'>
 <img src='imagenes/000176.jpg' data-codigo='000176' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000176</div>
@@ -1707,6 +1824,24 @@
 <div class='descripcion'>Caja = 24 Unidades *</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $160.54</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,852.94</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Hair Spray' data-art='vialen hair spray 4 oz 1x24 ref. 11020' data-cod='002297'>
+<img src='imagenes/002297.jpg' data-codigo='002297' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002297</div>
+<div class='underline'></div>
+<div class='articulo'>VIALEN HAIR SPRAY 4 OZ 1X24 Ref. 11020</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $106.64</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,559.29</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Hair Spray' data-art='vialen hair spray 8 oz 1x24 ref. 11021' data-cod='002298'>
+<img src='imagenes/002298.jpg' data-codigo='002298' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002298</div>
+<div class='underline'></div>
+<div class='articulo'>VIALEN HAIR SPRAY 8 OZ 1X24 Ref. 11021</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $168.37</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,040.98</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Leave In' data-art='mane leave in argan y macadamia 4 oz 1x24' data-cod='000180'>
 <img src='imagenes/000180.jpg' data-codigo='000180' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2093,7 +2228,7 @@
 <div class='articulo'>PALITOS P/ PINCHO 8" 100X100 Ref. 5821</div>
 <div class='descripcion'>Caja = 100 Paq de 100 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $29.27</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,926.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,926.99</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos para sushi 30x100 ref. 5687' data-cod='001908'>
 <img src='imagenes/001908.jpg' data-codigo='001908' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3796,147 +3931,12 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $130.27</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,302.73</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl16d) 10x100 ref. 18224' data-cod='002260'>
-<img src='imagenes/002260.jpg' data-codigo='002260' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002260</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL16D) 10X100 Ref. 18224</div>
-<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $184.95</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,849.51</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl910) 25x100 ca ref. 18141' data-cod='002001'>
-<img src='imagenes/002001.jpg' data-codigo='002001' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002001</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL910) 25x100 CA Ref. 18141</div>
-<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $123.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,093.70</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet s/r lion (pl1214) 25x100 ca ref. 18226' data-cod='002027'>
-<img src='imagenes/002027.jpg' data-codigo='002027' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002027</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET S/R LION (PL1214) 25x100 CA Ref. 18226</div>
-<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $142.49</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,562.22</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura (pl12h16) 10x100 ref. 18230' data-cod='002251'>
-<img src='imagenes/002251.jpg' data-codigo='002251' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002251</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA (PL12H16) 10X100 Ref. 18230</div>
-<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $170.99</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,709.86</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl16d) 10x100 ref. 18227' data-cod='002259'>
-<img src='imagenes/002259.jpg' data-codigo='002259' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002259</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL16D) 10X100 Ref. 18227</div>
-<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $184.95</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,849.51</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl640) 1x100 ref. 18228' data-cod='001794'>
-<img src='imagenes/001794.jpg' data-codigo='001794' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001794</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) 1X100 Ref. 18228</div>
-<div class='descripcion'>Caja = 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,650.80</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,650.80</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl910) 25x100 ref. 18225' data-cod='002258'>
-<img src='imagenes/002258.jpg' data-codigo='002258' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002258</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL910) 25X100 Ref. 18225</div>
-<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $123.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,093.70</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa blanca bebidas caliente  (pl6tl) 10x100 ref. 11390' data-cod='001572'>
-<img src='imagenes/001572.jpg' data-codigo='001572' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001572</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA BLANCA BEBIDAS CALIENTE  (PL6TL) 10X100 Ref. 11390</div>
-<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $152.89</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,528.91</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapas vasos (s-100) 50x100 ref. 18090' data-cod='002071'>
-<img src='imagenes/002071.jpg' data-codigo='002071' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002071</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPAS VASOS (S-100) 50x100 Ref. 18090</div>
-<div class='descripcion'>Caja = 50 Paq de 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $41.43</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,071.58</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso plastico no. 7 50x50 ref. 11011' data-cod='001394'>
-<img src='imagenes/001394.jpg' data-codigo='001394' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001394</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASO PLASTICO NO. 7 50X50 Ref. 11011</div>
-<div class='descripcion'>Fardo = 50 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $55.47</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,773.67</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pp 10 oz (pc10) 20x50 ref. 18012' data-cod='001732'>
-<img src='imagenes/001732.jpg' data-codigo='001732' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001732</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASO PP 10 OZ (PC10) 20x50 Ref. 18012</div>
-<div class='descripcion'>Fardo = 20 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $161.89</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,237.78</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos plasticos #10 50x50 ref. 18180' data-cod='001555'>
-<img src='imagenes/001555.jpg' data-codigo='001555' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001555</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASOS PLASTICOS #10 50X50 Ref. 18180</div>
-<div class='descripcion'>Fardo = 50 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $106.79</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,339.32</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 12 oz plastifar 20x50 ref. 18058' data-cod='002021'>
-<img src='imagenes/002021.jpg' data-codigo='002021' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002021</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASOS PP 12 OZ PLASTIFAR 20X50 Ref. 18058</div>
-<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $238.83</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,776.51</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 16 (pc16) 20x50 ref. 18048' data-cod='002012'>
-<img src='imagenes/002012.jpg' data-codigo='002012' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002012</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR VASOS PP 16 (PC16) 20x50 Ref. 18048</div>
-<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $283.31</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $5,666.11</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='0' data-art='plastifar tapa pp recesada para deli clear 10x50 ref. 18181' data-cod='001567'>
-<img src='imagenes/001567.jpg' data-codigo='001567' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001567</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PP RECESADA PARA DELI CLEAR 10X50 Ref. 18181</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $130.83</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,308.25</span></div>
-</div>
 </div><div id='loginPanel' style='display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; border:2px solid #003366; padding:20px; z-index:10000; border-radius:10px; text-align:center;'><h3>Acceso</h3><input type='text' id='usuario' placeholder='Usuario' style='display:block; margin:10px auto; padding:5px;'><input type='password' id='contrasena' placeholder='Contraseña' style='display:block; margin:10px auto; padding:5px;'><button onclick='verificarCredenciales()' style='margin-right:10px;'>Aceptar</button><button onclick='ocultarLogin()'>Cancelar</button><div id='mensajeLogin' style='color:red; margin-top:10px;'></div></div><button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style='position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#003366;color:white;border:none;border-radius:5px;cursor:pointer;'>Volver arriba</button><div id='overlay' style='display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; flex-direction: column;'><div style='position: relative; max-width: 90%; max-height: 80%; display:flex; align-items:center;'><button id='prevBtn' style='position:absolute; left:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(-1)'>&lt;</button><img id='imgAmpliada' src='' style='max-width:100%; max-height:80vh; border: 5px solid white; border-radius: 10px;' oncontextmenu='return false;' ondragstart='return false;' draggable='false'><button id='nextBtn' style='position:absolute; right:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(1)'>&gt;</button></div><div id='miniaturas' style='margin-top:10px; display:flex; justify-content:center; gap: 10px; overflow-x:auto; max-width: 90%;'></div></div><script>
 var usuarios = [
 {usuario: 'davidrojas', contrasena: 'rojasdavid'},
 {usuario: 'nahumbaltazar', contrasena: 'baltazarnahum'},
 {usuario: 'edisonpadilla', contrasena: 'padillaedison'},
-{usuario: 'franklin', contrasena: 'diaz'},
+{usuario: 'Frank', contrasena: 'diaz'},
 ];
 function mostrarLogin(){ document.getElementById('loginPanel').style.display='block'; }
 function ocultarLogin(){ document.getElementById('loginPanel').style.display='none'; document.getElementById('mensajeLogin').textContent=''; }
