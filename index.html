@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2025-06-18 13:04:08 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papelería / Oficina'>Papelería / Oficina</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos / Comestibles'>Alimentos / Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2025-06-18 16:18:08 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;}.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border box;} }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px }</style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='buscar()'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value=''>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papelería / Oficina'>Papelería / Oficina</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos / Comestibles'>Alimentos / Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='grid' id='productosGrid'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -1411,6 +1411,33 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $72.96</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,751.09</span></div>
 </div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='blink alcoholado supremo eucalipto 12 oz 1x24 ref. 20510' data-cod='002314'>
+<img src='imagenes/002314.jpg' data-codigo='002314' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002314</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK ALCOHOLADO SUPREMO EUCALIPTO 12 OZ 1X24 Ref. 20510</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.47</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,963.38</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='blink alcoholado supremo malagueta 12 oz 1x24 ref. 20508' data-cod='002312'>
+<img src='imagenes/002312.jpg' data-codigo='002312' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002312</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK ALCOHOLADO SUPREMO MALAGUETA 12 OZ 1X24 Ref. 20508</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.47</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,963.38</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='blink alcoholado supremo menta 12 oz 1x24 ref. 20509' data-cod='002313'>
+<img src='imagenes/002313.jpg' data-codigo='002313' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002313</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK ALCOHOLADO SUPREMO MENTA 12 OZ 1X24 Ref. 20509</div>
+<div class='descripcion'>Caja = 24 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.47</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,963.38</span></div>
+</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Desodorantes' data-art='ranex africa desodorante spray 150 ml 1x24 ref. 699256' data-cod='001815'>
 <img src='imagenes/001815.jpg' data-codigo='001815' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001815</div>
@@ -1573,6 +1600,42 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
 </div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon liquido aloe 11 oz 1x12 ref. 20201' data-cod='002317'>
+<img src='imagenes/002317.jpg' data-codigo='002317' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002317</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON LIQUIDO ALOE 11 OZ 1X12 Ref. 20201</div>
+<div class='descripcion'>Caja = 12 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,144.94</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon liquido colageno 11 oz 1x12 ref. 20202' data-cod='002315'>
+<img src='imagenes/002315.jpg' data-codigo='002315' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002315</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON LIQUIDO COLAGENO 11 OZ 1X12 Ref. 20202</div>
+<div class='descripcion'>Caja = 12 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,144.94</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon liquido karite 11 oz 1x12 ref. 20203' data-cod='002316'>
+<img src='imagenes/002316.jpg' data-codigo='002316' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002316</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON LIQUIDO KARITE 11 OZ 1X12 Ref. 20203</div>
+<div class='descripcion'>Caja = 12 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,144.94</span></div>
+</div>
+<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blossom jabon liquido rosa mosqueta 11 oz 1x12 ref. 20204' data-cod='002318'>
+<img src='imagenes/002318.jpg' data-codigo='002318' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002318</div>
+<div class='underline'></div>
+<div class='articulo'>BLOSSOM JABON LIQUIDO ROSA MOSQUETA 11 OZ 1X12 Ref. 20204</div>
+<div class='descripcion'>Caja = 12 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,144.94</span></div>
+</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial avena 8oz 1x8' data-cod='001376'>
 <img src='imagenes/001376.jpg' data-codigo='001376' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001376</div>
@@ -1690,15 +1753,6 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $122.40</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,448.03</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse multiaccion 1 gl 1x4 ref. 10703' data-cod='002294'>
-<img src='imagenes/002294.jpg' data-codigo='002294' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002294</div>
-<div class='underline'></div>
-<div class='articulo'>BLINK RINSE MULTIACCION 1 GL 1X4 Ref. 10703</div>
-<div class='descripcion'>Caja = 4 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
-</div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse multiaccion 8 oz 1x24 ref. 10604' data-cod='002290'>
 <img src='imagenes/002290.jpg' data-codigo='002290' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002290</div>
@@ -1708,20 +1762,29 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse natural 1 gl 1x4 ref. 10704' data-cod='002296'>
-<img src='imagenes/002296.jpg' data-codigo='002296' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002296</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse multiaccion fortificante 1 gl 1x4 ref. 10703' data-cod='002294'>
+<img src='imagenes/002294.jpg' data-codigo='002294' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002294</div>
 <div class='underline'></div>
-<div class='articulo'>BLINK RINSE NATURAL 1 GL 1X4 Ref. 10704</div>
+<div class='articulo'>BLINK RINSE MULTIACCION FORTIFICANTE 1 GL 1X4 Ref. 10703</div>
 <div class='descripcion'>Caja = 4 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse natural 8 oz 1x24 ref. 10603' data-cod='002292'>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse natural hidratante 1 gl 1x4 ref. 10704' data-cod='002296'>
+<img src='imagenes/002296.jpg' data-codigo='002296' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002296</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK RINSE NATURAL HIDRATANTE 1 GL 1X4 Ref. 10704</div>
+<div class='descripcion'>Caja = 4 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse natural hidratante 8 oz 1x24 ref. 10603' data-cod='002292'>
 <img src='imagenes/002292.jpg' data-codigo='002292' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002292</div>
 <div class='underline'></div>
-<div class='articulo'>BLINK RINSE NATURAL 8 OZ 1X24 Ref. 10603</div>
+<div class='articulo'>BLINK RINSE NATURAL HIDRATANTE 8 OZ 1X24 Ref. 10603</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
@@ -1906,15 +1969,6 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $115.53</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,310.68</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo multiaccion 1 gl 1x4 ref. 10701' data-cod='002293'>
-<img src='imagenes/002293.jpg' data-codigo='002293' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002293</div>
-<div class='underline'></div>
-<div class='articulo'>BLINK SHAMPOO MULTIACCION 1 GL 1X4 Ref. 10701</div>
-<div class='descripcion'>Caja = 4 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
-</div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo multiaccion 8 oz 1x24 ref. 10601' data-cod='002289'>
 <img src='imagenes/002289.jpg' data-codigo='002289' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002289</div>
@@ -1924,20 +1978,29 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo natural 1 gl 1x4 ref. 10702' data-cod='002295'>
-<img src='imagenes/002295.jpg' data-codigo='002295' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002295</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo multiaccion fortificante 1 gl 1x4 ref. 10701' data-cod='002293'>
+<img src='imagenes/002293.jpg' data-codigo='002293' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002293</div>
 <div class='underline'></div>
-<div class='articulo'>BLINK SHAMPOO NATURAL 1 GL 1X4 Ref. 10702</div>
+<div class='articulo'>BLINK SHAMPOO MULTIACCION FORTIFICANTE 1 GL 1X4 Ref. 10701</div>
 <div class='descripcion'>Caja = 4 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
 </div>
-<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo natural 8 oz 1x24 ref. 10602' data-cod='002291'>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo natural hidratante 1 gl 1x4 ref. 10702' data-cod='002295'>
+<img src='imagenes/002295.jpg' data-codigo='002295' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002295</div>
+<div class='underline'></div>
+<div class='articulo'>BLINK SHAMPOO NATURAL HIDRATANTE 1 GL 1X4 Ref. 10702</div>
+<div class='descripcion'>Caja = 4 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $145.92</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $583.70</span></div>
+</div>
+<div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo natural hidratante 8 oz 1x24 ref. 10602' data-cod='002291'>
 <img src='imagenes/002291.jpg' data-codigo='002291' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002291</div>
 <div class='underline'></div>
-<div class='articulo'>BLINK SHAMPOO NATURAL 8 OZ 1X24 Ref. 10602</div>
+<div class='articulo'>BLINK SHAMPOO NATURAL HIDRATANTE 8 OZ 1X24 Ref. 10602</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.51</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,212.29</span></div>
@@ -2344,8 +2407,8 @@
 <div class='underline'></div>
 <div class='articulo'>DE ORO PAPEL PVC 12" X 750" MTS 1X1 Ref. 5659</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.34</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.33</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro papel pvc 12x2000 pies 1x1 ref. 5646' data-cod='001827'>
 <img src='imagenes/001827.jpg' data-codigo='001827' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2633,7 +2696,7 @@
 <div class='articulo'>Bandeja 3 Libras 8X8 (4x125)  Ref. 5527</div>
 <div class='descripcion'>Caja = 4 Paq de 125 Unidades *</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $3,658.72</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $14,634.87</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $14,634.86</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio grande 525 (1x50) ref. 5307' data-cod='001455'>
 <img src='imagenes/001455.jpg' data-codigo='001455' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3523,8 +3586,8 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR BIO SANCOCHERO CON TAPA SOUP BOWL 32 OZ 6X20 Ref. 13181</div>
 <div class='descripcion'>Fardo = 6 Paq de 20 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $456.68</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,740.08</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $456.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,735.97</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar env. plast. souffle 4 oz color negro 20x125 ref 11272' data-cod='001561'>
 <img src='imagenes/001561.jpg' data-codigo='001561' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3930,6 +3993,141 @@
 <div class='descripcion'>Fardo = 10 Paq de 100 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $130.27</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,302.73</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl16d) 10x100 ref. 18224' data-cod='002260'>
+<img src='imagenes/002260.jpg' data-codigo='002260' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002260</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL16D) 10X100 Ref. 18224</div>
+<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $184.95</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,849.51</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet con ranura lion (pl910) 25x100 ca ref. 18141' data-cod='002001'>
+<img src='imagenes/002001.jpg' data-codigo='002001' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002001</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET CON RANURA LION (PL910) 25x100 CA Ref. 18141</div>
+<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $123.75</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,093.70</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet s/r lion (pl1214) 25x100 ca ref. 18226' data-cod='002027'>
+<img src='imagenes/002027.jpg' data-codigo='002027' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002027</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET S/R LION (PL1214) 25x100 CA Ref. 18226</div>
+<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $142.49</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,562.22</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura (pl12h16) 10x100 ref. 18230' data-cod='002251'>
+<img src='imagenes/002251.jpg' data-codigo='002251' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002251</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA (PL12H16) 10X100 Ref. 18230</div>
+<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $170.99</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,709.86</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl16d) 10x100 ref. 18227' data-cod='002259'>
+<img src='imagenes/002259.jpg' data-codigo='002259' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002259</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL16D) 10X100 Ref. 18227</div>
+<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $184.95</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,849.51</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl640) 1x100 ref. 18228' data-cod='001794'>
+<img src='imagenes/001794.jpg' data-codigo='001794' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001794</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL640) 1X100 Ref. 18228</div>
+<div class='descripcion'>Caja = 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,650.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,650.80</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa pet sin ranura lion (pl910) 25x100 ref. 18225' data-cod='002258'>
+<img src='imagenes/002258.jpg' data-codigo='002258' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002258</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PET SIN RANURA LION (PL910) 25X100 Ref. 18225</div>
+<div class='descripcion'>Caja = 25 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $123.75</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,093.70</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapa blanca bebidas caliente  (pl6tl) 10x100 ref. 11390' data-cod='001572'>
+<img src='imagenes/001572.jpg' data-codigo='001572' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001572</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA BLANCA BEBIDAS CALIENTE  (PL6TL) 10X100 Ref. 11390</div>
+<div class='descripcion'>Caja = 10 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $152.89</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,528.91</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar tapas vasos (s-100) 50x100 ref. 18090' data-cod='002071'>
+<img src='imagenes/002071.jpg' data-codigo='002071' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002071</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPAS VASOS (S-100) 50x100 Ref. 18090</div>
+<div class='descripcion'>Caja = 50 Paq de 100 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $41.43</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,071.58</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso plastico no. 7 50x50 ref. 11011' data-cod='001394'>
+<img src='imagenes/001394.jpg' data-codigo='001394' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001394</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PLASTICO NO. 7 50X50 Ref. 11011</div>
+<div class='descripcion'>Fardo = 50 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $55.47</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,773.67</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vaso pp 10 oz (pc10) 20x50 ref. 18012' data-cod='001732'>
+<img src='imagenes/001732.jpg' data-codigo='001732' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001732</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASO PP 10 OZ (PC10) 20x50 Ref. 18012</div>
+<div class='descripcion'>Fardo = 20 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $161.89</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,237.78</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos plasticos #10 50x50 ref. 18180' data-cod='001555'>
+<img src='imagenes/001555.jpg' data-codigo='001555' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001555</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PLASTICOS #10 50X50 Ref. 18180</div>
+<div class='descripcion'>Fardo = 50 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $106.79</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,339.32</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 12 oz plastifar 20x50 ref. 18058' data-cod='002021'>
+<img src='imagenes/002021.jpg' data-codigo='002021' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002021</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PP 12 OZ PLASTIFAR 20X50 Ref. 18058</div>
+<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $238.83</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,776.51</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar vasos pp 16 (pc16) 20x50 ref. 18048' data-cod='002012'>
+<img src='imagenes/002012.jpg' data-codigo='002012' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>002012</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR VASOS PP 16 (PC16) 20x50 Ref. 18048</div>
+<div class='descripcion'>Caja = 20 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $283.31</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $5,666.11</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='0' data-art='plastifar tapa pp recesada para deli clear 10x50 ref. 18181' data-cod='001567'>
+<img src='imagenes/001567.jpg' data-codigo='001567' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001567</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PP RECESADA PARA DELI CLEAR 10X50 Ref. 18181</div>
+<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $130.83</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,308.25</span></div>
 </div>
 </div><div id='loginPanel' style='display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; border:2px solid #003366; padding:20px; z-index:10000; border-radius:10px; text-align:center;'><h3>Acceso</h3><input type='text' id='usuario' placeholder='Usuario' style='display:block; margin:10px auto; padding:5px;'><input type='password' id='contrasena' placeholder='Contraseña' style='display:block; margin:10px auto; padding:5px;'><button onclick='verificarCredenciales()' style='margin-right:10px;'>Aceptar</button><button onclick='ocultarLogin()'>Cancelar</button><div id='mensajeLogin' style='color:red; margin-top:10px;'></div></div><button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style='position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#003366;color:white;border:none;border-radius:5px;cursor:pointer;'>Volver arriba</button><div id='overlay' style='display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; flex-direction: column;'><div style='position: relative; max-width: 90%; max-height: 80%; display:flex; align-items:center;'><button id='prevBtn' style='position:absolute; left:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(-1)'>&lt;</button><img id='imgAmpliada' src='' style='max-width:100%; max-height:80vh; border: 5px solid white; border-radius: 10px;' oncontextmenu='return false;' ondragstart='return false;' draggable='false'><button id='nextBtn' style='position:absolute; right:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(1)'>&gt;</button></div><div id='miniaturas' style='margin-top:10px; display:flex; justify-content:center; gap: 10px; overflow-x:auto; max-width: 90%;'></div></div><script>
 var usuarios = [
