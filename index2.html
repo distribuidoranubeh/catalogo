@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2026-03-05 14:57:47 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: block; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 140px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><button id='btnInicio' onclick='mostrarInicio()' style='margin:5px 10px; padding:8px 12px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value='' disabled selected>Seleccione una categoria</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos y Comestibles'>Alimentos y Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Articulos del hogar")'><img src='imagenes/Articulos del hogar.jpg' alt='Articulos del hogar' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Articulos del hogar</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Alimentos y Comestibles")'><img src='imagenes/Alimentos y Comestibles.jpg' alt='Alimentos y Comestibles' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Alimentos y Comestibles</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2026-03-05 15:04:21 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 20px; width: 100%; position: fixed; top: 0; z-index: 1000; }.filtros input, .filtros select { padding: 10px; margin: 5px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }.filtros img { position: absolute; left: 5px; height: 80px; }.detalle-unidades { display: block; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 140px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 140px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .filtros img { height: 50px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 14px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .filtros img { height: 45px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 11px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 100px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='filtros'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' style='cursor:pointer;' onclick='mostrarLogin()'><button id='btnInicio' onclick='mostrarInicio()' style='margin:5px 10px; padding:8px 12px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value='' disabled selected>Seleccione una categoria</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos y Comestibles'>Alimentos y Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Articulos del hogar")'><img src='imagenes/Articulos del hogar.jpg' alt='Articulos del hogar' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Articulos del hogar</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Alimentos y Comestibles")'><img src='imagenes/Alimentos y Comestibles.jpg' alt='Alimentos y Comestibles' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Alimentos y Comestibles</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -121,8 +121,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMBIENTADOR CANELA 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $62.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,498.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,577.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='nubeh ambientador manzana 4 oz 1x24' data-cod='000088'>
 <img src='imagenes/000088.jpg' data-codigo='000088' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -130,8 +130,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMBIENTADOR MANZANA 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $62.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,498.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,577.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='nubeh ambientador new car 4 oz 1x24' data-cod='000090'>
 <img src='imagenes/000090.jpg' data-codigo='000090' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -139,8 +139,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMBIENTADOR NEW CAR 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $62.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,498.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,577.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='nubeh ambientador sandalo 4 oz 1x24' data-cod='000087'>
 <img src='imagenes/000087.jpg' data-codigo='000087' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -148,8 +148,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMBIENTADOR SANDALO 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $62.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,498.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,577.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='nubeh ambientador uva 4 oz 1x24' data-cod='000091'>
 <img src='imagenes/000091.jpg' data-codigo='000091' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -157,8 +157,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMBIENTADOR UVA 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $62.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,498.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,577.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Cloro' data-art='nubeh cloro liquido 16 oz 1x15' data-cod='002092'>
 <img src='imagenes/002092.jpg' data-codigo='002092' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -166,8 +166,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH CLORO LIQUIDO 16 OZ 1X15</div>
 <div class='descripcion'>Caja = 15 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $33.45</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $501.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $35.21</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $528.21</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Cloro' data-art='nubeh cloro liquido 32 oz 1x12' data-cod='002093'>
 <img src='imagenes/002093.jpg' data-codigo='002093' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -175,8 +175,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH CLORO LIQUIDO 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $45.67</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $547.99</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $576.83</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Cloro' data-art='nubeh cloro liquido galon 1x6' data-cod='000098'>
 <img src='imagenes/000098.jpg' data-codigo='000098' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -184,8 +184,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH CLORO LIQUIDO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $80.48</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $482.86</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $84.71</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $508.27</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante multiusos 1/2 gal 1x6' data-cod='000102'>
 <img src='imagenes/000102.jpg' data-codigo='000102' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -193,8 +193,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE MULTIUSOS 1/2 GAL 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $93.55</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $561.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $98.47</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $590.84</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante multiusos 16 oz 1x15' data-cod='000103'>
 <img src='imagenes/000103.jpg' data-codigo='000103' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -202,8 +202,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE MULTIUSOS 16 OZ 1X15</div>
 <div class='descripcion'>Caja = 15 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.10</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $976.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $68.53</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,027.90</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante multiusos galon 1x6' data-cod='000101'>
 <img src='imagenes/000101.jpg' data-codigo='000101' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -211,8 +211,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE MULTIUSOS GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.29</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $883.73</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $155.04</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $930.24</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante en polvo 50 lbs 1x1' data-cod='000104'>
 <img src='imagenes/000104.jpg' data-codigo='000104' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -220,8 +220,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE EN POLVO 50 LBS 1X1</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $3,887.05</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $3,887.05</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $4,091.63</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $4,091.63</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desgrasantes' data-art='nubeh desgrasante en polvo 8 lbs 1x6' data-cod='000105'>
 <img src='imagenes/000105.jpg' data-codigo='000105' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -229,8 +229,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESGRASANTE EN POLVO 8 LBS 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $535.57</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,213.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $563.75</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,382.53</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante bebe 50 ml 1x200 ref. 40603' data-cod='002269'>
 <img src='imagenes/002269.jpg' data-codigo='002269' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -247,8 +247,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BEBE GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.66</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $759.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $133.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $799.97</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante brisa marina 1/2 galon 1x6' data-cod='000114'>
 <img src='imagenes/000114.jpg' data-codigo='000114' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -256,8 +256,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BRISA MARINA 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $84.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $508.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $89.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $535.32</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante brisa marina 8 oz 1x12' data-cod='001304'>
 <img src='imagenes/001304.jpg' data-codigo='001304' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -265,8 +265,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BRISA MARINA 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $29.55</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $354.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $31.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $373.23</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante brisa marina galon 1x6' data-cod='000113'>
 <img src='imagenes/000113.jpg' data-codigo='000113' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -274,8 +274,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BRISA MARINA GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.66</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $759.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $133.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $799.97</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante brisa marina litro 1x12' data-cod='001317'>
 <img src='imagenes/001317.jpg' data-codigo='001317' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -283,8 +283,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE BRISA MARINA LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $46.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $553.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $582.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante floral 120 ml 1x32 ref. 40701' data-cod='002274'>
 <img src='imagenes/002274.jpg' data-codigo='002274' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -310,8 +310,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FLORAL 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $84.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $508.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $89.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $535.32</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante floral 8 oz 1x12' data-cod='001303'>
 <img src='imagenes/001303.jpg' data-codigo='001303' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -319,8 +319,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FLORAL 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $29.55</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $354.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $31.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $373.23</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante floral galon 1x6' data-cod='000108'>
 <img src='imagenes/000108.jpg' data-codigo='000108' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -328,8 +328,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FLORAL GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.66</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $759.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $133.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $799.97</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante floral litro 1x12' data-cod='001315'>
 <img src='imagenes/001315.jpg' data-codigo='001315' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -337,8 +337,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FLORAL LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $46.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $553.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $582.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante frutal 1/2 galon 1x6' data-cod='000116'>
 <img src='imagenes/000116.jpg' data-codigo='000116' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -346,8 +346,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FRUTAL 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $84.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $508.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $89.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $535.32</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante frutal 8 oz 1x12' data-cod='001305'>
 <img src='imagenes/001305.jpg' data-codigo='001305' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -355,8 +355,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FRUTAL 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $29.55</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $354.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $31.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $373.23</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante frutal galon 1x6' data-cod='000115'>
 <img src='imagenes/000115.jpg' data-codigo='000115' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -364,8 +364,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FRUTAL GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.66</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $759.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $133.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $799.97</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante frutal litro 1x12' data-cod='001314'>
 <img src='imagenes/001314.jpg' data-codigo='001314' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -373,8 +373,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE FRUTAL LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $46.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $553.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $582.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='king desinfectante lavanda 120 ml 1x32 ref. 40702' data-cod='002275'>
 <img src='imagenes/002275.jpg' data-codigo='002275' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -400,8 +400,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE LAVANDA 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $84.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $508.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $89.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $535.32</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante lavanda 8 oz 1x12' data-cod='001302'>
 <img src='imagenes/001302.jpg' data-codigo='001302' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -409,8 +409,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE LAVANDA 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $29.55</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $354.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $31.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $373.23</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante lavanda galon 1x6' data-cod='000110'>
 <img src='imagenes/000110.jpg' data-codigo='000110' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -418,8 +418,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE LAVANDA GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.66</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $759.97</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $133.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $799.97</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Desinfectantes' data-art='nubeh desinfectante lavanda litro 1x12' data-cod='001316'>
 <img src='imagenes/001316.jpg' data-codigo='001316' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -427,8 +427,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DESINFECTANTE LAVANDA LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $46.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $553.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $582.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente blanqueador 1/2 galon 1x6' data-cod='002144'>
 <img src='imagenes/002144.jpg' data-codigo='002144' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -436,8 +436,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE BLANQUEADOR 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $129.27</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $775.61</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $816.44</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente blanqueador galon 1x6' data-cod='000128'>
 <img src='imagenes/000128.jpg' data-codigo='000128' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -445,8 +445,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE BLANQUEADOR GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $164.06</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $984.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $172.69</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,036.14</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente blanqueador litro 1x12' data-cod='000129'>
 <img src='imagenes/000129.jpg' data-codigo='000129' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -454,8 +454,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE BLANQUEADOR LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $68.42</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $821.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $72.02</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $864.21</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='king jabon de cuaba 120 ml 1x32 ref. 40301' data-cod='002272'>
 <img src='imagenes/002272.jpg' data-codigo='002272' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -481,8 +481,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE CUABA LIQUIDO 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $117.40</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $704.39</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $741.46</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon de cuaba liquido 8 oz 1x12' data-cod='001298'>
 <img src='imagenes/001298.jpg' data-codigo='001298' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -490,8 +490,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE CUABA LIQUIDO 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $35.13</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $421.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $443.73</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon de cuaba liquido galon 1x6' data-cod='000125'>
 <img src='imagenes/000125.jpg' data-codigo='000125' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -499,8 +499,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE CUABA LIQUIDO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $165.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $990.92</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $173.85</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,043.07</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon de cuaba liquido litro 1x12' data-cod='000127'>
 <img src='imagenes/000127.jpg' data-codigo='000127' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -508,8 +508,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE CUABA LIQUIDO LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $67.18</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $806.13</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $70.71</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $848.56</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
 <img src='imagenes/002143.jpg' data-codigo='002143' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -517,8 +517,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $129.27</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $775.61</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $816.44</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon liquido neutro multiusos galon 1x6' data-cod='000121'>
 <img src='imagenes/000121.jpg' data-codigo='000121' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -526,8 +526,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $178.35</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,070.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $187.73</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,126.39</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
 <img src='imagenes/001910.jpg' data-codigo='001910' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -535,8 +535,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $981.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $86.05</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,032.64</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente liquido pro-color 1/2 gl 1x6' data-cod='000123'>
 <img src='imagenes/000123.jpg' data-codigo='000123' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -544,8 +544,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE LIQUIDO PRO-COLOR 1/2 GL 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $111.60</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $669.63</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $117.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $704.87</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente liquido pro-color 8 oz 1x12' data-cod='001301'>
 <img src='imagenes/001301.jpg' data-codigo='001301' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -553,8 +553,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE LIQUIDO PRO-COLOR 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $39.07</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $468.84</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $41.13</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $493.51</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente liquido pro-color galon 1x6' data-cod='000122'>
 <img src='imagenes/000122.jpg' data-codigo='000122' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -562,8 +562,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE LIQUIDO PRO-COLOR GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $163.04</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $978.24</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $171.62</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,029.73</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Detergente Liquido' data-art='nubeh detergente liquido pro-color litro 1x12' data-cod='000124'>
 <img src='imagenes/000124.jpg' data-codigo='000124' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -571,8 +571,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH DETERGENTE LIQUIDO PRO-COLOR LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.15</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $781.77</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $68.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $822.92</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Jabon en barra' data-art='king jabon de cuaba 5x160 gr 1x10 ref. 41201' data-cod='002280'>
 <img src='imagenes/002280.jpg' data-codigo='002280' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -589,8 +589,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON 1/2 GAL 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $119.03</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $714.16</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $125.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $751.75</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux lavaplatos liquido limon 8 oz 1x12' data-cod='001297'>
 <img src='imagenes/001297.jpg' data-codigo='001297' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -598,8 +598,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.60</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $439.24</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $38.53</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $462.36</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux lavaplatos liquido limon galon 1x6' data-cod='000140'>
 <img src='imagenes/000140.jpg' data-codigo='000140' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -607,8 +607,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $164.92</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $989.50</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $173.60</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,041.58</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux lavaplatos liquido limon litro 1x12' data-cod='000142'>
 <img src='imagenes/000142.jpg' data-codigo='000142' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -616,8 +616,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX LAVAPLATOS LIQUIDO LIMON LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $70.87</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $850.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $74.60</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $895.21</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='king lavaplatos 120 ml 1x32 ref. 40401' data-cod='002273'>
 <img src='imagenes/002273.jpg' data-codigo='002273' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -643,8 +643,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR 10 LBR 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $428.20</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,569.19</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $450.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,704.41</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux pasta de fregar 16 oz 2x12' data-cod='000157'>
 <img src='imagenes/000157.jpg' data-codigo='000157' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -652,8 +652,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR 16 OZ 2X12</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $71.37</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,712.79</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $75.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,802.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux pasta de fregar 24 oz 2x12' data-cod='000158'>
 <img src='imagenes/000158.jpg' data-codigo='000158' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -661,8 +661,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR 24 OZ 2X12</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $91.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,202.16</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $96.59</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,318.07</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux pasta de fregar 25 lbr' data-cod='001430'>
 <img src='imagenes/001430.jpg' data-codigo='001430' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -670,8 +670,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR 25 LBR</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,067.95</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,067.95</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,124.15</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,124.15</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux pasta de fregar 8oz 2x12' data-cod='002383'>
 <img src='imagenes/002383.jpg' data-codigo='002383' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -679,8 +679,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR 8OZ 2X12</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $48.43</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,162.25</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $50.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,223.42</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Lavaplatos' data-art='cristalux pasta de fregar cubeta 50 lbs 1x1' data-cod='000159'>
 <img src='imagenes/000159.jpg' data-codigo='000159' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -688,8 +688,8 @@
 <div class='underline'></div>
 <div class='articulo'>CRISTALUX PASTA DE FREGAR CUBETA 50 LBS 1X1</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $2,235.30</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $2,235.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $2,352.94</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $2,352.94</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpia cristales galon 1x6' data-cod='000148'>
 <img src='imagenes/000148.jpg' data-codigo='000148' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -697,8 +697,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIA CRISTALES GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $165.45</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $992.69</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $174.16</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,044.93</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpia cristales litro 1x12' data-cod='000147'>
 <img src='imagenes/000147.jpg' data-codigo='000147' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -706,8 +706,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIA CRISTALES LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $67.70</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $812.36</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $71.26</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $855.11</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpiador de inodoros y ceramicas 1/2gl 1x6' data-cod='000146'>
 <img src='imagenes/000146.jpg' data-codigo='000146' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -715,8 +715,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIADOR DE INODOROS Y CERAMICAS 1/2GL 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $99.92</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $599.53</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $105.18</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $631.09</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpiador de inodoros y ceramicas 8 oz 1x12' data-cod='001299'>
 <img src='imagenes/001299.jpg' data-codigo='001299' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -724,8 +724,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIADOR DE INODOROS Y CERAMICAS 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $39.85</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $478.18</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $41.95</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $503.35</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpiador de inodoros y ceramicas galon 1x6' data-cod='000144'>
 <img src='imagenes/000144.jpg' data-codigo='000144' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -733,8 +733,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIADOR DE INODOROS Y CERAMICAS GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $164.98</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $989.85</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $173.66</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,041.95</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh limpiador de inodoros y ceramicas litro 1x12' data-cod='000145'>
 <img src='imagenes/000145.jpg' data-codigo='000145' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -742,8 +742,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LIMPIADOR DE INODOROS Y CERAMICAS LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $58.21</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $698.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $61.27</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $735.28</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh lustrador maderas 14 oz 1x20' data-cod='000149'>
 <img src='imagenes/000149.jpg' data-codigo='000149' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -751,8 +751,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH LUSTRADOR MADERAS 14 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $129.01</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,580.19</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $135.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,715.99</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh pinol concentrado 1/2 gl 1x6' data-cod='000118'>
 <img src='imagenes/000118.jpg' data-codigo='000118' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -760,8 +760,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH PINOL CONCENTRADO 1/2 GL 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $100.52</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $603.15</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $105.81</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $634.89</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh pinol concentrado 8 oz 1x12' data-cod='001300'>
 <img src='imagenes/001300.jpg' data-codigo='001300' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -769,8 +769,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH PINOL CONCENTRADO 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $39.18</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $470.11</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $41.24</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $494.85</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh pinol concentrado galon 1x6' data-cod='000117'>
 <img src='imagenes/000117.jpg' data-codigo='000117' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -778,8 +778,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH PINOL CONCENTRADO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $188.23</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,129.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $198.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,188.84</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Limpiadores' data-art='nubeh pinol concentrado litro 1x12' data-cod='000119'>
 <img src='imagenes/000119.jpg' data-codigo='000119' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -787,8 +787,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH PINOL CONCENTRADO LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $70.03</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $840.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $73.72</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $884.63</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='bicarbonato de sodio' data-cod='000374'>
 <img src='imagenes/000374.jpg' data-codigo='000374' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -805,8 +805,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH BICARBONATO DE SODIO 3 LBS 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $211.49</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,537.90</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $222.62</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,671.47</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Polvo' data-art='detergente en polvo 10 lbs 1x3 ref. det10' data-cod='001735'>
 <img src='imagenes/001735.jpg' data-codigo='001735' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -886,8 +886,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS BABY 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $99.57</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $597.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $104.81</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $628.85</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas baby galon 1x6' data-cod='001080'>
 <img src='imagenes/001080.jpg' data-codigo='001080' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -895,8 +895,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS BABY GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $141.97</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $851.79</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $149.44</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $896.63</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas baby litro 1x12' data-cod='001082'>
 <img src='imagenes/001082.jpg' data-codigo='001082' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -904,8 +904,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS BABY LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $64.07</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.89</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $67.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $809.36</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='king suavizante 120 ml 1x32 ref. 40501' data-cod='002271'>
 <img src='imagenes/002271.jpg' data-codigo='002271' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -940,8 +940,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS PRIMAVERAL 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $99.57</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $597.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $104.81</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $628.85</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas primaveral 8 oz 1x12' data-cod='001296'>
 <img src='imagenes/001296.jpg' data-codigo='001296' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -949,8 +949,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS PRIMAVERAL 8 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $32.80</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $393.65</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $34.53</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $414.37</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas primaveral galon 1x6' data-cod='000196'>
 <img src='imagenes/000196.jpg' data-codigo='000196' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -958,8 +958,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS PRIMAVERAL GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $141.97</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $851.79</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $149.44</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $896.63</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Suavizantes' data-art='suavifresh suavizante de telas primaveral litro 1x12' data-cod='000200'>
 <img src='imagenes/000200.jpg' data-codigo='000200' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -967,8 +967,8 @@
 <div class='underline'></div>
 <div class='articulo'>SUAVIFRESH SUAVIZANTE DE TELAS PRIMAVERAL LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $64.07</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $768.89</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $67.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $809.36</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh amorol blanco 14 oz spray 1x20' data-cod='000190'>
 <img src='imagenes/000190.jpg' data-codigo='000190' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -976,8 +976,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMOROL BLANCO 14 OZ SPRAY 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $101.19</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,023.70</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $106.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,130.21</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh amorol blanco galon 1x6' data-cod='000193'>
 <img src='imagenes/000193.jpg' data-codigo='000193' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -985,8 +985,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMOROL BLANCO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $703.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,222.58</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $740.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,444.82</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh amorol 14 oz gel 1x20' data-cod='000189'>
 <img src='imagenes/000189.jpg' data-codigo='000189' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -994,8 +994,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMOROL 14 OZ GEL 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $144.08</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,881.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $151.66</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,033.22</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh amorol gel galon 1x6' data-cod='000192'>
 <img src='imagenes/000192.jpg' data-codigo='000192' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1003,8 +1003,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH AMOROL GEL GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,567.77</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $9,406.63</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $1,650.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $9,901.72</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh car wash shampoo galon 1x6' data-cod='000191'>
 <img src='imagenes/000191.jpg' data-codigo='000191' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1012,8 +1012,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH CAR WASH SHAMPOO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $161.19</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $967.13</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $169.67</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,018.03</span></div>
 </div>
 <div class='item' data-cat='Productos de Limpieza' data-subcat='Vehiculos' data-art='nubeh car wash shampoo litro 1x12' data-cod='000194'>
 <img src='imagenes/000194.jpg' data-codigo='000194' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1021,8 +1021,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH CAR WASH SHAMPOO LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $71.83</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $861.92</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $75.61</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $907.28</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Cepillos' data-art='brava cepillo plastico p/ inodoros c/ base blanco 1x12 ref. 47039 b' data-cod='002205'>
 <img src='imagenes/002205.jpg' data-codigo='002205' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1183,8 +1183,8 @@
 <div class='underline'></div>
 <div class='articulo'>FRASCO CON ATOMIZADOR 16 OZ 1X1</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $34.57</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $34.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.39</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $36.39</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Otros' data-art='letrero piso mojado 1x1 ref. 30470' data-cod='002204'>
 <img src='imagenes/002204.jpg' data-codigo='002204' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1345,8 +1345,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH ALCOHOL ISOPROPILICO 70% GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $498.56</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,991.37</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $524.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,148.81</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh spray desinfectante 14 oz (alcohol 70%) 1x20' data-cod='001262'>
 <img src='imagenes/001262.jpg' data-codigo='001262' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1354,8 +1354,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH SPRAY DESINFECTANTE 14 OZ (ALCOHOL 70%) 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.04</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,520.72</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $132.67</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,653.39</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh spray desinfectante 4 oz (alcohol 70%) 1x24' data-cod='001263'>
 <img src='imagenes/001263.jpg' data-codigo='001263' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1363,8 +1363,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH SPRAY DESINFECTANTE 4 OZ (ALCOHOL 70%) 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.05</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,945.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $85.32</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,047.69</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='nubeh alcohol en gel galon 1x6' data-cod='000135'>
 <img src='imagenes/000135.jpg' data-codigo='000135' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1372,8 +1372,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH ALCOHOL EN GEL GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $547.06</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,282.36</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $575.85</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,455.11</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='pureglow alcohol en gel 8oz 1x8' data-cod='002138'>
 <img src='imagenes/002138.jpg' data-codigo='002138' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1381,8 +1381,8 @@
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW ALCOHOL EN GEL 8OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $139.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,112.03</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $146.32</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,170.56</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Alcohol' data-art='valle verde bay rum 12 oz 1x24 ref. 41301' data-cod='002287'>
 <img src='imagenes/002287.jpg' data-codigo='002287' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1561,8 +1561,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE BODY WASH DE COCO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $248.28</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,489.70</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $261.35</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,568.11</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash coconut & vanilla 16 oz 1x20' data-cod='001470'>
 <img src='imagenes/001470.jpg' data-codigo='001470' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1570,8 +1570,8 @@
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW BODY WASH COCONUT & VANILLA 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,954.96</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $155.52</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,110.48</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash green tea & mint 16 oz 1x20' data-cod='002113'>
 <img src='imagenes/002113.jpg' data-codigo='002113' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1579,8 +1579,8 @@
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW BODY WASH GREEN TEA & MINT 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,954.96</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $155.52</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,110.48</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='pureglow body wash tropical fruits 16 oz 1x20' data-cod='002114'>
 <img src='imagenes/002114.jpg' data-codigo='002114' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1588,8 +1588,8 @@
 <div class='underline'></div>
 <div class='articulo'>PUREGLOW BODY WASH TROPICAL FRUITS 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,954.96</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $155.52</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,110.48</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='ultra compact gel de baño pasion of fruit 500 ml 1x12 ref. bw-012' data-cod='001893'>
 <img src='imagenes/001893.jpg' data-codigo='001893' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1696,8 +1696,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE MANOS ANTIBACTERIAL AVENA 8OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.82</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $526.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $69.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $554.28</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial coco tropical 8oz 1x8' data-cod='001372'>
 <img src='imagenes/001372.jpg' data-codigo='001372' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1705,8 +1705,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE MANOS ANTIBACTERIAL COCO TROPICAL 8OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.82</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $526.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $69.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $554.28</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial leche y miel 8oz 1x8' data-cod='001377'>
 <img src='imagenes/001377.jpg' data-codigo='001377' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1714,8 +1714,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE MANOS ANTIBACTERIAL LECHE Y MIEL 8OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $65.82</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $526.56</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $69.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $554.28</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos galon 1x6' data-cod='000136'>
 <img src='imagenes/000136.jpg' data-codigo='000136' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1723,8 +1723,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE MANOS GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $206.96</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,241.76</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $217.85</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,307.12</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos litro 1x12' data-cod='002105'>
 <img src='imagenes/002105.jpg' data-codigo='002105' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1732,8 +1732,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON DE MANOS LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $976.05</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $85.62</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,027.42</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos 1/2 galon 1x6' data-cod='002143'>
 <img src='imagenes/002143.jpg' data-codigo='002143' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1741,8 +1741,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS 1/2 GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $129.27</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $775.61</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $816.44</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos galon 1x6' data-cod='000121'>
 <img src='imagenes/000121.jpg' data-codigo='000121' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1750,8 +1750,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $178.35</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,070.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $187.73</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,126.39</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon liquido neutro multiusos litro 1x12' data-cod='001910'>
 <img src='imagenes/001910.jpg' data-codigo='001910' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1759,8 +1759,8 @@
 <div class='underline'></div>
 <div class='articulo'>NUBEH JABON LIQUIDO NEUTRO MULTIUSOS LITRO 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.75</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $981.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $86.05</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,032.64</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Pañales desechables' data-art='baby boo pañal #1 small 10 uds 1x20 ref. pa-0006' data-cod='002014'>
 <img src='imagenes/002014.jpg' data-codigo='002014' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1795,8 +1795,8 @@
 <div class='underline'></div>
 <div class='articulo'>MOSQUI-STOP REPELENTE SPRAY 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $144.47</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,467.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $152.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,649.70</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallas desmaquillantes' data-art='ultra compact toallas desmaquillante micellar 25 uds 1x10 ref. ww-181-1' data-cod='001975'>
 <img src='imagenes/001975.jpg' data-codigo='001975' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1903,8 +1903,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACEITE ARGAN Y MACADAMIA 4 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $209.46</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,189.24</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $220.49</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,409.72</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Aceites' data-art='mane aceite de coco 4 oz 1x20' data-cod='001379'>
 <img src='imagenes/001379.jpg' data-codigo='001379' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1912,8 +1912,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACEITE DE COCO 4 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $198.31</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,966.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $208.75</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,174.96</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='mane acondicionador argan y macadamia 16 oz 1x20' data-cod='000162'>
 <img src='imagenes/000162.jpg' data-codigo='000162' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1921,8 +1921,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR ARGAN Y MACADAMIA 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $110.16</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,203.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $115.96</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,319.26</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='blink rinse multiaccion 8 oz 1x24 ref. 10604' data-cod='002290'>
 <img src='imagenes/002290.jpg' data-codigo='002290' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1966,8 +1966,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR DE COCO 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $77.23</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,544.62</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,625.92</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='mane acondicionador de coco galon 1x6' data-cod='000186'>
 <img src='imagenes/000186.jpg' data-codigo='000186' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1975,8 +1975,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR DE COCO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $194.78</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,168.70</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $205.03</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,230.21</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='mane acondicionador de coco garrafon 3 gls 1x1' data-cod='001757'>
 <img src='imagenes/001757.jpg' data-codigo='001757' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1984,8 +1984,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR DE COCO GARRAFON 3 GLS 1X1</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $714.22</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $714.22</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $751.81</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $751.81</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='mane acondicionador hydra 32 oz 1x12' data-cod='000173'>
 <img src='imagenes/000173.jpg' data-codigo='000173' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1993,8 +1993,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR HYDRA 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $139.71</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,676.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,764.78</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Acondicionador' data-art='mane acondicionador repair therapy 32 oz 1x12' data-cod='000163'>
 <img src='imagenes/000163.jpg' data-codigo='000163' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2002,8 +2002,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE ACONDICIONADOR REPAIR THERAPY 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $141.42</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,697.08</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $148.87</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,786.40</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Alisado' data-art='vialen laciopelo alisado no lye oliva 1 ap 1x12 ref. 10901' data-cod='002325'>
 <img src='imagenes/002325.jpg' data-codigo='002325' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2092,8 +2092,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE GOTAS DE BRILLO HYDRA 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $144.49</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,467.78</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $152.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,650.30</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Gotas de Brillo' data-art='mane gotas de brillo repair therapy 4 oz 1x24' data-cod='000166'>
 <img src='imagenes/000166.jpg' data-codigo='000166' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2101,8 +2101,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE GOTAS DE BRILLO REPAIR THERAPY 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $144.49</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,467.78</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $152.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,650.30</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Gotas de Brillo' data-art='mane gotas de brillo smooth keratin 4 oz 1x24' data-cod='000171'>
 <img src='imagenes/000171.jpg' data-codigo='000171' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2110,8 +2110,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE GOTAS DE BRILLO SMOOTH KERATIN 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $144.49</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,467.78</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $152.10</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,650.30</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Hair Spray' data-art='vialen hair spray 4 oz 1x24 ref. 11020' data-cod='002297'>
 <img src='imagenes/002297.jpg' data-codigo='002297' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2137,8 +2137,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LEAVE IN ARGAN Y MACADAMIA 4 OZ 1X24</div>
 <div class='descripcion'>Caja = 24 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $69.53</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,668.61</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $73.18</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,756.44</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Leave In' data-art='mane leave in hydra 8 oz 1x16' data-cod='000175'>
 <img src='imagenes/000175.jpg' data-codigo='000175' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2146,8 +2146,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LEAVE IN HYDRA 8 OZ 1X16</div>
 <div class='descripcion'>Caja = 16 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $90.41</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,446.59</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.17</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,522.72</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Leave In' data-art='mane leave in repair therapy 8 oz 1x16' data-cod='000165'>
 <img src='imagenes/000165.jpg' data-codigo='000165' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2155,8 +2155,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LEAVE IN REPAIR THERAPY 8 OZ 1X16</div>
 <div class='descripcion'>Caja = 16 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $99.13</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,586.11</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $104.35</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,669.59</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Leave In' data-art='mane leave in smooth keratin 8 oz 1x16' data-cod='000170'>
 <img src='imagenes/000170.jpg' data-codigo='000170' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2164,8 +2164,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LEAVE IN SMOOTH KERATIN 8 OZ 1X16</div>
 <div class='descripcion'>Caja = 16 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $91.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,468.11</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $96.59</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,545.38</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Lineas Completas' data-art='mane linea hydra (shampoo, condition, leave-in, gotas y tratamiento)' data-cod='002132'>
 <img src='imagenes/002132.jpg' data-codigo='002132' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2173,8 +2173,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LINEA HYDRA (SHAMPOO, CONDITION, LEAVE-IN, GOTAS Y TRATAMIENTO)</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $760.38</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $760.38</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $800.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $800.40</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Lineas Completas' data-art='mane linea repair therapy (shampoo, condition, leave-in, gotas y tratamiento)' data-cod='002135'>
 <img src='imagenes/002135.jpg' data-codigo='002135' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2182,8 +2182,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE LINEA REPAIR THERAPY (SHAMPOO, CONDITION, LEAVE-IN, GOTAS Y TRATAMIENTO)</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $760.38</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $760.38</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $800.40</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $800.40</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo argan y macadamia 16 oz 1x20' data-cod='000179'>
 <img src='imagenes/000179.jpg' data-codigo='000179' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2191,8 +2191,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO ARGAN Y MACADAMIA 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $80.95</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,618.96</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $85.21</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,704.17</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='blink shampoo multiaccion 8 oz 1x24 ref. 10601' data-cod='002289'>
 <img src='imagenes/002289.jpg' data-codigo='002289' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2236,8 +2236,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO DE COCO 16 OZ 1X20</div>
 <div class='descripcion'>Caja = 20 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $82.36</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,647.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $86.70</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,733.98</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo de coco galon 1x6' data-cod='000187'>
 <img src='imagenes/000187.jpg' data-codigo='000187' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2245,8 +2245,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO DE COCO GALON 1X6</div>
 <div class='descripcion'>Caja = 6 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $177.40</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,064.41</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $186.74</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,120.43</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo de coco garrafon 3 gls 1x1' data-cod='001756'>
 <img src='imagenes/001756.jpg' data-codigo='001756' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2254,8 +2254,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO DE COCO GARRAFON 3 GLS 1X1</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $577.48</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $577.48</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $607.87</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $607.87</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo hydra 32 oz 1x12' data-cod='000174'>
 <img src='imagenes/000174.jpg' data-codigo='000174' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2263,8 +2263,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO HYDRA 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $139.71</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,676.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,764.78</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo repair therapy 32 oz 1x12' data-cod='000164'>
 <img src='imagenes/000164.jpg' data-codigo='000164' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2272,8 +2272,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO REPAIR THERAPY 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $139.71</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,676.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,764.78</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Shampoo' data-art='mane shampoo smooth keratin 32 oz 1x12' data-cod='000169'>
 <img src='imagenes/000169.jpg' data-codigo='000169' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2281,8 +2281,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE SHAMPOO SMOOTH KERATIN 32 OZ 1X12</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $139.71</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,676.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $147.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,764.78</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Tratamiento' data-art='mane tratamiento argan y macadamia 8 oz 1x10' data-cod='000181'>
 <img src='imagenes/000181.jpg' data-codigo='000181' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2290,8 +2290,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE TRATAMIENTO ARGAN Y MACADAMIA 8 OZ 1X10</div>
 <div class='descripcion'>Caja = 10 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $81.51</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $815.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $85.80</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $858.05</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Tratamiento' data-art='mane tratamiento hydra 16oz 1x8' data-cod='000177'>
 <img src='imagenes/000177.jpg' data-codigo='000177' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2299,8 +2299,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE TRATAMIENTO HYDRA 16OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $108.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $865.08</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $113.83</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $910.61</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Tratamiento' data-art='mane tratamiento repair therapy 16 oz 1x8' data-cod='000167'>
 <img src='imagenes/000167.jpg' data-codigo='000167' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2308,8 +2308,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE TRATAMIENTO REPAIR THERAPY 16 OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $108.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $865.08</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $113.83</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $910.61</span></div>
 </div>
 <div class='item' data-cat='Cuidado del Cabello' data-subcat='Tratamiento' data-art='mane tratamiento smooth keratin 16 oz 1x8' data-cod='000172'>
 <img src='imagenes/000172.jpg' data-codigo='000172' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2317,8 +2317,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANE TRATAMIENTO SMOOTH KERATIN 16 OZ 1X8</div>
 <div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $108.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $865.08</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $113.83</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $910.61</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palillos bola roja 12cm 100x100 ref. 5688' data-cod='002175'>
 <img src='imagenes/002175.jpg' data-codigo='002175' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
