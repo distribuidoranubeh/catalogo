@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2026-06-01 16:06:58 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.topbar { display:flex; align-items:center; justify-content:center; background-color:#ffffff; color:#003366; padding:6px 18px 6px 115px; width:100%; height:62px; box-sizing:border-box; position:fixed; top:0; left:0; z-index:1001; border-bottom:1px solid #e5e5e5; font-size:13px; font-weight:bold; line-height:1.2; gap:14px; overflow:hidden; }.topbar img { position:absolute; left:5px; height:80px; max-width:150px; object-fit:contain; cursor:pointer; }.topbar .contact-info { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; width:100%; }.topbar .contact-item { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }.topbar a { color:#003366; text-decoration:none; }.contact-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; min-width:22px; border-radius:50%; background:#003366; color:#fff; font-size:13px; line-height:1; }.whatsapp-icon { background:#25D366; color:#fff; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 12px 20px; width: 100%; position: fixed; top: 62px; left: 0; z-index: 1000; box-sizing:border-box; }.filtros input, .filtros select { padding: 8px; margin: 4px; font-size: 15px; border-radius: 5px; border: 1px solid #ccc; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 145px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 145px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .topbar { height:58px; font-size:11px; padding:5px 10px 5px 140px; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:12px; justify-content:flex-start; } .contact-icon { width:19px; height:19px; min-width:19px; font-size:11px; } .filtros { top:58px; padding:9px 12px; } .grid, .home-grid { margin-top:128px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 13px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .topbar { height:78px; font-size:11px; padding:4px 6px 4px 140px; align-items:center; justify-content:flex-start; line-height:1.1; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:8px 7px; justify-content:flex-start; align-content:center; } .topbar .contact-item { gap:3px; } .contact-icon { width:16px; height:16px; min-width:16px; font-size:9px; } .filtros { top:78px; padding:7px 8px; } .grid, .home-grid { margin-top:148px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 10px ; padding: 5px; margin: 2px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 130px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='topbar'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' onclick='mostrarLogin()'><div class='contact-info'><span class='contact-item'><span class='contact-icon'>&#9742;</span><span><a href='tel:8095407288'>809-540-7288</a> / <a href='tel:8095669605'>809-566-9605</a></span></span><span class='contact-item'><span class='contact-icon whatsapp-icon'>&#9742;</span><span>Whatsapp: <a href='https://wa.me/18296575746' target='_blank'>829-657-5746</a></span></span><span class='contact-item'><span class='contact-icon'>&#9993;</span><span><a href='mailto:ventas@edilsa.com.do'>ventas@edilsa.com.do</a></span></span><span class='contact-item'><span class='contact-icon'>&#128205;</span><span>Santo Domingo. Rep. Dom.</span></span></div></div><div class='filtros'><button id='btnInicio' onclick='mostrarInicio()' style='margin:4px 8px; padding:6px 10px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='actualizarSubcategorias();filtrar()'><option value='' disabled selected>Seleccione una categoria</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos y Comestibles'>Alimentos y Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Articulos del hogar")'><img src='imagenes/Articulos del hogar.jpg' alt='Articulos del hogar' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Articulos del hogar</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Alimentos y Comestibles")'><img src='imagenes/Alimentos y Comestibles.jpg' alt='Alimentos y Comestibles' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Alimentos y Comestibles</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2026-06-12 15:54:15 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.topbar { display:flex; align-items:center; justify-content:center; background-color:#ffffff; color:#003366; padding:6px 18px 6px 115px; width:100%; height:62px; box-sizing:border-box; position:fixed; top:0; left:0; z-index:1001; border-bottom:1px solid #e5e5e5; font-size:13px; font-weight:bold; line-height:1.2; gap:14px; overflow:hidden; }.topbar img { position:absolute; left:5px; height:80px; max-width:150px; object-fit:contain; cursor:pointer; }.topbar .contact-info { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; width:100%; }.topbar .contact-item { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }.topbar a { color:#003366; text-decoration:none; }.contact-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; min-width:22px; border-radius:50%; background:#003366; color:#fff; font-size:13px; line-height:1; }.whatsapp-icon { background:#25D366; color:#fff; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 12px 20px; width: 100%; position: fixed; top: 62px; left: 0; z-index: 1000; box-sizing:border-box; }.filtros input, .filtros select { padding: 8px; margin: 4px; font-size: 15px; border-radius: 5px; border: 1px solid #ccc; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 145px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 145px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .topbar { height:58px; font-size:11px; padding:5px 10px 5px 140px; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:12px; justify-content:flex-start; } .contact-icon { width:19px; height:19px; min-width:19px; font-size:11px; } .filtros { top:58px; padding:9px 12px; } .grid, .home-grid { margin-top:128px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 13px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .topbar { height:78px; font-size:11px; padding:4px 6px 4px 140px; align-items:center; justify-content:flex-start; line-height:1.1; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:8px 7px; justify-content:flex-start; align-content:center; } .topbar .contact-item { gap:3px; } .contact-icon { width:16px; height:16px; min-width:16px; font-size:9px; } .filtros { top:78px; padding:7px 8px; } .grid, .home-grid { margin-top:148px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 10px ; padding: 5px; margin: 2px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 130px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='topbar'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' onclick='mostrarLogin()'><div class='contact-info'><span class='contact-item'><span class='contact-icon'>&#9742;</span><span><a href='tel:8095407288'>809-540-7288</a> / <a href='tel:8095669605'>809-566-9605</a></span></span><span class='contact-item'><span class='contact-icon whatsapp-icon'>&#9742;</span><span>Whatsapp: <a href='https://wa.me/18296575746' target='_blank'>829-657-5746</a></span></span><span class='contact-item'><span class='contact-icon'>&#9993;</span><span><a href='mailto:ventas@edilsa.com.do'>ventas@edilsa.com.do</a></span></span><span class='contact-item'><span class='contact-icon'>&#128205;</span><span>Santo Domingo. Rep. Dom.</span></span></div></div><div class='filtros'><button id='btnInicio' onclick='mostrarInicio()' style='margin:4px 8px; padding:6px 10px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='quitarOpcionInicialCategoria();actualizarSubcategorias();filtrar()'><option id='opcionInicialCategoria' value='' disabled selected>Seleccione una categoria</option><option value='__TODAS__'>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Articulos del hogar'>Articulos del hogar</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Alimentos y Comestibles'>Alimentos y Comestibles</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Articulos del hogar")'><img src='imagenes/Articulos del hogar.jpg' alt='Articulos del hogar' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Articulos del hogar</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Alimentos y Comestibles")'><img src='imagenes/Alimentos y Comestibles.jpg' alt='Alimentos y Comestibles' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Alimentos y Comestibles</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -1282,8 +1282,8 @@
 <div class='underline'></div>
 <div class='articulo'>ELITE TOALLA MICROFIBRA 16X18 (Colores) 1x3 Ref. T2375-01</div>
 <div class='descripcion'>Paq = 3 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $272.88</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $272.88</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $272.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $272.51</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Toallas Multiusos' data-art='toalla micro fibra 1x36 ref. 877990' data-cod='001141'>
 <img src='imagenes/001141.jpg' data-codigo='001141' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1417,8 +1417,8 @@
 <div class='underline'></div>
 <div class='articulo'>BLOSSOM CREMA MANOS Y CUERPO VAINILLA 8 OZ 1X24 Ref. 20107</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $4,935.77</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $118,458.51</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $515.79</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $12,378.94</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Cremas y lociones corporales' data-art='blossom crema manos y cuerpo yogurt 8 oz 1x24 ref. 20105' data-cod='002367'>
 <img src='imagenes/002367.jpg' data-codigo='002367' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1545,15 +1545,6 @@
 <div class='descripcion'>Caja = 20 Unidades *</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $175.96</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,519.23</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Gel de Baño' data-art='ultra compact gel de baño pasion of fruit 500 ml 1x12 ref. bw-012' data-cod='001893'>
-<img src='imagenes/001893.jpg' data-codigo='001893' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001893</div>
-<div class='underline'></div>
-<div class='articulo'>ULTRA COMPACT GEL DE BAÑO PASION OF FRUIT 500 ML 1X12 Ref. BW-012</div>
-<div class='descripcion'>Caja = 12 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $131.11</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,573.33</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='blink jabon miel glicerina 110 gr 1x24 ref. 20802' data-cod='002304'>
 <img src='imagenes/002304.jpg' data-codigo='002304' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1690,33 +1681,6 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $102.64</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,231.64</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Pañales desechables' data-art='baby boo pañal #1 small 10 uds 1x20 ref. pa-0006' data-cod='002014'>
-<img src='imagenes/002014.jpg' data-codigo='002014' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002014</div>
-<div class='underline'></div>
-<div class='articulo'>BABY BOO PAÑAL #1 SMALL 10 UDS 1X20 Ref. PA-0006</div>
-<div class='descripcion'>Fardo = 20 Paq de 10 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $133.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,666.80</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Pañales desechables' data-art='baby boo pañal #2 medium 10 uds 1x20 ref. pa-0007' data-cod='002377'>
-<img src='imagenes/002377.jpg' data-codigo='002377' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002377</div>
-<div class='underline'></div>
-<div class='articulo'>BABY BOO PAÑAL #2 MEDIUM 10 UDS 1X20 Ref. PA-0007</div>
-<div class='descripcion'>Fardo = 20 Paq de 10 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $133.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,666.80</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Pañales desechables' data-art='baby boo pañal #4 xl 10 uds 1x20 ref. pa-0009' data-cod='001964'>
-<img src='imagenes/001964.jpg' data-codigo='001964' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001964</div>
-<div class='underline'></div>
-<div class='articulo'>BABY BOO PAÑAL #4 XL 10 UDS 1X20 Ref. PA-0009</div>
-<div class='descripcion'>Fardo = 20 Paq de 10 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $133.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,666.80</span></div>
-</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Repelente' data-art='mosqui-stop repelente spray 4 oz 1x24' data-cod='002099'>
 <img src='imagenes/002099.jpg' data-codigo='002099' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002099</div>
@@ -1725,51 +1689,6 @@
 <div class='descripcion'>Caja = 24 Unidades *</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $172.32</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,135.57</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallas desmaquillantes' data-art='ultra compact toallas desmaquillante micellar 25 uds 1x10 ref. ww-181-1' data-cod='001975'>
-<img src='imagenes/001975.jpg' data-codigo='001975' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001975</div>
-<div class='underline'></div>
-<div class='articulo'>ULTRA COMPACT TOALLAS DESMAQUILLANTE MICELLAR 25 UDS 1X10 Ref. WW-181-1</div>
-<div class='descripcion'>Fardo = 10 Paq de 25 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $472.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $4,720.00</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallas sanitarias' data-art='lilas toallas sanitarias noche aloe vera 7 uds 1x24 ref. li-0008' data-cod='001841'>
-<img src='imagenes/001841.jpg' data-codigo='001841' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001841</div>
-<div class='underline'></div>
-<div class='articulo'>LILAS TOALLAS SANITARIAS NOCHE ALOE VERA 7 UDS 1X24 Ref. LI-0008</div>
-<div class='descripcion'>Fardo = 24 Paq de 7 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $74.47</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,787.31</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallas sanitarias' data-art='lilas toallas sanitarias normal aloe vera 9 uds 1x24 ref. li-0009' data-cod='001894'>
-<img src='imagenes/001894.jpg' data-codigo='001894' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001894</div>
-<div class='underline'></div>
-<div class='articulo'>LILAS TOALLAS SANITARIAS NORMAL ALOE VERA 9 UDS 1X24 Ref. LI-0009</div>
-<div class='descripcion'>Fardo = 24 Paq de 9 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $74.73</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,793.60</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallitas Humedas' data-art='angels toallas humedas con fragancia 120 unds 1x12 ref. ww-120n' data-cod='001890'>
-<img src='imagenes/001890.jpg' data-codigo='001890' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001890</div>
-<div class='underline'></div>
-<div class='articulo'>ANGELS TOALLAS HUMEDAS CON FRAGANCIA 120 UNDS 1X12 Ref. WW-120N</div>
-<div class='descripcion'>Fardo = 12 Paq de 120 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $161.59</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,939.13</span></div>
-</div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Toallitas Humedas' data-art='angels toallas humedas sin fragancia 120 unds 1x12 ref. ww-186dm' data-cod='001953'>
-<img src='imagenes/001953.jpg' data-codigo='001953' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001953</div>
-<div class='underline'></div>
-<div class='articulo'>ANGELS TOALLAS HUMEDAS SIN FRAGANCIA 120 UNDS 1X12 Ref. WW-186DM</div>
-<div class='descripcion'>Caja = 12 Paq de 120 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $218.43</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,621.17</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Fregado' data-art='brillisimo brillo bola grande 20x12 ref. 5798' data-cod='002182'>
 <img src='imagenes/002182.jpg' data-codigo='002182' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2408,7 +2327,7 @@
 <div class='articulo'>PALITOS P/ PINCHO 10" 100X100 Ref. 5822</div>
 <div class='descripcion'>Caja = 100 Paq de 100 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $29.33</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,933.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,933.34</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Palitos y Sticks' data-art='palitos p/ pincho 12" 100x100 ref. 5823' data-cod='002171'>
 <img src='imagenes/002171.jpg' data-codigo='002171' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2605,8 +2524,8 @@
 <div class='underline'></div>
 <div class='articulo'>DE ORO PAPEL PVC 12" X 750" MTS 1X1 Ref. 5659</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $700.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $700.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $700.01</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $700.01</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='de oro papel pvc 12x2000 pies 1x1 ref. 5646' data-cod='001827'>
 <img src='imagenes/001827.jpg' data-codigo='001827' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2833,113 +2752,14 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,220.03</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,220.03</span></div>
 </div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Azúcar y edulcorantes' data-art='don rodrigo azucar crema 2,225 grs 1x12 ref. az-0037' data-cod='001880'>
-<img src='imagenes/001880.jpg' data-codigo='001880' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001880</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO AZUCAR CREMA 2,225 GRS 1X12 Ref. AZ-0037</div>
-<div class='descripcion'>Fardo = 12 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $206.22</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,474.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Azúcar y edulcorantes' data-art='don rodrigo azucar crema 800 grs 1x30 ref. az-0010' data-cod='001882'>
-<img src='imagenes/001882.jpg' data-codigo='001882' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001882</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO AZUCAR CREMA 800 GRS 1X30 Ref. AZ-0010</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $74.91</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,247.31</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Azúcar y edulcorantes' data-art='don rodrigo azucar refinada 2,225 grs 1x12 ref. az-0038' data-cod='001883'>
-<img src='imagenes/001883.jpg' data-codigo='001883' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001883</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO AZUCAR REFINADA 2,225 GRS 1X12 Ref. AZ-0038</div>
-<div class='descripcion'>Fardo = 12 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $318.36</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,820.27</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Azúcar y edulcorantes' data-art='don rodrigo azucar refinada 800 grs 1x30 ref. az-0016' data-cod='001884'>
-<img src='imagenes/001884.jpg' data-codigo='001884' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001884</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO AZUCAR REFINADA 800 GRS 1X30 Ref. AZ-0016</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $116.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,480.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='don rodrigo sal marina (salero) 737 grs 1x24 ref. sa-0025' data-cod='001829'>
-<img src='imagenes/001829.jpg' data-codigo='001829' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001829</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO SAL MARINA (SALERO) 737 GRS 1X24 Ref. SA-0025</div>
-<div class='descripcion'>Fardo = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $54.48</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,307.44</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='don rodrigo sal marina 1 lb funda 1x25 ref. sa-0006' data-cod='001867'>
-<img src='imagenes/001867.jpg' data-codigo='001867' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001867</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO SAL MARINA 1 LB FUNDA 1X25 Ref. SA-0006</div>
-<div class='descripcion'>Fardo = 25 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $15.10</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $377.60</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='don rodrigo sal marina 25 lb saco 1x1 ref. sa-0008' data-cod='002375'>
-<img src='imagenes/002375.jpg' data-codigo='002375' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002375</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO SAL MARINA 25 LB SACO 1X1 Ref. SA-0008</div>
-<div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FUN = $338.27</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FUN = $338.27</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='don rodrigo sal marina pote (pote) 10 lbs 1x4 ref. sa-0007' data-cod='001921'>
-<img src='imagenes/001921.jpg' data-codigo='001921' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001921</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO SAL MARINA POTE (POTE) 10 LBS 1X4 Ref. SA-0007</div>
-<div class='descripcion'>Fardo = 4 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $232.07</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $928.27</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='don rodrigo sal marina pote (pote) 5 lbs 1x6 ref. sa-0004' data-cod='001920'>
-<img src='imagenes/001920.jpg' data-codigo='001920' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001920</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO SAL MARINA POTE (POTE) 5 LBS 1X6 Ref. SA-0004</div>
-<div class='descripcion'>Fardo = 6 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $141.60</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $849.60</span></div>
-</div>
 <div class='item' data-cat='Alimentos y Comestibles' data-subcat='Condimentos y especias' data-art='sal' data-cod='000442'>
 <img src='imagenes/000442.jpg' data-codigo='000442' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>000442</div>
 <div class='underline'></div>
 <div class='articulo'>SAL</div>
 <div class='descripcion'>FUN = 25 KG  (55 lbs)</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>KG = $34.98</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FUN = $874.38</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo arvejas 400 grs 1x30 ref. av-0004' data-cod='001914'>
-<img src='imagenes/001914.jpg' data-codigo='001914' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001914</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO ARVEJAS 400 GRS 1X30 Ref. AV-0004</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $41.37</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,241.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo arvejas 800 grs 1x30 ref. av-0005' data-cod='002374'>
-<img src='imagenes/002374.jpg' data-codigo='002374' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002374</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO ARVEJAS 800 GRS 1X30 Ref. AV-0005</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $82.54</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,476.33</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>KG = $34.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FUN = $861.25</span></div>
 </div>
 <div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='arbol dorado avena 40x300grs 1x1 ref. 5621' data-cod='001805'>
 <img src='imagenes/001805.jpg' data-codigo='001805' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2949,222 +2769,6 @@
 <div class='descripcion'>Fardo = 40 Paq</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $46.67</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,866.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo garbanzos 400 grs  1x30 ref. ga-0004' data-cod='001901'>
-<img src='imagenes/001901.jpg' data-codigo='001901' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001901</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO GARBANZOS 400 GRS  1X30 Ref. GA-0004</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $56.67</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,700.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo guandules 15oz (enlatado) 1x24 ref. gu-0017' data-cod='001946'>
-<img src='imagenes/001946.jpg' data-codigo='001946' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001946</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO GUANDULES 15OZ (ENLATADO) 1X24 Ref. GU-0017</div>
-<div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $102.76</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,466.20</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo guandules secos 400 grs 1x30 ref. gu-0005' data-cod='001900'>
-<img src='imagenes/001900.jpg' data-codigo='001900' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001900</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO GUANDULES SECOS 400 GRS 1X30 Ref. GU-0005</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $96.52</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,895.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo guandules secos 800 grs 1x30 ref. gu-0006' data-cod='002373'>
-<img src='imagenes/002373.jpg' data-codigo='002373' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>002373</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO GUANDULES SECOS 800 GRS 1X30 Ref. GU-0006</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $192.67</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,780.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas blancas 400 grs 1x30 ref. hb-0022' data-cod='001919'>
-<img src='imagenes/001919.jpg' data-codigo='001919' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001919</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS BLANCAS 400 GRS 1X30 Ref. HB-0022</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $68.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,040.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas blancas 800 grs 1x30 ref. hb-0023' data-cod='001903'>
-<img src='imagenes/001903.jpg' data-codigo='001903' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001903</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS BLANCAS 800 GRS 1X30 Ref. HB-0023</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $136.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $4,080.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas jacomelo 400 grs 1x30 ref. hb-0111' data-cod='001950'>
-<img src='imagenes/001950.jpg' data-codigo='001950' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001950</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS JACOMELO 400 GRS 1X30 Ref. HB-0111</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $86.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,580.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas jacomelo 800 grs 1x30 ref. hb-0020' data-cod='001972'>
-<img src='imagenes/001972.jpg' data-codigo='001972' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001972</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS JACOMELO 800 GRS 1X30 Ref. HB-0020</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $172.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,160.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas negras 400 grs 1x30 ref. hb-0025' data-cod='001836'>
-<img src='imagenes/001836.jpg' data-codigo='001836' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001836</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS NEGRAS 400 GRS 1X30 Ref. HB-0025</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $61.40</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,842.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas negras 800 grs 1x30 ref. hb-0026' data-cod='001898'>
-<img src='imagenes/001898.jpg' data-codigo='001898' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001898</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS NEGRAS 800 GRS 1X30 Ref. HB-0026</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $120.89</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,626.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas pintas 400 grs 1x30 ref. hb-0029' data-cod='001837'>
-<img src='imagenes/001837.jpg' data-codigo='001837' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001837</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS PINTAS 400 GRS 1X30 Ref. HB-0029</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $62.33</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,870.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas pintas 800 grs 1x30 ref. hb-0027' data-cod='001971'>
-<img src='imagenes/001971.jpg' data-codigo='001971' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001971</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS PINTAS 800 GRS 1X30 Ref. HB-0027</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $124.67</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,740.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas rojas largas 400 grs 1x30 ref. hb-0034' data-cod='001830'>
-<img src='imagenes/001830.jpg' data-codigo='001830' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001830</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS ROJAS LARGAS 400 GRS 1X30 Ref. HB-0034</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $100.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,000.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo habichuelas rojas largas 800 grs 1x30 ref. hb-0035' data-cod='001947'>
-<img src='imagenes/001947.jpg' data-codigo='001947' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001947</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO HABICHUELAS ROJAS LARGAS 800 GRS 1X30 Ref. HB-0035</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $188.89</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,666.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo lentejas 400 grs 1x30 ref. ln-0005' data-cod='001878'>
-<img src='imagenes/001878.jpg' data-codigo='001878' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001878</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO LENTEJAS 400 GRS 1X30 Ref. LN-0005</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $77.63</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,329.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo lentejas 800 grs 1x30 ref. ln-0004' data-cod='001922'>
-<img src='imagenes/001922.jpg' data-codigo='001922' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001922</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO LENTEJAS 800 GRS 1X30 Ref. LN-0004</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $154.89</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $4,646.67</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz chaca 400 grs 1x30 ref. ma-0008' data-cod='001899'>
-<img src='imagenes/001899.jpg' data-codigo='001899' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001899</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO MAIZ CHACA 400 GRS 1X30 Ref. MA-0008</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $37.78</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,133.33</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz chenchen 400 grs 1x30 ref. ma-0010' data-cod='001897'>
-<img src='imagenes/001897.jpg' data-codigo='001897' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001897</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO MAIZ CHENCHEN 400 GRS 1X30 Ref. MA-0010</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $23.23</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $697.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz pop corn 400 grs 1x30 ref. ma-0012' data-cod='001875'>
-<img src='imagenes/001875.jpg' data-codigo='001875' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001875</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO MAIZ POP CORN 400 GRS 1X30 Ref. MA-0012</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $39.60</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,188.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz pop corn 800 grs 1x30 ref. ma-0013' data-cod='001885'>
-<img src='imagenes/001885.jpg' data-codigo='001885' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001885</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO MAIZ POP CORN 800 GRS 1X30 Ref. MA-0013</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $74.61</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,238.33</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo maiz dulce 15oz (enlatado) 1x24 ref. ma-0015' data-cod='001904'>
-<img src='imagenes/001904.jpg' data-codigo='001904' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001904</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO MAIZ DULCE 15OZ (ENLATADO) 1X24 Ref. MA-0015</div>
-<div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $54.63</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,311.00</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo trigo negro 400 grs 1x30 ref. tr-0003' data-cod='001874'>
-<img src='imagenes/001874.jpg' data-codigo='001874' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001874</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO TRIGO NEGRO 400 GRS 1X30 Ref. TR-0003</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $44.80</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,344.02</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Granerias' data-art='don rodrigo trigo negro 800 grs 1x30 ref. tr-0004' data-cod='001877'>
-<img src='imagenes/001877.jpg' data-codigo='001877' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001877</div>
-<div class='underline'></div>
-<div class='articulo'>DON RODRIGO TRIGO NEGRO 800 GRS 1X30 Ref. TR-0004</div>
-<div class='descripcion'>Fardo = 30 Paq</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $88.93</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,667.98</span></div>
-</div>
-<div class='item' data-cat='Alimentos y Comestibles' data-subcat='Pescados' data-art='mediterraneo sardina en salsa de tomate 425 grs 1x24 ref. sr-0001' data-cod='001866'>
-<img src='imagenes/001866.jpg' data-codigo='001866' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001866</div>
-<div class='underline'></div>
-<div class='articulo'>MEDITERRANEO SARDINA EN SALSA DE TOMATE 425 GRS 1X24 Ref. SR-0001</div>
-<div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $78.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,872.00</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envase rectangular ilock (prd32) 1x200 ref. 18320' data-cod='002220'>
 <img src='imagenes/002220.jpg' data-codigo='002220' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3460,26 +3064,26 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR ENVASES DELI 8 ONZAS 10x50 Ref. 18020</div>
 <div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $269.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,693.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $224.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,244.54</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli de 16 onzas white 10x50 ref. 18071' data-cod='002379'>
 <img src='imagenes/002379.jpg' data-codigo='002379' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002379</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR ENVASES DELI DE 16 ONZAS WHITE 10x50 Ref. 18071</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $445.28</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $4,452.82</span></div>
+<div class='descripcion'>Paq = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $8.91</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $89.06</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli de 24 onzas white 10x50 ref. 18170' data-cod='002382'>
 <img src='imagenes/002382.jpg' data-codigo='002382' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002382</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR ENVASES DELI DE 24 ONZAS WHITE 10x50 Ref. 18170</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $534.34</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $5,343.39</span></div>
+<div class='descripcion'>Paq = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $10.69</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $106.87</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli de 32 onzas white 10x50 ref. 18072' data-cod='001569'>
 <img src='imagenes/001569.jpg' data-codigo='001569' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3487,17 +3091,17 @@
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR ENVASES DELI DE 32 ONZAS WHITE 10x50 Ref. 18072</div>
 <div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $641.21</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $6,412.07</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $12.82</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $128.24</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases deli de 8 onzas white 10x50 ref. 18070' data-cod='002380'>
 <img src='imagenes/002380.jpg' data-codigo='002380' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>002380</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR ENVASES DELI DE 8 ONZAS WHITE 10x50 Ref. 18070</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $309.22</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $3,092.24</span></div>
+<div class='descripcion'>Paq = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $6.18</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $61.84</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar envases souffle 1 oz  color negro (s100) 20x250 ref. 11280' data-cod='002070'>
 <img src='imagenes/002070.jpg' data-codigo='002070' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3522,9 +3126,9 @@
 <div class='codigo'>002381</div>
 <div class='underline'></div>
 <div class='articulo'>PLASTIFAR TAPA PARA ENVASES DELI WHITE 10x50 Ref. 18073</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $244.06</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,440.59</span></div>
+<div class='descripcion'>Paq = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $244.06</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $2,440.59</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapas envases 3,4,5 oz. 20x50 ref. 11031' data-cod='001749'>
 <img src='imagenes/001749.jpg' data-codigo='001749' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3614,7 +3218,7 @@
 <div class='articulo'>PLASTIFAR VASO FOAM #16 OZ 20X25 Ref. 13174</div>
 <div class='descripcion'>Fardo = 20 Paq de 25 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $136.87</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,737.49</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $2,737.48</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='plastifar bio vaso papel bl 4oz bio (phc4-w) 20x50 ca ref. 19060' data-cod='002211'>
 <img src='imagenes/002211.jpg' data-codigo='002211' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3903,15 +3507,6 @@
 <div class='descripcion'>Caja = 100 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,800.00</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,800.00</span></div>
-</div>
-<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio pequeña 320 (1x100) ref. 5070' data-cod='001452'>
-<img src='imagenes/001452.jpg' data-codigo='001452' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001452</div>
-<div class='underline'></div>
-<div class='articulo'>Bandeja Aluminio Pequeña 320 (1x100) Ref. 5070</div>
-<div class='descripcion'>Caja = 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,906.67</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,906.67</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja jumbo oval 1x50 ref. 5846' data-cod='002160'>
 <img src='imagenes/002160.jpg' data-codigo='002160' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -4615,6 +4210,15 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,922.02</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,922.02</span></div>
 </div>
+<div class='item' data-cat='Desechables' data-subcat='Envases' data-art='plastifar tapa pp recesada para deli clear 10x50 ref. 18181' data-cod='001567'>
+<img src='imagenes/001567.jpg' data-codigo='001567' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001567</div>
+<div class='underline'></div>
+<div class='articulo'>PLASTIFAR TAPA PP RECESADA PARA DELI CLEAR 10X50 Ref. 18181</div>
+<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $143.03</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,430.29</span></div>
+</div>
 <div class='item' data-cat='Desechables' data-subcat='Vasos' data-art='vaso papel 12 oz blanco 20x50 ref. 5743' data-cod='001961'>
 <img src='imagenes/001961.jpg' data-codigo='001961' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001961</div>
@@ -4840,17 +4444,13 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $309.73</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $6,194.65</span></div>
 </div>
-<div class='item' data-cat='Desechables' data-subcat='0' data-art='plastifar tapa pp recesada para deli clear 10x50 ref. 18181' data-cod='001567'>
-<img src='imagenes/001567.jpg' data-codigo='001567' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001567</div>
-<div class='underline'></div>
-<div class='articulo'>PLASTIFAR TAPA PP RECESADA PARA DELI CLEAR 10X50 Ref. 18181</div>
-<div class='descripcion'>Fardo = 10 Paq de 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $143.03</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>FAR = $1,430.29</span></div>
-</div>
 </div><div id='loginPanel' style='display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; border:2px solid #003366; padding:20px; z-index:10000; border-radius:10px; text-align:center;'><h3>Acceso</h3><input type='text' id='usuario' placeholder='Usuario' style='display:block; margin:10px auto; padding:5px;'><input type='password' id='contrasena' placeholder='Contraseña' style='display:block; margin:10px auto; padding:5px;'><button onclick='verificarCredenciales()' style='margin-right:10px;'>Aceptar</button><button onclick='ocultarLogin()'>Cancelar</button><div id='mensajeLogin' style='color:red; margin-top:10px;'></div></div><button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style='position:fixed;bottom:20px;right:20px;padding:10px 15px;background:#003366;color:white;border:none;border-radius:5px;cursor:pointer;'>Volver arriba</button><div id='overlay' style='display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; flex-direction: column;'><div style='position: relative; max-width: 90%; max-height: 80%; display:flex; align-items:center;'><button id='prevBtn' style='position:absolute; left:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(-1)'>&lt;</button><img id='imgAmpliada' src='' style='max-width:100%; max-height:80vh; border: 5px solid white; border-radius: 10px;' oncontextmenu='return false;' ondragstart='return false;' draggable='false'><button id='nextBtn' style='position:absolute; right:-50px; font-size:30px; background:none; border:none; color:white; cursor:pointer;' onclick='cambiarImagen(1)'>&gt;</button></div><div id='miniaturas' style='margin-top:10px; display:flex; justify-content:center; gap: 10px; overflow-x:auto; max-width: 90%;'></div></div><script>
-function mostrarInicio(){   var g=document.getElementById('productosGrid'); if(g) g.style.display='none';   var h=document.getElementById('homeGrid'); if(h) h.style.display='grid';   var cs=document.getElementById('categoriaSelect'); if(cs) cs.value='';   var ss=document.getElementById('subcategoriaSelect'); if(ss) ss.innerHTML='<option value="">Todas las subcategorias</option>';   var b=document.getElementById('buscador'); if(b) b.value=''; }function irACategoria(cat){   var cs=document.getElementById('categoriaSelect'); if(cs){ cs.value=cat; }   if(typeof actualizarSubcategorias==='function'){ actualizarSubcategorias(); }   var ss=document.getElementById('subcategoriaSelect'); if(ss){ ss.value=''; }   if(typeof filtrar==='function'){ filtrar(); }   var h=document.getElementById('homeGrid'); if(h) h.style.display='none';   var g=document.getElementById('productosGrid'); if(g) g.style.display='grid';   window.scrollTo({ top:0, behavior:'smooth' }); }document.addEventListener('DOMContentLoaded', function(){ mostrarInicio(); });var clientesArticulos = {
+function quitarOpcionInicialCategoria(){ var op=document.getElementById('opcionInicialCategoria'); var cs=document.getElementById('categoriaSelect'); if(op && cs && cs.value!==''){ op.parentNode.removeChild(op); } }
+function mostrarInicio(){ var g=document.getElementById('productosGrid'); if(g) g.style.display='none'; var h=document.getElementById('homeGrid'); if(h) h.style.display='grid'; var cs=document.getElementById('categoriaSelect'); if(cs){ if(!document.getElementById('opcionInicialCategoria')){ var op=document.createElement('option'); op.id='opcionInicialCategoria'; op.value=''; op.disabled=true; op.text='Seleccione una categoria'; cs.insertBefore(op, cs.firstChild); } cs.value=''; } var ss=document.getElementById('subcategoriaSelect'); if(ss) ss.innerHTML='<option value="">Todas las subcategorias</option>'; var b=document.getElementById('buscador'); if(b) b.value=''; }
+function mostrarTodasCategorias(){ var cs=document.getElementById('categoriaSelect'); if(cs){ cs.value='__TODAS__'; quitarOpcionInicialCategoria(); } if(typeof actualizarSubcategorias==='function'){ actualizarSubcategorias(); } var ss=document.getElementById('subcategoriaSelect'); if(ss){ ss.value=''; } var b=document.getElementById('buscador'); if(b){ b.value=''; } if(typeof filtrar==='function'){ filtrar(); } var h=document.getElementById('homeGrid'); if(h) h.style.display='none'; var g=document.getElementById('productosGrid'); if(g) g.style.display='grid'; window.scrollTo({ top:0, behavior:'smooth' }); }
+function irACategoria(cat){ var cs=document.getElementById('categoriaSelect'); if(cs){ cs.value=cat; } if(typeof quitarOpcionInicialCategoria==='function'){ quitarOpcionInicialCategoria(); } if(typeof actualizarSubcategorias==='function'){ actualizarSubcategorias(); } var ss=document.getElementById('subcategoriaSelect'); if(ss){ ss.value=''; } if(typeof filtrar==='function'){ filtrar(); } var h=document.getElementById('homeGrid'); if(h) h.style.display='none'; var g=document.getElementById('productosGrid'); if(g) g.style.display='grid'; window.scrollTo({ top:0, behavior:'smooth' }); }
+document.addEventListener('DOMContentLoaded', function(){ mostrarTodasCategorias(); });
+var clientesArticulos = {
 '000001c': ['000125','000144','000140','000101','000145','000034','000124','000200','000127','000196','000191','000098','000157','000129','000142','001052','000118','000103','000115','000141','000122','000126','000108','000121','000128','000158','000114','000123','000116','000197','000194','000364','000146','000329','000426','000377','000415','000406','000467','000391','000090','000187','000386','000147','000148','000110','000102','000149','000111','000301','000089','000091','000117','000113','000407','000451','000354','000990','000087','000190','000186','000274','000277','000109','000193','000227','000443','000401','000431','000430','000468','000316','000469','000387','000450','000449','000249','000434','000413','000452','000362','000422','000356','000189','000404','001051','000368','000359','000097','000258','000310','000159','000455','000237','000393','000275','000322','000352','000395','000305','000252','000376','000321','000300','000136','000420','000088','001050','001056','000211','000372','000374','000330','000416','000456','000261','000306','000119','000417','000155','000225','000383','000344','000340','000276','000179','000304','000373','000334','000248','000272','000223','000256','000298','000365','000369','000278','000205','000093','000220','000348','000378','000379','000247','000230','000336','000470','000257','000288','000270','000446','000433','000206','000219','000423','000135','000442','000287','000366','000471','000439','001055','000461','000341','000445','000283','000432','000303','000212','000342','000094','000396','000399','000398','000259','000327','000095','000229','000296','000293','000411','000231','000290','000425','001067','000213','000367','000400','000346','001083','000466','000308','S00001','001148','001160','001159','000105','000188','001262','001316','001317','001297','001162','001379','001296','001303','000181','001341','001299','001263','001314','001300','001372','001302','001315','001342','001082','001080','001377','001376','001757','001807','002086','001097','001081','002092','001511','001072','000170','000168','000172','000171','000173','000169','001734','001141','001811','002305','002301','002143','001098','002199','001541','002303','002306','000112','002282','002284','001810','002366','002286','002364','002369','002383','001537','002307','002308','002304','002370','002371','002316','002315'],
 '003506c': ['000122','000196','000098','000125','000141','000119','000102','000135','000124','000123','000103','000142','000127','000200','000101','000126','000140','000128','000148','000197','000097','000158','000145','000114','000116','000146','000191','000111','000109','000157','000129','001054','001315','001317','001316','001314','000089','001051','000187','000118','000186','001052','000136','000190','001082','002093','001733','001166'],
 '003507c': ['000098','000102','000090','000125','000197','000149','000103','000146','000108','000196','000158','000144','000116','000087','000140','000118','000115','000157','000145','000101','000091','000122','000117','000141','000111','000147'],
@@ -8092,5 +7692,19 @@ function verificarCredenciales(){
     document.getElementById('mensajeLogin').textContent = 'Credenciales incorrectas';
   }
 }
-var imagenesActuales = []; var indiceActual = 0; var codigoActual = '';function ampliarImagen(img){codigoActual=img.getAttribute('data-codigo');imagenesActuales=[];indiceActual=0;imagenesActuales.push('imagenes/'+codigoActual+'.jpg');var maxExtras=5;for(var i=1;i<=maxExtras;i++){var imgTest=new Image();imgTest.src='imagenes/'+codigoActual+'-'+i+'.jpg';(function(i){imgTest.onload=function(){imagenesActuales.push('imagenes/'+codigoActual+'-'+i+'.jpg');actualizarMiniaturas();};imgTest.onerror=function(){}})(i);}mostrarImagen(0);document.getElementById('overlay').style.display='flex';}function mostrarImagen(index){if(index<0)index=imagenesActuales.length-1;if(index>=imagenesActuales.length)index=0;indiceActual=index;document.getElementById('imgAmpliada').src=imagenesActuales[indiceActual];actualizarMiniaturas();}function cambiarImagen(direccion){mostrarImagen(indiceActual+direccion);}function actualizarMiniaturas(){var contMini=document.getElementById('miniaturas');contMini.innerHTML='';for(var i=0;i<imagenesActuales.length;i++){var mini=document.createElement('img');mini.src=imagenesActuales[i];mini.style.width='60px';mini.style.height='60px';mini.style.objectFit='contain';mini.style.cursor='pointer';mini.style.border=(i===indiceActual)?'3px solid #003366':'1px solid gray';mini.style.borderRadius='5px';mini.onclick=(function(i){return function(){mostrarImagen(i);}})(i);contMini.appendChild(mini);}}function cerrarOverlay(){document.getElementById('overlay').style.display='none';imagenesActuales=[];indiceActual=0;codigoActual='';}document.addEventListener('DOMContentLoaded',function(){var overlay=document.getElementById('overlay');overlay.addEventListener('click',function(e){if(e.target===overlay){cerrarOverlay();}});});function buscar(){var inputText=document.getElementById('buscador').value.toLowerCase().trim();var cat=document.getElementById('categoriaSelect').value;var subcat=document.getElementById('subcategoriaSelect').value;var items=document.getElementsByClassName('item');var h=document.getElementById('homeGrid');var g=document.getElementById('productosGrid');var hasCriteria=(inputText!==''||cat!==''||subcat!=='');if(!hasCriteria){if(h)h.style.display='grid';if(g)g.style.display='none';return;}else{if(h)h.style.display='none';if(g)g.style.display='grid';}if(inputText.indexOf(',')!==-1){var codigos=inputText.split(',').map(function(s){return s.trim();}).filter(function(s){return s!=='';});var contenedor=items[0].parentNode;var ordenados=[];for(var c=0;c<codigos.length;c++){for(var i=0;i<items.length;i++){var item=items[i],codigo=item.getAttribute('data-cod').toLowerCase();if(codigo===codigos[c]){item.style.display='block';ordenados.push(item);break;}}}for(var i=0;i<items.length;i++){if(ordenados.indexOf(items[i])===-1){items[i].style.display='none';}}ordenados.forEach(function(item){contenedor.appendChild(item);});}else{var input=inputText.split(' ');var hasInput=input.filter(function(w){return w.trim()!=='';}).length>0;for(var i=0;i<items.length;i++){var item=items[i],texto=item.getAttribute('data-art')+' '+item.getAttribute('data-cod'),itemCat=item.getAttribute('data-cat'),itemSubcat=item.getAttribute('data-subcat');var pos=0,matchesText=hasInput;for(var j=0;j<input.length&&hasInput;j++){var found=texto.indexOf(input[j],pos);if(found===-1){matchesText=false;break;}else{pos=found+input[j].length;}}var matchesCat=(!hasInput&&(cat===''||itemCat===cat));var matchesSubcat=(!hasInput&&(subcat===''||itemSubcat===subcat));item.style.display=(hasInput&&matchesText)||(!hasInput&&(matchesCat&&matchesSubcat))?'block':'none';}}};function buscarPorCliente(){if(!usuarioLogueado){return;}var inputText=document.getElementById('buscador').value.toLowerCase().trim();if(inputText.length<7||!/[a-z]$/.test(inputText)||!clientesArticulos.hasOwnProperty(inputText)){return;}var h=document.getElementById('homeGrid');if(h)h.style.display='none';var g=document.getElementById('productosGrid');if(g)g.style.display='grid';var articulosCliente=clientesArticulos[inputText];var items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var item=items[i];var codigoItem=item.getAttribute('data-cod').toLowerCase();item.style.display=(articulosCliente.indexOf(codigoItem)!==-1)?'block':'none';}}function actualizarSubcategorias(){var cat=document.getElementById('categoriaSelect').value;var subcatSelect=document.getElementById('subcategoriaSelect');if(cat===''){subcatSelect.innerHTML='<option value="">Todas las subcategorias</option>';return;}subcatSelect.innerHTML='<option value="">Todas las subcategorias</option>';var items=document.getElementsByClassName('item');var subcats={};for(var i=0;i<items.length;i++){if(cat==''||items[i].getAttribute('data-cat')==cat){subcats[items[i].getAttribute('data-subcat')]=true;}}for(var key in subcats){subcatSelect.innerHTML+='<option value="' + key + '">' + key + '</option>';}}function filtrar(){var cat=document.getElementById('categoriaSelect').value,subcat=document.getElementById('subcategoriaSelect').value,items=document.getElementsByClassName('item');var h=document.getElementById('homeGrid');var g=document.getElementById('productosGrid');if(cat!==''||subcat!==''){if(h)h.style.display='none';if(g)g.style.display='grid';}else{if(h)h.style.display='grid';if(g)g.style.display='none';}for(var i=0;i<items.length;i++){var item=items[i],itemCat=item.getAttribute('data-cat'),itemSubcat=item.getAttribute('data-subcat');item.style.display=(cat==''||itemCat==cat)&&(subcat==''||itemSubcat==subcat)?'block':'none';}document.getElementById('buscador').value='';actualizarURL(cat,subcat,'');}function actualizarURL(){ /* no-op */ }
+var imagenesActuales = []; var indiceActual = 0; var codigoActual = '';
+function ampliarImagen(img){codigoActual=img.getAttribute('data-codigo');imagenesActuales=[];indiceActual=0;imagenesActuales.push('imagenes/'+codigoActual+'.jpg');var maxExtras=5;for(var i=1;i<=maxExtras;i++){var imgTest=new Image();imgTest.src='imagenes/'+codigoActual+'-'+i+'.jpg';(function(i){imgTest.onload=function(){imagenesActuales.push('imagenes/'+codigoActual+'-'+i+'.jpg');actualizarMiniaturas();};imgTest.onerror=function(){}})(i);}mostrarImagen(0);document.getElementById('overlay').style.display='flex';}
+function mostrarImagen(index){if(index<0)index=imagenesActuales.length-1;if(index>=imagenesActuales.length)index=0;indiceActual=index;document.getElementById('imgAmpliada').src=imagenesActuales[indiceActual];actualizarMiniaturas();}
+function cambiarImagen(direccion){mostrarImagen(indiceActual+direccion);}
+function actualizarMiniaturas(){var contMini=document.getElementById('miniaturas');contMini.innerHTML='';for(var i=0;i<imagenesActuales.length;i++){var mini=document.createElement('img');mini.src=imagenesActuales[i];mini.style.width='60px';mini.style.height='60px';mini.style.objectFit='contain';mini.style.cursor='pointer';mini.style.border=(i===indiceActual)?'3px solid #003366':'1px solid gray';mini.style.borderRadius='5px';mini.onclick=(function(i){return function(){mostrarImagen(i);}})(i);contMini.appendChild(mini);}}
+function cerrarOverlay(){document.getElementById('overlay').style.display='none';imagenesActuales=[];indiceActual=0;codigoActual='';}
+document.addEventListener('DOMContentLoaded',function(){var overlay=document.getElementById('overlay');overlay.addEventListener('click',function(e){if(e.target===overlay){cerrarOverlay();}});});
+function buscar(){var inputText=document.getElementById('buscador').value.toLowerCase().trim();var cat=document.getElementById('categoriaSelect').value;var subcat=document.getElementById('subcategoriaSelect').value;var items=document.getElementsByClassName('item');var h=document.getElementById('homeGrid');var g=document.getElementById('productosGrid');var hasCriteria=(inputText!==''||cat!==''||subcat!=='');
+if(!hasCriteria){if(h)h.style.display='grid';if(g)g.style.display='none';return;}else{if(h)h.style.display='none';if(g)g.style.display='grid';}if(inputText.indexOf(',')!==-1){var codigos=inputText.split(',').map(function(s){return s.trim();}).filter(function(s){return s!=='';});var contenedor=items[0].parentNode;var ordenados=[];for(var c=0;c<codigos.length;c++){for(var i=0;i<items.length;i++){var item=items[i],codigo=item.getAttribute('data-cod').toLowerCase();if(codigo===codigos[c]){item.style.display='block';ordenados.push(item);break;}}}for(var i=0;i<items.length;i++)
+{if(ordenados.indexOf(items[i])===-1){items[i].style.display='none';}}ordenados.forEach(function(item){contenedor.appendChild(item);});}else{var input=inputText.split(' ');var hasInput=input.filter(function(w){return w.trim()!=='';}).length>0;
+for(var i=0;i<items.length;i++){var item=items[i],texto=item.getAttribute('data-art')+' '+item.getAttribute('data-cod'),itemCat=item.getAttribute('data-cat'),itemSubcat=item.getAttribute('data-subcat');var pos=0,matchesText=hasInput;for(var j=0;j<input.length&&hasInput;j++){var found=texto.indexOf(input[j],pos);if(found===-1){matchesText=false;break;}else{pos=found+input[j].length;}}var matchesCat=(!hasInput&&(cat===''||cat==='__TODAS__'||itemCat===cat));var matchesSubcat=(!hasInput&&(subcat===''||itemSubcat===subcat));item.style.display=(hasInput&&matchesText)||(!hasInput&&(matchesCat&&matchesSubcat))?'block':'none';}}};
+function buscarPorCliente(){if(!usuarioLogueado){return;}var inputText=document.getElementById('buscador').value.toLowerCase().trim();if(inputText.length<7||!/[a-z]$/.test(inputText)||!clientesArticulos.hasOwnProperty(inputText)){return;}var h=document.getElementById('homeGrid');if(h)h.style.display='none';var g=document.getElementById('productosGrid');if(g)g.style.display='grid';var articulosCliente=clientesArticulos[inputText];var items=document.getElementsByClassName('item');for(var i=0;i<items.length;i++){var item=items[i];var codigoItem=item.getAttribute('data-cod').toLowerCase();item.style.display=(articulosCliente.indexOf(codigoItem)!==-1)?'block':'none';}}
+function actualizarSubcategorias(){var cat=document.getElementById('categoriaSelect').value;var subcatSelect=document.getElementById('subcategoriaSelect');subcatSelect.innerHTML='<option value="">Todas las subcategorias</option>';if(cat===''){return;}var items=document.getElementsByClassName('item');var subcats={};for(var i=0;i<items.length;i++){if(cat==='__TODAS__'||items[i].getAttribute('data-cat')==cat){subcats[items[i].getAttribute('data-subcat')]=true;}}for(var key in subcats){subcatSelect.innerHTML+='<option value="' + key + '">' + key + '</option>';}}
+function filtrar(){var cat=document.getElementById('categoriaSelect').value,subcat=document.getElementById('subcategoriaSelect').value,items=document.getElementsByClassName('item');var h=document.getElementById('homeGrid');var g=document.getElementById('productosGrid');if(cat!==''||subcat!==''){if(h)h.style.display='none';if(g)g.style.display='grid';}else{if(h)h.style.display='grid';if(g)g.style.display='none';}for(var i=0;i<items.length;i++){var item=items[i],itemCat=item.getAttribute('data-cat'),itemSubcat=item.getAttribute('data-subcat');item.style.display=(cat===''||cat==='__TODAS__'||itemCat==cat)&&(subcat===''||itemSubcat==subcat)?'block':'none';}document.getElementById('buscador').value='';actualizarURL(cat,subcat,'');}
+function actualizarURL(){ /* no-op */ }
 </script></body></html>
