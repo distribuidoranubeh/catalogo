@@ -1,4 +1,4 @@
-﻿<!-- Esta es la versión 2026-09-04 10:43:16 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.topbar { display:flex; align-items:center; justify-content:center; background-color:#ffffff; color:#003366; padding:6px 18px 6px 115px; width:100%; height:62px; box-sizing:border-box; position:fixed; top:0; left:0; z-index:1001; border-bottom:1px solid #e5e5e5; font-size:13px; font-weight:bold; line-height:1.2; gap:14px; overflow:hidden; }.topbar img { position:absolute; left:5px; height:80px; max-width:150px; object-fit:contain; cursor:pointer; }.topbar .contact-info { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; width:100%; }.topbar .contact-item { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }.topbar a { color:#003366; text-decoration:none; }.contact-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; min-width:22px; border-radius:50%; background:#003366; color:#fff; font-size:13px; line-height:1; }.whatsapp-icon { background:#25D366; color:#fff; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 12px 20px; width: 100%; position: fixed; top: 62px; left: 0; z-index: 1000; box-sizing:border-box; }.filtros input, .filtros select { padding: 8px; margin: 4px; font-size: 15px; border-radius: 5px; border: 1px solid #ccc; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 145px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 145px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .topbar { height:58px; font-size:11px; padding:5px 10px 5px 140px; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:12px; justify-content:flex-start; } .contact-icon { width:19px; height:19px; min-width:19px; font-size:11px; } .filtros { top:58px; padding:9px 12px; } .grid, .home-grid { margin-top:128px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 13px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .topbar { height:78px; font-size:11px; padding:4px 6px 4px 140px; align-items:center; justify-content:flex-start; line-height:1.1; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:8px 7px; justify-content:flex-start; align-content:center; } .topbar .contact-item { gap:3px; } .contact-icon { width:16px; height:16px; min-width:16px; font-size:9px; } .filtros { top:78px; padding:7px 8px; } .grid, .home-grid { margin-top:148px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 10px ; padding: 5px; margin: 2px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 130px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='topbar'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' onclick='mostrarLogin()'><div class='contact-info'><span class='contact-item'><span class='contact-icon'>&#9742;</span><span><a href='tel:8095407288'>809-540-7288</a> / <a href='tel:8095669605'>809-566-9605</a></span></span><span class='contact-item'><span class='contact-icon whatsapp-icon'>&#9742;</span><span>Whatsapp: <a href='https://wa.me/18296575746' target='_blank'>829-657-5746</a></span></span><span class='contact-item'><span class='contact-icon'>&#9993;</span><span><a href='mailto:ventas@edilsa.com.do'>ventas@edilsa.com.do</a></span></span><span class='contact-item'><span class='contact-icon'>&#128205;</span><span>Santo Domingo. Rep. Dom.</span></span></div></div><div class='filtros'><button id='btnInicio' onclick='mostrarInicio()' style='margin:4px 8px; padding:6px 10px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='quitarOpcionInicialCategoria();actualizarSubcategorias();filtrar()'><option id='opcionInicialCategoria' value='' disabled selected>Seleccione una categoria</option><option value='__TODAS__'>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
+﻿<!-- Esta es la versión 2026-09-25 17:01:55 --><!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><style>body { font-family: sans-serif; margin: 0; padding: 0; }.topbar { display:flex; align-items:center; justify-content:center; background-color:#ffffff; color:#003366; padding:6px 18px 6px 115px; width:100%; height:62px; box-sizing:border-box; position:fixed; top:0; left:0; z-index:1001; border-bottom:1px solid #e5e5e5; font-size:13px; font-weight:bold; line-height:1.2; gap:14px; overflow:hidden; }.topbar img { position:absolute; left:5px; height:80px; max-width:150px; object-fit:contain; cursor:pointer; }.topbar .contact-info { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; width:100%; }.topbar .contact-item { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }.topbar a { color:#003366; text-decoration:none; }.contact-icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; min-width:22px; border-radius:50%; background:#003366; color:#fff; font-size:13px; line-height:1; }.whatsapp-icon { background:#25D366; color:#fff; }.filtros { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background-color: #003366; color: white; padding: 12px 20px; width: 100%; position: fixed; top: 62px; left: 0; z-index: 1000; box-sizing:border-box; }.filtros input, .filtros select { padding: 8px; margin: 4px; font-size: 15px; border-radius: 5px; border: 1px solid #ccc; }.detalle-unidades { display: none; }.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); justify-content: center; gap: 10px; margin: 145px auto 0 auto; padding: 10px; max-width: 100%; } .grid > * { max-width: auto; width: 100%; box-sizing: border-box; }.item { border: 1px dashed #003366; padding: 10px; text-align: left; position: relative; transition: 0.2s; }.item:hover { box-shadow: 0 0 10px rgba(0,0,0,0.2); transform: scale(1.02); }.item img { width: 100%; height: 200px; object-fit: contain; cursor: pointer; }.codigo { font-weight: bold; font-size: 20px; text-align: left; background-color: #003366; color: white; padding: 5px; border: 1px solid #003366; display: inline-block; margin-top: 5px;} .home-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin: 145px auto 0 auto; padding:10px; max-width:1200px; } .home-card { border:1px dashed #003366; border-radius:8px; padding:10px; text-align:center; cursor:pointer; transition:.2s; background:#fff; } .home-card:hover { box-shadow:0 0 10px rgba(0,0,0,.2); transform:scale(1.02); } .home-card img { width:100%; height:180px; object-fit:contain; } .home-title { margin-top:8px; font-weight:bold; color:#003366; }.underline { border-bottom: 1px solid #003366; width: 100%; margin: 0px 0; }.articulo { font-size: 13px; margin-top: 10px; color: #003366; text-align: left; }.descripcion { font-weight: bold; font-size: 12px; margin-top: 5px; color: black; text-align: left; }#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }#imgAmpliada { max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px; }@media (max-width: 1065px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 1065px) { .topbar { height:58px; font-size:11px; padding:5px 10px 5px 140px; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:12px; justify-content:flex-start; } .contact-icon { width:19px; height:19px; min-width:19px; font-size:11px; } .filtros { top:58px; padding:9px 12px; } .grid, .home-grid { margin-top:128px; } }@media (max-width: 1065px) { .filtros input, .filtros select { width: 25%; font-size: 13px ; padding: 6px; margin: 3px; box-sizing: border-box; } }@media (max-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }@media (max-width: 720px) { .topbar { height:78px; font-size:11px; padding:4px 6px 4px 140px; align-items:center; justify-content:flex-start; line-height:1.1; } .topbar img { height:60px; max-width:120px; } .topbar .contact-info { gap:8px 7px; justify-content:flex-start; align-content:center; } .topbar .contact-item { gap:3px; } .contact-icon { width:16px; height:16px; min-width:16px; font-size:9px; } .filtros { top:78px; padding:7px 8px; } .grid, .home-grid { margin-top:148px; } }@media (max-width: 720px) { .filtros input, .filtros select { width: 23%; font-size: 10px ; padding: 5px; margin: 2px; box-sizing: border-box; } }@media (max-width: 720px) { .articulo, .descripcion { font-size: 12px; } }@media (max-width: 720px) { .codigo { font-size: 16px; } }@media print { body * { visibility: hidden !important; } .grid, .grid * { visibility: visible !important; color: black !important; } .grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; padding: 10px !important; margin: 10px !important; page-break-inside: avoid !important; } .item { break-inside: avoid !important; page-break-inside: avoid !important; border: 1px dashed #003366 !important; padding: 10px !important; margin: 0px !important; color: black !important; background-color: white !important; } .item img { height: auto !important; max-height: 1.8in !important; width: 100% !important; object-fit: contain !important; display: block !important; page-break-inside: avoid !important; } .codigo { font-weight: bold !important; font-size: 20px !important; background-color: #003366 !important; color: white !important; padding: 5px !important; border: 1px solid #003366 !important; display: inline-block !important; margin-top: 5px !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } </style><script>document.addEventListener('DOMContentLoaded',function(){var images=document.images,total=images.length,count=0,loader=document.getElementById('image-loader');if(total===0)return;loader.style.display='block';function updateProgress(){count++;var percent=Math.min(100,Math.round((count/total)*100));loader.textContent='Cargando imágenes... '+percent+'%';if(count===total)setTimeout(()=>loader.style.display='none',500);}for(var i=0;i<total;i++){if(images[i].complete){updateProgress();}else{images[i].addEventListener('load',updateProgress);images[i].addEventListener('error',updateProgress);}}});document.addEventListener('keydown',function(event){var loginVisible=document.getElementById('loginPanel').style.display==='block';if(loginVisible&&event.key==='Enter'){verificarCredenciales();}});</script></head><body><div id='image-loader' style='position: fixed; top: 130px; left: 50%; transform: translateX(-50%); color: #003366; background-color: white; border: 1px solid #003366; padding: 8px 12px; border-radius: 5px; font-family: sans-serif; font-size: 24px; font-weight: bold; z-index: 9999; display: none;'>Cargando imágenes... 0%</div><div class='topbar'><img src='imagenes/logo.jpg' alt='Logo' id='logoAcceso' onclick='mostrarLogin()'><div class='contact-info'><span class='contact-item'><span class='contact-icon'>&#9742;</span><span><a href='tel:8095407288'>809-540-7288</a> / <a href='tel:8095669605'>809-566-9605</a></span></span><span class='contact-item'><span class='contact-icon whatsapp-icon'>&#9742;</span><span>Whatsapp: <a href='https://wa.me/18296575746' target='_blank'>829-657-5746</a></span></span><span class='contact-item'><span class='contact-icon'>&#9993;</span><span><a href='mailto:ventas@edilsa.com.do'>ventas@edilsa.com.do</a></span></span><span class='contact-item'><span class='contact-icon'>&#128205;</span><span>Santo Domingo. Rep. Dom.</span></span></div></div><div class='filtros'><button id='btnInicio' onclick='mostrarInicio()' style='margin:4px 8px; padding:6px 10px; border:1px solid #fff; background:transparent; color:#fff; border-radius:6px; cursor:pointer;'>Inicio</button><input type='text' id='buscador' placeholder='Buscar por codigo o articulo' onkeyup='if(usuarioLogueado && clientesArticulos.hasOwnProperty(this.value.toLowerCase().trim())){buscarPorCliente();}else{buscar();}'><select id='categoriaSelect' onchange='quitarOpcionInicialCategoria();actualizarSubcategorias();filtrar()'><option id='opcionInicialCategoria' value='' disabled selected>Seleccione una categoria</option><option value='__TODAS__'>Todas las categorias</option><option value='Productos de Limpieza'>Productos de Limpieza</option><option value='Utensilios de Limpieza'>Utensilios de Limpieza</option><option value='Higiene y Cuidado Personal'>Higiene y Cuidado Personal</option><option value='Cuidado del Cabello'>Cuidado del Cabello</option><option value='Consumibles (Insumos)'>Consumibles (Insumos)</option><option value='Papeles de Higiene y Cocina'>Papeles de Higiene y Cocina</option><option value='Desechables'>Desechables</option></select><select id='subcategoriaSelect' onchange='filtrar()'><option value=''>Todas las subcategorias</option></select></div><div class='home-grid' id='homeGrid'><div class='home-card' onclick='irACategoria("Productos de Limpieza")'><img src='imagenes/Productos de Limpieza.jpg' alt='Productos de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Productos de Limpieza</div></div><div class='home-card' onclick='irACategoria("Utensilios de Limpieza")'><img src='imagenes/Utensilios de Limpieza.jpg' alt='Utensilios de Limpieza' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Utensilios de Limpieza</div></div><div class='home-card' onclick='irACategoria("Higiene y Cuidado Personal")'><img src='imagenes/Higiene y Cuidado Personal.jpg' alt='Higiene y Cuidado Personal' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Higiene y Cuidado Personal</div></div><div class='home-card' onclick='irACategoria("Cuidado del Cabello")'><img src='imagenes/Cuidado del Cabello.jpg' alt='Cuidado del Cabello' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Cuidado del Cabello</div></div><div class='home-card' onclick='irACategoria("Consumibles (Insumos)")'><img src='imagenes/Consumibles (Insumos).jpg' alt='Consumibles (Insumos)' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Consumibles (Insumos)</div></div><div class='home-card' onclick='irACategoria("Papeles de Higiene y Cocina")'><img src='imagenes/Papeles de Higiene y Cocina.jpg' alt='Papeles de Higiene y Cocina' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Papeles de Higiene y Cocina</div></div><div class='home-card' onclick='irACategoria("Desechables")'><img src='imagenes/Desechables.jpg' alt='Desechables' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';"><div class='home-title'>Desechables</div></div></div><div class='grid' id='productosGrid' style='display:none;'><div class='item' data-cat='Productos de Limpieza' data-subcat='Ambientadores' data-art='air magic fresh air aerosol bouquet 260 ml 1x24 ref. 008504' data-cod='001821'>
 <img src='imagenes/001821.jpg' data-codigo='001821' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001821</div>
 <div class='underline'></div>
@@ -967,8 +967,8 @@
 <div class='underline'></div>
 <div class='articulo'>DURA CLEAN CEPILLO DE MANO PLANCHITA 1X12 Ref. 77152</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $75.58</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $906.95</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $80.54</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $966.42</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano ecoovalin 1x12 ref. 21055' data-cod='001748'>
 <img src='imagenes/001748.jpg' data-codigo='001748' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -976,8 +976,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA CEPILLO DE MANO ECOOVALIN 1X12 Ref. 21055</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $95.40</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $1,144.84</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $99.12</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $1,189.44</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Cepillos' data-art='linda cepillo de mano plancha 1x12 ref. 00090' data-cod='001197'>
 <img src='imagenes/001197.jpg' data-codigo='001197' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1021,8 +1021,8 @@
 <div class='underline'></div>
 <div class='articulo'>BRAVA DESTUPIDOR DE INODOROS DE GOMA 1X12 Ref. 80033</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $230.45</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,765.45</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $237.89</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,854.66</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Destupidor' data-art='linda destupidor de inodoros de goma 1x12 ref. 02004' data-cod='002196'>
 <img src='imagenes/002196.jpg' data-codigo='002196' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1030,8 +1030,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA DESTUPIDOR DE INODOROS DE GOMA 1X12 Ref. 02004</div>
 <div class='descripcion'>Caja = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $185.85</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,230.20</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $193.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,319.41</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Escobas' data-art='brava cepillo de piso + goma 1x12' data-cod='002190'>
 <img src='imagenes/002190.jpg' data-codigo='002190' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1057,8 +1057,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA ESCOBA CARIBE 1X12 Ref. 40806</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $211.87</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,542.43</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $219.30</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,631.64</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Escobas' data-art='linda escoba super economica 1x12 ref. 00013' data-cod='001541'>
 <img src='imagenes/001541.jpg' data-codigo='001541' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1066,8 +1066,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA ESCOBA SUPER ECONOMICA 1X12 Ref. 00013</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $2,494.86</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $29,938.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $193.28</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,319.41</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Guantes' data-art='dura clean guantes de limpieza 1x120' data-cod='002449'>
 <img src='imagenes/002449.jpg' data-codigo='002449' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1084,8 +1084,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANOS FUERTES GUANTES DE LIMPIEZA ECO 1X120</div>
 <div class='descripcion'>Caja = 120 Unidades  = (10 Paquetes de 12 pares)*</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $113.74</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $13,648.82</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $126.38</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $15,165.36</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Guantes' data-art='manos suaves guantes de limpieza 1x120 ref. 881325' data-cod='001100'>
 <img src='imagenes/001100.jpg' data-codigo='001100' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1093,8 +1093,8 @@
 <div class='underline'></div>
 <div class='articulo'>MANOS SUAVES GUANTES DE LIMPIEZA 1X120 Ref. 881325</div>
 <div class='descripcion'>Caja = 120 Unidades  = (10 Paquetes de 12 pares)*</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $83.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $9,976.43</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $94.16</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $11,299.68</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Otros' data-art='frasco con atomizador 16 oz 1x1' data-cod='002213'>
 <img src='imagenes/002213.jpg' data-codigo='002213' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1111,8 +1111,8 @@
 <div class='underline'></div>
 <div class='articulo'>LETRERO PISO MOJADO 1X1 Ref. 30470</div>
 <div class='descripcion'>1 Unidad</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $579.85</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $579.85</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $579.87</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $579.87</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Palitas' data-art='linda palita recogedora 1x12 ref. 02059' data-cod='001162'>
 <img src='imagenes/001162.jpg' data-codigo='001162' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1120,8 +1120,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA PALITA RECOGEDORA 1X12 Ref. 02059</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $128.86</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $1,546.27</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $1,635.48</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Palitas' data-art='linda palita recogedora con banda 1x12 ref. 02060' data-cod='002198'>
 <img src='imagenes/002198.jpg' data-codigo='002198' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1129,8 +1129,8 @@
 <div class='underline'></div>
 <div class='articulo'>LINDA PALITA RECOGEDORA CON BANDA 1X12 Ref. 02060</div>
 <div class='descripcion'>Docena = 12 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $172.22</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,066.65</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $187.09</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>DOCE = $2,245.07</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Saca Agua' data-art='saca agua c/palo (floor squeege) ref. 87104' data-cod='001355'>
 <img src='imagenes/001355.jpg' data-codigo='001355' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1228,8 +1228,8 @@
 <div class='underline'></div>
 <div class='articulo'>ELITE TOALLA MICRO FIBRA 14X14 (Colores) 1x3 Ref. T2374-01</div>
 <div class='descripcion'>Paq = 3 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $227.65</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $227.65</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $227.67</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $227.67</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Toallas Multiusos' data-art='elite toalla micro fibra 16x18 (colores) 1x3 ref. t2375-01' data-cod='001811'>
 <img src='imagenes/001811.jpg' data-codigo='001811' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1390,8 +1390,8 @@
 <div class='underline'></div>
 <div class='articulo'>BLOSSOM CREMA MANOS Y CUERPO VAINILLA 8 OZ 1X24 Ref. 20107</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $178.88</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,293.17</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $151.98</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,647.60</span></div>
 </div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Cremas y lociones corporales' data-art='blossom crema manos y cuerpo yogurt 8 oz 1x24 ref. 20105' data-cod='002367'>
 <img src='imagenes/002367.jpg' data-codigo='002367' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -1627,15 +1627,6 @@
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.22</span></div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $985.72</span></div>
 </div>
-<div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial coco tropical 8oz 1x8' data-cod='001372'>
-<img src='imagenes/001372.jpg' data-codigo='001372' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
-<div class='codigo'>001372</div>
-<div class='underline'></div>
-<div class='articulo'>NUBEH JABON DE MANOS ANTIBACTERIAL COCO TROPICAL 8OZ 1X8</div>
-<div class='descripcion'>Caja = 8 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $123.22</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $985.72</span></div>
-</div>
 <div class='item' data-cat='Higiene y Cuidado Personal' data-subcat='Jabones' data-art='nubeh jabon de manos antibacterial leche y miel 8oz 1x8' data-cod='001377'>
 <img src='imagenes/001377.jpg' data-codigo='001377' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
 <div class='codigo'>001377</div>
@@ -1741,8 +1732,8 @@
 <div class='underline'></div>
 <div class='articulo'>BRILLISIMO ESPONJA DOBLE 48X2 Ref. 5801</div>
 <div class='descripcion'>Caja = 48 Paq de 2 Unidades *</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $46.13</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $2,214.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>PAQ = $2,214.29</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $106,285.77</span></div>
 </div>
 <div class='item' data-cat='Utensilios de Limpieza' data-subcat='Toallas Multiusos' data-art='brillisimo toalla micro fibra 1x100 ref. 5879' data-cod='002463'>
 <img src='imagenes/002463.jpg' data-codigo='002463' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2444,7 +2435,7 @@
 <div class='articulo'>Papel Aluminio 12 pulg x 25 Pies (1x24) Ref. 5411</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
 <div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $55.06</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,321.49</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,321.45</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel aluminio 12 pulg x 75 pies (1x24) ref. 5412' data-cod='001460'>
 <img src='imagenes/001460.jpg' data-codigo='001460' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -2452,8 +2443,8 @@
 <div class='underline'></div>
 <div class='articulo'>Papel Aluminio 12 pulg x 75 Pies (1x24) Ref. 5412</div>
 <div class='descripcion'>Caja = 24 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.91</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,285.75</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $136.90</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,285.71</span></div>
 </div>
 <div class='item' data-cat='Consumibles (Insumos)' data-subcat='Papeles y empaques' data-art='papel aluminio 18 pulg x 1000 pies (1x4) ref. 5559' data-cod='001458'>
 <img src='imagenes/001458.jpg' data-codigo='001458' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3496,8 +3487,8 @@
 <div class='underline'></div>
 <div class='articulo'>Bandeja Aluminio Grande 525 (1x50) Ref. 5307</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,557.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,557.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,857.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $4,857.14</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio lasagña 1x50 ref. 5587' data-cod='001872'>
 <img src='imagenes/001872.jpg' data-codigo='001872' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3514,8 +3505,17 @@
 <div class='underline'></div>
 <div class='articulo'>Bandeja Aluminio Mediana 430 (1x50) Ref. 4710</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,357.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,357.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,785.71</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,785.71</span></div>
+</div>
+<div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio oval 470 (1x50) ref. 4711' data-cod='001456'>
+<img src='imagenes/001456.jpg' data-codigo='001456' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
+<div class='codigo'>001456</div>
+<div class='underline'></div>
+<div class='articulo'>Bandeja Aluminio Oval 470 (1x50) Ref. 4711</div>
+<div class='descripcion'>Caja = 50 Unidades *</div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>UD = $78.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,928.57</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio paella 1x100 ref. 5655' data-cod='002074'>
 <img src='imagenes/002074.jpg' data-codigo='002074' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3523,8 +3523,8 @@
 <div class='underline'></div>
 <div class='articulo'>BANDEJA ALUMINIO PAELLA 1X100 Ref. 5655</div>
 <div class='descripcion'>Caja = 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,000.00</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,000.00</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,428.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,428.57</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja aluminio pequeña 320 (1x100) ref. 5070' data-cod='001452'>
 <img src='imagenes/001452.jpg' data-codigo='001452' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3532,8 +3532,8 @@
 <div class='underline'></div>
 <div class='articulo'>Bandeja Aluminio Pequeña 320 (1x100) Ref. 5070</div>
 <div class='descripcion'>Caja = 100 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,557.14</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $1,557.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,607.14</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,607.14</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja jumbo oval 1x50 ref. 5846' data-cod='002160'>
 <img src='imagenes/002160.jpg' data-codigo='002160' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
@@ -3541,8 +3541,8 @@
 <div class='underline'></div>
 <div class='articulo'>BANDEJA JUMBO OVAL 1X50 Ref. 5846</div>
 <div class='descripcion'>Caja = 50 Unidades</div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,642.86</span></div>
-<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,642.86</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,928.57</span></div>
+<div class='detalle-unidades'><span style='font-weight:normal; font-size:12px; color:black;'>CAJ = $3,928.57</span></div>
 </div>
 <div class='item' data-cat='Desechables' data-subcat='Bandejas' data-art='bandeja redonda 7 pulgadas 4x125 ref. 5814' data-cod='002162'>
 <img src='imagenes/002162.jpg' data-codigo='002162' onerror="this.onerror=null;this.src='imagenes/sin_imagen.jpg';" oncontextmenu='return false;' ondragstart='return false;' draggable='false' onclick='ampliarImagen(this)'>
